@@ -1,6 +1,5 @@
-import os
+import socket
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
+HOSTNAME = socket.gethostname()
 print('********************')
-print(__file__)
+print(HOSTNAME)

@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 import argparse
 import math
 import h5py
@@ -7,15 +8,19 @@ import socket
 import importlib
 import os
 import sys
+
+#加入依赖的默认查找路径
 #os.path.dirname()功能为去掉文件名，返回目录
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-#sys.path.append(BASE_DIR)帮助程序在本项目文件夹下找程序
+#sys.path.append(BASE_DIR)帮助程序在本项目文件夹下找依赖
 sys.path.append(BASE_DIR)
+#os.path.join是路径拼接函数
 sys.path.append(os.path.join(BASE_DIR, 'models'))
 sys.path.append(os.path.join(BASE_DIR, 'utils'))
+
 import provider
 import tf_util
-
+#用于参数获取，使程序更加友好
 parser = argparse.ArgumentParser()
 parser.add_argument('--gpu', type=int, default=0, help='GPU to use [default: GPU 0]')
 parser.add_argument('--model', default='pointnet_cls', help='Model name: pointnet_cls or pointnet_cls_basic [default: pointnet_cls]')
@@ -30,7 +35,7 @@ parser.add_argument('--decay_step', type=int, default=200000, help='Decay step f
 parser.add_argument('--decay_rate', type=float, default=0.7, help='Decay rate for lr decay [default: 0.8]')
 FLAGS = parser.parse_args()
 
-
+#存储参数
 BATCH_SIZE = FLAGS.batch_size
 NUM_POINT = FLAGS.num_point
 MAX_EPOCH = FLAGS.max_epoch
@@ -58,6 +63,7 @@ BN_DECAY_DECAY_RATE = 0.5
 BN_DECAY_DECAY_STEP = float(DECAY_STEP)
 BN_DECAY_CLIP = 0.99
 
+#获取主机名
 HOSTNAME = socket.gethostname()
 
 # ModelNet40 official train/test split
