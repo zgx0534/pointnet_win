@@ -7,7 +7,9 @@ import socket
 import importlib
 import os
 import sys
+#os.path.dirname()功能为去掉文件名，返回目录
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+#sys.path.append(BASE_DIR)帮助程序在本项目文件夹下找程序
 sys.path.append(BASE_DIR)
 sys.path.append(os.path.join(BASE_DIR, 'models'))
 sys.path.append(os.path.join(BASE_DIR, 'utils'))
