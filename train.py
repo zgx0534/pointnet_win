@@ -121,11 +121,13 @@ def train():
             pointclouds_pl, labels_pl = MODEL.placeholder_inputs(BATCH_SIZE, NUM_POINT)
             is_training_pl = tf.placeholder(tf.bool, shape=())
             print(is_training_pl)
-            
-            # Note the global_step=batch parameter to minimize. 
-            # That tells the optimizer to helpfully increment the 'batch' parameter for you every time it trains.
+
+
+            # 请注意将参数 global_step = batch 最小化。
+            # 这告诉优化器每次训练时都会为你帮助增加'batch'参数。
             batch = tf.Variable(0)
             bn_decay = get_bn_decay(batch)
+            #用来显示标量信息,用于tensorboard图谱
             tf.summary.scalar('bn_decay', bn_decay)
 
             # Get model and loss 

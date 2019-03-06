@@ -1,5276 +1,1230 @@
 Namespace(batch_size=32, decay_rate=0.7, decay_step=200000, gpu=0, learning_rate=0.001, log_dir='log', max_epoch=250, model='pointnet_cls', momentum=0.9, num_point=1024, optimizer='adam')
 **** EPOCH 000 ****
 ----0-----
-mean loss: 3.699599
-accuracy: 0.211426
+mean loss: 3.964048
+accuracy: 0.190918
 ----1-----
-mean loss: 2.737255
-accuracy: 0.296387
+mean loss: 2.762744
+accuracy: 0.313965
 ----2-----
-mean loss: 2.206668
-accuracy: 0.409926
+mean loss: 2.317302
+accuracy: 0.399414
 ----3-----
-mean loss: 2.017542
-accuracy: 0.451660
+mean loss: 2.125037
+accuracy: 0.432129
 ----4-----
-mean loss: 1.749586
-accuracy: 0.518555
+mean loss: 1.838090
+accuracy: 0.487745
 ----0-----
 ----1-----
-eval mean loss: 1.681685
-eval accuracy: 0.523945
-eval avg class acc: 0.440548
+eval mean loss: 1.741149
+eval accuracy: 0.507305
+eval avg class acc: 0.416008
 Model saved in file: log/model.ckpt
 **** EPOCH 001 ****
 ----0-----
-mean loss: 1.579542
-accuracy: 0.557617
+mean loss: 1.754822
+accuracy: 0.508578
 ----1-----
-mean loss: 1.526373
-accuracy: 0.577637
+mean loss: 1.667557
+accuracy: 0.556152
 ----2-----
-mean loss: 1.392818
-accuracy: 0.598652
+mean loss: 1.714766
+accuracy: 0.525879
 ----3-----
-mean loss: 1.405656
-accuracy: 0.600586
+mean loss: 1.560782
+accuracy: 0.553223
 ----4-----
-mean loss: 1.325705
-accuracy: 0.611816
+mean loss: 1.420375
+accuracy: 0.602051
 ----0-----
 ----1-----
-eval mean loss: 1.470697
-eval accuracy: 0.588068
-eval avg class acc: 0.510548
+eval mean loss: 1.153188
+eval accuracy: 0.679789
+eval avg class acc: 0.588635
 **** EPOCH 002 ****
 ----0-----
-mean loss: 1.301881
-accuracy: 0.634766
+mean loss: 1.380125
+accuracy: 0.598145
 ----1-----
-mean loss: 1.246446
-accuracy: 0.633789
+mean loss: 1.352160
+accuracy: 0.610352
 ----2-----
-mean loss: 1.146219
-accuracy: 0.663086
+mean loss: 1.335041
+accuracy: 0.604492
 ----3-----
-mean loss: 1.272076
-accuracy: 0.619629
+mean loss: 1.225274
+accuracy: 0.637255
 ----4-----
-mean loss: 1.181027
-accuracy: 0.656250
+mean loss: 1.225434
+accuracy: 0.638184
 ----0-----
 ----1-----
-eval mean loss: 1.045896
-eval accuracy: 0.692776
-eval avg class acc: 0.608607
+eval mean loss: 1.000692
+eval accuracy: 0.709416
+eval avg class acc: 0.618154
 **** EPOCH 003 ****
 ----0-----
-mean loss: 1.193230
-accuracy: 0.642578
+mean loss: 1.113238
+accuracy: 0.681152
 ----1-----
-mean loss: 1.118010
-accuracy: 0.668457
+mean loss: 1.153393
+accuracy: 0.664062
 ----2-----
-mean loss: 1.061752
-accuracy: 0.671875
+mean loss: 1.074264
+accuracy: 0.674805
 ----3-----
-mean loss: 1.118489
-accuracy: 0.669434
+mean loss: 1.033223
+accuracy: 0.685662
 ----4-----
-mean loss: 1.081562
-accuracy: 0.681985
+mean loss: 1.116134
+accuracy: 0.671387
 ----0-----
 ----1-----
-eval mean loss: 1.149348
-eval accuracy: 0.659497
-eval avg class acc: 0.579019
+eval mean loss: 0.950493
+eval accuracy: 0.708198
+eval avg class acc: 0.620840
 **** EPOCH 004 ****
 ----0-----
-mean loss: 1.046836
-accuracy: 0.689338
+mean loss: 1.038202
+accuracy: 0.690918
 ----1-----
-mean loss: 1.018454
-accuracy: 0.707031
+mean loss: 0.992418
+accuracy: 0.699755
 ----2-----
-mean loss: 0.990156
-accuracy: 0.708496
+mean loss: 1.572309
+accuracy: 0.586914
 ----3-----
-mean loss: 0.951851
-accuracy: 0.717773
+mean loss: 1.341151
+accuracy: 0.604004
 ----4-----
-mean loss: 0.932618
-accuracy: 0.734375
+mean loss: 1.190299
+accuracy: 0.638672
 ----0-----
 ----1-----
-eval mean loss: 0.912093
-eval accuracy: 0.721185
-eval avg class acc: 0.655037
+eval mean loss: 1.130375
+eval accuracy: 0.665179
+eval avg class acc: 0.602856
 **** EPOCH 005 ****
 ----0-----
-mean loss: 0.904636
-accuracy: 0.726074
+mean loss: 1.009327
+accuracy: 0.701172
 ----1-----
-mean loss: 0.903359
-accuracy: 0.722656
+mean loss: 0.965936
+accuracy: 0.703431
 ----2-----
-mean loss: 0.897795
-accuracy: 0.727051
+mean loss: 0.964686
+accuracy: 0.713379
 ----3-----
-mean loss: 1.131361
-accuracy: 0.666054
+mean loss: 0.991661
+accuracy: 0.709473
 ----4-----
-mean loss: 0.939581
-accuracy: 0.720703
+mean loss: 0.985700
+accuracy: 0.702637
 ----0-----
 ----1-----
-eval mean loss: 0.893344
-eval accuracy: 0.727679
-eval avg class acc: 0.667748
+eval mean loss: 0.864386
+eval accuracy: 0.749594
+eval avg class acc: 0.671796
 **** EPOCH 006 ****
 ----0-----
-mean loss: 0.851445
-accuracy: 0.737305
+mean loss: 0.917150
+accuracy: 0.726562
 ----1-----
-mean loss: 0.885922
-accuracy: 0.729980
+mean loss: 0.844473
+accuracy: 0.743873
 ----2-----
-mean loss: 0.861304
-accuracy: 0.742676
+mean loss: 0.908007
+accuracy: 0.724121
 ----3-----
-mean loss: 0.809509
-accuracy: 0.755515
+mean loss: 0.875605
+accuracy: 0.734863
 ----4-----
-mean loss: 0.931022
-accuracy: 0.726074
+mean loss: 0.861761
+accuracy: 0.752441
 ----0-----
 ----1-----
-eval mean loss: 1.114620
-eval accuracy: 0.670455
-eval avg class acc: 0.609731
+eval mean loss: 0.712661
+eval accuracy: 0.779221
+eval avg class acc: 0.708079
 **** EPOCH 007 ****
 ----0-----
-mean loss: 0.951347
-accuracy: 0.710938
+mean loss: 0.791168
+accuracy: 0.763184
 ----1-----
-mean loss: 0.831520
-accuracy: 0.755515
+mean loss: 0.801968
+accuracy: 0.757324
 ----2-----
-mean loss: 0.812213
-accuracy: 0.746094
+mean loss: 0.784738
+accuracy: 0.751465
 ----3-----
-mean loss: 0.814046
-accuracy: 0.752441
+mean loss: 0.813763
+accuracy: 0.746094
 ----4-----
-mean loss: 0.804541
-accuracy: 0.741699
+mean loss: 0.825027
+accuracy: 0.743260
 ----0-----
 ----1-----
-eval mean loss: 0.740307
-eval accuracy: 0.765828
-eval avg class acc: 0.692144
+eval mean loss: 0.747001
+eval accuracy: 0.771510
+eval avg class acc: 0.723614
 **** EPOCH 008 ****
 ----0-----
-mean loss: 0.751704
-accuracy: 0.765319
+mean loss: 0.775644
+accuracy: 0.756836
 ----1-----
-mean loss: 0.757314
-accuracy: 0.761719
+mean loss: 0.718151
+accuracy: 0.776348
 ----2-----
-mean loss: 0.774292
-accuracy: 0.753906
+mean loss: 0.833272
+accuracy: 0.752930
 ----3-----
-mean loss: 0.774692
-accuracy: 0.771484
+mean loss: 0.785565
+accuracy: 0.755371
 ----4-----
-mean loss: 0.763066
-accuracy: 0.778809
+mean loss: 0.778361
+accuracy: 0.759277
 ----0-----
 ----1-----
-eval mean loss: 0.765931
-eval accuracy: 0.754058
-eval avg class acc: 0.714114
+eval mean loss: 0.820964
+eval accuracy: 0.737013
+eval avg class acc: 0.702542
 **** EPOCH 009 ****
 ----0-----
-mean loss: 0.741604
-accuracy: 0.779412
+mean loss: 0.768443
+accuracy: 0.764160
 ----1-----
-mean loss: 0.787562
-accuracy: 0.765625
+mean loss: 0.713175
+accuracy: 0.781250
 ----2-----
-mean loss: 0.756422
-accuracy: 0.773926
+mean loss: 0.761895
+accuracy: 0.766602
 ----3-----
-mean loss: 0.715970
-accuracy: 0.778809
+mean loss: 0.778517
+accuracy: 0.775879
 ----4-----
-mean loss: 0.721139
-accuracy: 0.780273
+mean loss: 0.814933
+accuracy: 0.750977
 ----0-----
 ----1-----
-eval mean loss: 0.777229
-eval accuracy: 0.750406
-eval avg class acc: 0.697303
+eval mean loss: 0.646062
+eval accuracy: 0.812500
+eval avg class acc: 0.748409
 **** EPOCH 010 ****
 ----0-----
-mean loss: 0.629903
-accuracy: 0.799805
+mean loss: 0.716064
+accuracy: 0.780273
 ----1-----
-mean loss: 0.712042
-accuracy: 0.778320
+mean loss: 0.706202
+accuracy: 0.776348
 ----2-----
-mean loss: 0.754332
-accuracy: 0.773926
+mean loss: 0.752945
+accuracy: 0.768555
 ----3-----
-mean loss: 0.722394
-accuracy: 0.777344
+mean loss: 0.734240
+accuracy: 0.785156
 ----4-----
-mean loss: 0.641038
-accuracy: 0.797181
+mean loss: 0.718341
+accuracy: 0.772461
 ----0-----
 ----1-----
-eval mean loss: 0.724263
-eval accuracy: 0.765828
-eval avg class acc: 0.726347
+eval mean loss: 0.615897
+eval accuracy: 0.818994
+eval avg class acc: 0.753802
 Model saved in file: log/model.ckpt
 **** EPOCH 011 ****
 ----0-----
-mean loss: 0.610881
-accuracy: 0.814951
+mean loss: 0.669965
+accuracy: 0.786621
 ----1-----
-mean loss: 0.693694
-accuracy: 0.784180
+mean loss: 0.648865
+accuracy: 0.792279
 ----2-----
-mean loss: 0.671494
-accuracy: 0.804199
+mean loss: 0.727946
+accuracy: 0.772949
 ----3-----
-mean loss: 0.731693
-accuracy: 0.770996
+mean loss: 0.698944
+accuracy: 0.788574
 ----4-----
-mean loss: 0.651130
+mean loss: 0.665264
+accuracy: 0.799316
+----0-----
+----1-----
+eval mean loss: 0.702968
+eval accuracy: 0.771104
+eval avg class acc: 0.713713
+**** EPOCH 012 ****
+----0-----
+mean loss: 0.641905
+accuracy: 0.805147
+----1-----
+mean loss: 0.665436
+accuracy: 0.797852
+----2-----
+mean loss: 0.684776
+accuracy: 0.782227
+----3-----
+mean loss: 0.715513
+accuracy: 0.777344
+----4-----
+mean loss: 0.756128
+accuracy: 0.761230
+----0-----
+----1-----
+eval mean loss: 0.690159
+eval accuracy: 0.784903
+eval avg class acc: 0.711602
+**** EPOCH 013 ****
+----0-----
+mean loss: 0.693459
+accuracy: 0.784180
+----1-----
+mean loss: 0.661335
+accuracy: 0.791054
+----2-----
+mean loss: 0.623119
+accuracy: 0.813477
+----3-----
+mean loss: 0.639673
+accuracy: 0.795898
+----4-----
+mean loss: 0.649672
+accuracy: 0.793945
+----0-----
+----1-----
+eval mean loss: 0.662842
+eval accuracy: 0.789773
+eval avg class acc: 0.728600
+**** EPOCH 014 ****
+----0-----
+mean loss: 0.660394
+accuracy: 0.798340
+----1-----
+mean loss: 0.611462
+accuracy: 0.802734
+----2-----
+mean loss: 0.662204
+accuracy: 0.792969
+----3-----
+mean loss: 0.628494
+accuracy: 0.798828
+----4-----
+mean loss: 0.585044
+accuracy: 0.816176
+----0-----
+----1-----
+eval mean loss: 0.634812
+eval accuracy: 0.810065
+eval avg class acc: 0.749211
+**** EPOCH 015 ****
+----0-----
+mean loss: 0.633242
+accuracy: 0.798828
+----1-----
+mean loss: 0.645774
+accuracy: 0.798828
+----2-----
+mean loss: 0.632326
+accuracy: 0.786765
+----3-----
+mean loss: 0.650316
+accuracy: 0.801270
+----4-----
+mean loss: 0.631303
 accuracy: 0.801270
 ----0-----
 ----1-----
-eval mean loss: 0.671428
-eval accuracy: 0.788149
-eval avg class acc: 0.733132
-**** EPOCH 012 ****
-----0-----
-mean loss: 0.624936
-accuracy: 0.796387
-----1-----
-mean loss: 0.630194
-accuracy: 0.802734
-----2-----
-mean loss: 0.606500
-accuracy: 0.812500
-----3-----
-mean loss: 0.658795
-accuracy: 0.794434
-----4-----
-mean loss: 0.680725
-accuracy: 0.789062
-----0-----
-----1-----
-eval mean loss: 0.607458
-eval accuracy: 0.818182
-eval avg class acc: 0.779016
-**** EPOCH 013 ****
-----0-----
-mean loss: 0.612246
-accuracy: 0.808105
-----1-----
-mean loss: 0.680817
-accuracy: 0.791992
-----2-----
-mean loss: 0.650526
-accuracy: 0.790527
-----3-----
-mean loss: 0.625116
-accuracy: 0.808211
-----4-----
-mean loss: 0.621430
-accuracy: 0.806641
-----0-----
-----1-----
-eval mean loss: 0.637423
-eval accuracy: 0.809659
-eval avg class acc: 0.755639
-**** EPOCH 014 ****
-----0-----
-mean loss: 0.615778
-accuracy: 0.810059
-----1-----
-mean loss: 0.613343
-accuracy: 0.800781
-----2-----
-mean loss: 0.731807
-accuracy: 0.803223
-----3-----
-mean loss: 1.296233
-accuracy: 0.647672
-----4-----
-mean loss: 0.920109
-accuracy: 0.734863
-----0-----
-----1-----
-eval mean loss: 0.763506
-eval accuracy: 0.785714
-eval avg class acc: 0.717315
-**** EPOCH 015 ****
-----0-----
-mean loss: 0.778515
-accuracy: 0.755859
-----1-----
-mean loss: 0.705753
-accuracy: 0.768382
-----2-----
-mean loss: 0.686328
-accuracy: 0.785156
-----3-----
-mean loss: 0.685181
-accuracy: 0.790039
-----4-----
-mean loss: 0.671389
-accuracy: 0.796387
-----0-----
-----1-----
-eval mean loss: 0.628712
-eval accuracy: 0.802760
-eval avg class acc: 0.762165
+eval mean loss: 0.594245
+eval accuracy: 0.806006
+eval avg class acc: 0.750486
 **** EPOCH 016 ****
 ----0-----
-mean loss: 0.571691
-accuracy: 0.809436
+mean loss: 0.612151
+accuracy: 0.807129
 ----1-----
-mean loss: 0.641635
-accuracy: 0.789062
+mean loss: 0.599906
+accuracy: 0.807617
 ----2-----
-mean loss: 0.625841
-accuracy: 0.803711
+mean loss: 0.637356
+accuracy: 0.795956
 ----3-----
-mean loss: 0.618728
-accuracy: 0.805664
+mean loss: 0.633539
+accuracy: 0.808105
 ----4-----
-mean loss: 0.628487
-accuracy: 0.804688
+mean loss: 0.625785
+accuracy: 0.799805
 ----0-----
 ----1-----
-eval mean loss: 0.633997
-eval accuracy: 0.812500
-eval avg class acc: 0.759996
+eval mean loss: 0.567448
+eval accuracy: 0.825893
+eval avg class acc: 0.759764
 **** EPOCH 017 ****
 ----0-----
-mean loss: 0.578385
-accuracy: 0.822266
-----1-----
-mean loss: 0.564479
-accuracy: 0.822304
-----2-----
-mean loss: 0.611563
+mean loss: 0.553786
 accuracy: 0.819336
+----1-----
+mean loss: 0.560742
+accuracy: 0.818848
+----2-----
+mean loss: 0.549783
+accuracy: 0.813725
 ----3-----
-mean loss: 0.560189
-accuracy: 0.824219
+mean loss: 0.608834
+accuracy: 0.808594
 ----4-----
-mean loss: 0.591277
-accuracy: 0.815430
+mean loss: 0.629615
+accuracy: 0.796875
 ----0-----
 ----1-----
-eval mean loss: 0.617397
-eval accuracy: 0.817370
-eval avg class acc: 0.756943
+eval mean loss: 0.563534
+eval accuracy: 0.823458
+eval avg class acc: 0.771638
 **** EPOCH 018 ****
 ----0-----
-mean loss: 0.578552
-accuracy: 0.811523
+mean loss: 0.600894
+accuracy: 0.804688
 ----1-----
-mean loss: 0.562421
-accuracy: 0.824707
+mean loss: 0.577980
+accuracy: 0.817383
 ----2-----
-mean loss: 0.573274
-accuracy: 0.820801
+mean loss: 0.599026
+accuracy: 0.811035
 ----3-----
-mean loss: 0.581074
-accuracy: 0.821289
+mean loss: 0.542892
+accuracy: 0.829044
 ----4-----
-mean loss: 0.519815
-accuracy: 0.833333
+mean loss: 0.581470
+accuracy: 0.821777
 ----0-----
 ----1-----
-eval mean loss: 0.547808
-eval accuracy: 0.830763
-eval avg class acc: 0.790131
+eval mean loss: 0.577373
+eval accuracy: 0.833198
+eval avg class acc: 0.785941
 **** EPOCH 019 ****
 ----0-----
-mean loss: 0.539802
-accuracy: 0.833008
+mean loss: 0.559949
+accuracy: 0.825684
 ----1-----
-mean loss: 0.554322
-accuracy: 0.827637
+mean loss: 0.560221
+accuracy: 0.820312
 ----2-----
-mean loss: 0.534868
-accuracy: 0.829657
+mean loss: 0.608412
+accuracy: 0.808105
 ----3-----
-mean loss: 0.589102
-accuracy: 0.815918
+mean loss: 0.609539
+accuracy: 0.809570
 ----4-----
-mean loss: 0.615714
-accuracy: 0.801758
+mean loss: 0.557648
+accuracy: 0.816789
 ----0-----
 ----1-----
-eval mean loss: 0.587387
-eval accuracy: 0.821023
-eval avg class acc: 0.771744
+eval mean loss: 0.598677
+eval accuracy: 0.808036
+eval avg class acc: 0.767209
 **** EPOCH 020 ****
 ----0-----
-mean loss: 0.542817
-accuracy: 0.821289
+mean loss: 0.583273
+accuracy: 0.810547
 ----1-----
-mean loss: 0.538076
-accuracy: 0.830078
+mean loss: 0.538794
+accuracy: 0.822266
 ----2-----
-mean loss: 0.521679
-accuracy: 0.827637
+mean loss: 0.485249
+accuracy: 0.841912
 ----3-----
-mean loss: 0.527308
-accuracy: 0.836914
+mean loss: 0.508932
+accuracy: 0.830078
 ----4-----
-mean loss: 0.541418
-accuracy: 0.833333
+mean loss: 0.529186
+accuracy: 0.836914
 ----0-----
 ----1-----
-eval mean loss: 0.594016
-eval accuracy: 0.812500
-eval avg class acc: 0.764944
+eval mean loss: 0.539100
+eval accuracy: 0.822646
+eval avg class acc: 0.786482
 Model saved in file: log/model.ckpt
 **** EPOCH 021 ****
 ----0-----
-mean loss: 0.528840
-accuracy: 0.832520
+mean loss: 0.461905
+accuracy: 0.847426
 ----1-----
-mean loss: 0.488314
-accuracy: 0.844975
+mean loss: 0.502978
+accuracy: 0.838867
 ----2-----
-mean loss: 0.504001
-accuracy: 0.834473
+mean loss: 0.516781
+accuracy: 0.835449
 ----3-----
-mean loss: 0.496688
-accuracy: 0.836426
+mean loss: 0.519395
+accuracy: 0.830566
 ----4-----
-mean loss: 0.516797
-accuracy: 0.833496
+mean loss: 0.491122
+accuracy: 0.849121
 ----0-----
 ----1-----
-eval mean loss: 0.530295
-eval accuracy: 0.836445
-eval avg class acc: 0.781806
+eval mean loss: 0.549760
+eval accuracy: 0.822240
+eval avg class acc: 0.783982
 **** EPOCH 022 ****
 ----0-----
-mean loss: 0.434386
-accuracy: 0.862132
+mean loss: 0.487345
+accuracy: 0.844727
 ----1-----
-mean loss: 0.490382
-accuracy: 0.847168
+mean loss: 0.559136
+accuracy: 0.822754
 ----2-----
-mean loss: 0.482608
-accuracy: 0.848145
+mean loss: 0.492913
+accuracy: 0.848652
 ----3-----
-mean loss: 0.474912
-accuracy: 0.841797
+mean loss: 0.510401
+accuracy: 0.839844
 ----4-----
-mean loss: 0.490443
-accuracy: 0.843262
+mean loss: 0.489328
+accuracy: 0.838379
 ----0-----
 ----1-----
-eval mean loss: 0.508474
-eval accuracy: 0.841721
-eval avg class acc: 0.795147
+eval mean loss: 0.510743
+eval accuracy: 0.836851
+eval avg class acc: 0.775194
 **** EPOCH 023 ****
 ----0-----
-mean loss: 0.447797
-accuracy: 0.851103
+mean loss: 0.460844
+accuracy: 0.851716
 ----1-----
-mean loss: 0.461780
-accuracy: 0.853027
+mean loss: 0.514042
+accuracy: 0.834473
 ----2-----
-mean loss: 0.459546
-accuracy: 0.850586
+mean loss: 0.499706
+accuracy: 0.837891
 ----3-----
-mean loss: 0.476638
-accuracy: 0.845215
+mean loss: 0.485673
+accuracy: 0.849609
 ----4-----
-mean loss: 0.488745
-accuracy: 0.839844
+mean loss: 0.487264
+accuracy: 0.842773
 ----0-----
 ----1-----
-eval mean loss: 0.509656
-eval accuracy: 0.841315
-eval avg class acc: 0.798717
+eval mean loss: 0.503755
+eval accuracy: 0.846185
+eval avg class acc: 0.798472
 **** EPOCH 024 ****
 ----0-----
-mean loss: 0.469473
-accuracy: 0.841797
+mean loss: 0.413969
+accuracy: 0.862132
 ----1-----
-mean loss: 0.456137
-accuracy: 0.850098
+mean loss: 0.484846
+accuracy: 0.841309
 ----2-----
-mean loss: 0.459111
-accuracy: 0.854492
+mean loss: 0.486526
+accuracy: 0.835449
 ----3-----
-mean loss: 0.465858
-accuracy: 0.847656
+mean loss: 0.465297
+accuracy: 0.846191
 ----4-----
-mean loss: 0.442067
-accuracy: 0.856618
+mean loss: 0.453157
+accuracy: 0.845703
 ----0-----
 ----1-----
-eval mean loss: 0.509682
-eval accuracy: 0.841721
-eval avg class acc: 0.802157
+eval mean loss: 0.478077
+eval accuracy: 0.851461
+eval avg class acc: 0.796945
 **** EPOCH 025 ****
 ----0-----
-mean loss: 0.444403
-accuracy: 0.848633
+mean loss: 0.433281
+accuracy: 0.862132
 ----1-----
-mean loss: 0.493852
-accuracy: 0.838379
+mean loss: 0.462541
+accuracy: 0.844727
 ----2-----
-mean loss: 0.468198
-accuracy: 0.847168
+mean loss: 0.450799
+accuracy: 0.856934
 ----3-----
-mean loss: 0.461355
-accuracy: 0.858398
-----4-----
-mean loss: 0.429853
-accuracy: 0.854779
-----0-----
-----1-----
-eval mean loss: 0.505283
-eval accuracy: 0.838474
-eval avg class acc: 0.803793
-**** EPOCH 026 ****
-----0-----
-mean loss: 0.414530
-accuracy: 0.865234
-----1-----
-mean loss: 0.440441
-accuracy: 0.858398
-----2-----
-mean loss: 0.448707
-accuracy: 0.855957
-----3-----
-mean loss: 0.456551
+mean loss: 0.457205
 accuracy: 0.849121
 ----4-----
-mean loss: 0.402001
-accuracy: 0.865196
+mean loss: 0.449129
+accuracy: 0.854004
 ----0-----
 ----1-----
-eval mean loss: 0.508148
-eval accuracy: 0.842127
-eval avg class acc: 0.801535
-**** EPOCH 027 ****
+eval mean loss: 0.544181
+eval accuracy: 0.836851
+eval avg class acc: 0.797432
+**** EPOCH 026 ****
 ----0-----
-mean loss: 0.454012
-accuracy: 0.855469
+mean loss: 0.426497
+accuracy: 0.872559
 ----1-----
-mean loss: 0.416919
-accuracy: 0.859375
+mean loss: 0.437877
+accuracy: 0.848633
 ----2-----
-mean loss: 0.428864
-accuracy: 0.863770
+mean loss: 0.412051
+accuracy: 0.853554
 ----3-----
-mean loss: 0.393191
-accuracy: 0.869485
+mean loss: 0.489099
+accuracy: 0.838379
 ----4-----
-mean loss: 0.450406
-accuracy: 0.855469
-----0-----
-----1-----
-eval mean loss: 0.511603
-eval accuracy: 0.840909
-eval avg class acc: 0.793731
-**** EPOCH 028 ****
-----0-----
-mean loss: 0.388045
-accuracy: 0.871582
-----1-----
-mean loss: 0.406369
-accuracy: 0.865234
-----2-----
-mean loss: 0.405886
-accuracy: 0.864583
-----3-----
-mean loss: 0.462657
-accuracy: 0.857422
-----4-----
-mean loss: 0.441497
+mean loss: 0.458519
 accuracy: 0.847656
 ----0-----
 ----1-----
-eval mean loss: 0.478893
-eval accuracy: 0.854708
-eval avg class acc: 0.817469
+eval mean loss: 0.640292
+eval accuracy: 0.802760
+eval avg class acc: 0.757339
+**** EPOCH 027 ****
+----0-----
+mean loss: 0.516864
+accuracy: 0.832520
+----1-----
+mean loss: 0.442287
+accuracy: 0.867034
+----2-----
+mean loss: 0.459205
+accuracy: 0.847168
+----3-----
+mean loss: 0.469494
+accuracy: 0.850098
+----4-----
+mean loss: 0.455022
+accuracy: 0.853516
+----0-----
+----1-----
+eval mean loss: 0.541019
+eval accuracy: 0.837256
+eval avg class acc: 0.797027
+**** EPOCH 028 ****
+----0-----
+mean loss: 0.426091
+accuracy: 0.859375
+----1-----
+mean loss: 0.437665
+accuracy: 0.862132
+----2-----
+mean loss: 0.438172
+accuracy: 0.857910
+----3-----
+mean loss: 0.436057
+accuracy: 0.860352
+----4-----
+mean loss: 0.463769
+accuracy: 0.855469
+----0-----
+----1-----
+eval mean loss: 0.506047
+eval accuracy: 0.841315
+eval avg class acc: 0.779307
 **** EPOCH 029 ****
 ----0-----
-mean loss: 0.372705
-accuracy: 0.882353
+mean loss: 0.441945
+accuracy: 0.851562
 ----1-----
-mean loss: 0.412407
-accuracy: 0.862305
+mean loss: 0.430492
+accuracy: 0.856934
 ----2-----
-mean loss: 0.443852
-accuracy: 0.854980
+mean loss: 0.455958
+accuracy: 0.840820
 ----3-----
-mean loss: 0.427968
-accuracy: 0.864746
+mean loss: 0.422242
+accuracy: 0.870098
 ----4-----
-mean loss: 0.419102
-accuracy: 0.862305
+mean loss: 0.455138
+accuracy: 0.852051
 ----0-----
 ----1-----
-eval mean loss: 0.504285
-eval accuracy: 0.842938
-eval avg class acc: 0.803034
+eval mean loss: 0.523042
+eval accuracy: 0.843344
+eval avg class acc: 0.803690
 **** EPOCH 030 ****
 ----0-----
-mean loss: 0.385302
-accuracy: 0.872559
+mean loss: 0.436253
+accuracy: 0.867188
 ----1-----
-mean loss: 0.421585
-accuracy: 0.863281
+mean loss: 0.418730
+accuracy: 0.867034
 ----2-----
-mean loss: 0.454440
-accuracy: 0.856934
+mean loss: 0.412644
+accuracy: 0.865723
 ----3-----
-mean loss: 0.441102
-accuracy: 0.852941
+mean loss: 0.440016
+accuracy: 0.851562
 ----4-----
-mean loss: 0.432877
-accuracy: 0.854492
+mean loss: 0.467930
+accuracy: 0.851074
 ----0-----
 ----1-----
-eval mean loss: 0.497461
-eval accuracy: 0.843344
-eval avg class acc: 0.800154
+eval mean loss: 0.510761
+eval accuracy: 0.846591
+eval avg class acc: 0.809300
 Model saved in file: log/model.ckpt
 **** EPOCH 031 ****
 ----0-----
-mean loss: 0.406041
-accuracy: 0.868652
+mean loss: 0.376015
+accuracy: 0.878064
 ----1-----
-mean loss: 0.440650
-accuracy: 0.855957
+mean loss: 0.418326
+accuracy: 0.862305
 ----2-----
-mean loss: 0.431526
-accuracy: 0.859863
+mean loss: 0.437679
+accuracy: 0.857422
 ----3-----
-mean loss: 0.393715
-accuracy: 0.867034
+mean loss: 0.426531
+accuracy: 0.856934
 ----4-----
-mean loss: 0.423018
-accuracy: 0.863281
+mean loss: 0.440864
+accuracy: 0.855957
 ----0-----
 ----1-----
-eval mean loss: 0.502176
-eval accuracy: 0.838474
-eval avg class acc: 0.784523
+eval mean loss: 0.552411
+eval accuracy: 0.827110
+eval avg class acc: 0.783781
 **** EPOCH 032 ****
 ----0-----
-mean loss: 0.446824
-accuracy: 0.848633
+mean loss: 0.431686
+accuracy: 0.854980
 ----1-----
-mean loss: 0.419590
-accuracy: 0.863281
+mean loss: 0.424707
+accuracy: 0.859375
 ----2-----
-mean loss: 0.403805
-accuracy: 0.865723
+mean loss: 0.410926
+accuracy: 0.869629
 ----3-----
-mean loss: 0.402314
-accuracy: 0.863770
+mean loss: 0.408656
+accuracy: 0.867188
 ----4-----
-mean loss: 0.369459
-accuracy: 0.875000
+mean loss: 0.410437
+accuracy: 0.870098
 ----0-----
 ----1-----
-eval mean loss: 0.504521
-eval accuracy: 0.845373
-eval avg class acc: 0.809439
+eval mean loss: 0.506501
+eval accuracy: 0.844562
+eval avg class acc: 0.812657
 **** EPOCH 033 ****
 ----0-----
-mean loss: 0.379844
-accuracy: 0.878418
+mean loss: 0.347188
+accuracy: 0.881740
 ----1-----
-mean loss: 0.413000
-accuracy: 0.867188
+mean loss: 0.440255
+accuracy: 0.850098
 ----2-----
-mean loss: 0.370076
-accuracy: 0.880515
+mean loss: 0.426799
+accuracy: 0.860352
 ----3-----
-mean loss: 0.407558
-accuracy: 0.857910
+mean loss: 0.540760
+accuracy: 0.827148
 ----4-----
-mean loss: 0.445340
-accuracy: 0.856934
+mean loss: 0.455453
+accuracy: 0.851074
 ----0-----
 ----1-----
-eval mean loss: 0.485142
-eval accuracy: 0.849026
-eval avg class acc: 0.805328
+eval mean loss: 0.504391
+eval accuracy: 0.846591
+eval avg class acc: 0.797254
 **** EPOCH 034 ****
 ----0-----
-mean loss: 0.378401
-accuracy: 0.882353
+mean loss: 0.413188
+accuracy: 0.867034
 ----1-----
-mean loss: 0.388887
-accuracy: 0.871094
+mean loss: 0.434216
+accuracy: 0.856445
 ----2-----
-mean loss: 0.394236
-accuracy: 0.870605
+mean loss: 0.429494
+accuracy: 0.857422
 ----3-----
-mean loss: 0.432867
-accuracy: 0.855957
+mean loss: 0.457479
+accuracy: 0.854980
 ----4-----
-mean loss: 0.406431
-accuracy: 0.864258
+mean loss: 0.419597
+accuracy: 0.866699
 ----0-----
 ----1-----
-eval mean loss: 0.467752
-eval accuracy: 0.864448
-eval avg class acc: 0.810554
+eval mean loss: 0.485249
+eval accuracy: 0.852273
+eval avg class acc: 0.805176
 **** EPOCH 035 ****
 ----0-----
-mean loss: 0.399969
-accuracy: 0.871582
+mean loss: 0.401692
+accuracy: 0.866211
 ----1-----
-mean loss: 0.355608
-accuracy: 0.892157
+mean loss: 0.410476
+accuracy: 0.870605
 ----2-----
-mean loss: 0.384693
-accuracy: 0.864258
+mean loss: 0.390035
+accuracy: 0.872549
 ----3-----
-mean loss: 0.380548
-accuracy: 0.873535
+mean loss: 0.432170
+accuracy: 0.861328
 ----4-----
-mean loss: 0.399333
-accuracy: 0.869629
+mean loss: 0.431488
+accuracy: 0.857422
 ----0-----
 ----1-----
-eval mean loss: 0.466558
-eval accuracy: 0.853084
-eval avg class acc: 0.800544
+eval mean loss: 0.494342
+eval accuracy: 0.851461
+eval avg class acc: 0.806632
 **** EPOCH 036 ****
 ----0-----
-mean loss: 0.379818
-accuracy: 0.880515
+mean loss: 0.405287
+accuracy: 0.868164
 ----1-----
-mean loss: 0.391236
-accuracy: 0.873047
+mean loss: 0.404871
+accuracy: 0.860352
 ----2-----
-mean loss: 0.399015
-accuracy: 0.867188
+mean loss: 0.397314
+accuracy: 0.861328
 ----3-----
-mean loss: 0.386258
+mean loss: 0.407313
 accuracy: 0.869629
 ----4-----
-mean loss: 0.387568
-accuracy: 0.864258
+mean loss: 0.384461
+accuracy: 0.879902
 ----0-----
 ----1-----
-eval mean loss: 0.483812
-eval accuracy: 0.862419
-eval avg class acc: 0.822061
+eval mean loss: 0.505707
+eval accuracy: 0.843750
+eval avg class acc: 0.806234
 **** EPOCH 037 ****
 ----0-----
-mean loss: 0.357985
-accuracy: 0.879902
+mean loss: 0.380689
+accuracy: 0.868652
 ----1-----
-mean loss: 0.358369
-accuracy: 0.875000
+mean loss: 0.338452
+accuracy: 0.882966
 ----2-----
-mean loss: 0.357543
-accuracy: 0.884766
+mean loss: 0.401240
+accuracy: 0.863281
 ----3-----
-mean loss: 0.390952
-accuracy: 0.862793
+mean loss: 0.375881
+accuracy: 0.873047
 ----4-----
-mean loss: 0.375222
-accuracy: 0.883301
+mean loss: 0.397357
+accuracy: 0.876953
 ----0-----
 ----1-----
-eval mean loss: 0.472506
-eval accuracy: 0.855925
-eval avg class acc: 0.807005
+eval mean loss: 0.471858
+eval accuracy: 0.862825
+eval avg class acc: 0.820933
 **** EPOCH 038 ****
 ----0-----
-mean loss: 0.344214
-accuracy: 0.878418
+mean loss: 0.389354
+accuracy: 0.873047
 ----1-----
-mean loss: 0.337808
-accuracy: 0.894608
+mean loss: 0.364720
+accuracy: 0.877451
 ----2-----
-mean loss: 0.368709
-accuracy: 0.874512
+mean loss: 0.397630
+accuracy: 0.869629
 ----3-----
-mean loss: 0.392825
-accuracy: 0.868164
+mean loss: 0.401961
+accuracy: 0.876465
 ----4-----
-mean loss: 0.401413
-accuracy: 0.864746
+mean loss: 0.391945
+accuracy: 0.871094
 ----0-----
 ----1-----
-eval mean loss: 0.488102
-eval accuracy: 0.850244
-eval avg class acc: 0.814986
+eval mean loss: 0.466480
+eval accuracy: 0.854708
+eval avg class acc: 0.808057
 **** EPOCH 039 ****
 ----0-----
-mean loss: 0.382228
-accuracy: 0.870117
+mean loss: 0.343965
+accuracy: 0.881348
 ----1-----
-mean loss: 0.362262
-accuracy: 0.884191
+mean loss: 0.484369
+accuracy: 0.863281
 ----2-----
-mean loss: 0.382592
-accuracy: 0.875488
+mean loss: 0.666145
+accuracy: 0.796387
 ----3-----
-mean loss: 0.403341
-accuracy: 0.869629
+mean loss: 0.477968
+accuracy: 0.849877
 ----4-----
-mean loss: 0.374911
-accuracy: 0.869141
+mean loss: 0.503872
+accuracy: 0.838379
 ----0-----
 ----1-----
-eval mean loss: 0.464472
-eval accuracy: 0.865666
-eval avg class acc: 0.819477
+eval mean loss: 0.514724
+eval accuracy: 0.833198
+eval avg class acc: 0.795322
 **** EPOCH 040 ****
 ----0-----
-mean loss: 0.333777
-accuracy: 0.889648
+mean loss: 0.423805
+accuracy: 0.855392
 ----1-----
-mean loss: 0.351761
-accuracy: 0.881740
+mean loss: 0.544830
+accuracy: 0.831055
 ----2-----
-mean loss: 0.366411
-accuracy: 0.882812
+mean loss: 0.513286
+accuracy: 0.839844
 ----3-----
-mean loss: 0.365054
-accuracy: 0.874512
+mean loss: 0.481864
+accuracy: 0.844238
 ----4-----
-mean loss: 0.358920
-accuracy: 0.884277
+mean loss: 0.448905
+accuracy: 0.844238
 ----0-----
 ----1-----
-eval mean loss: 0.440057
-eval accuracy: 0.870942
-eval avg class acc: 0.828653
+eval mean loss: 0.487222
+eval accuracy: 0.845373
+eval avg class acc: 0.812270
 Model saved in file: log/model.ckpt
 **** EPOCH 041 ****
 ----0-----
-mean loss: 0.346909
-accuracy: 0.877441
+mean loss: 0.394004
+accuracy: 0.865723
 ----1-----
-mean loss: 0.331132
-accuracy: 0.888184
+mean loss: 0.395758
+accuracy: 0.862305
 ----2-----
-mean loss: 0.305295
-accuracy: 0.894608
+mean loss: 0.388058
+accuracy: 0.876225
 ----3-----
-mean loss: 0.318457
-accuracy: 0.897461
+mean loss: 0.373442
+accuracy: 0.868652
 ----4-----
-mean loss: 0.341512
-accuracy: 0.886719
+mean loss: 0.392834
+accuracy: 0.868652
 ----0-----
 ----1-----
-eval mean loss: 0.447673
-eval accuracy: 0.861607
-eval avg class acc: 0.820773
+eval mean loss: 0.487415
+eval accuracy: 0.855925
+eval avg class acc: 0.810355
 **** EPOCH 042 ****
 ----0-----
-mean loss: 0.316501
-accuracy: 0.895508
+mean loss: 0.399763
+accuracy: 0.870117
 ----1-----
-mean loss: 0.301301
-accuracy: 0.896973
+mean loss: 0.387925
+accuracy: 0.874023
 ----2-----
-mean loss: 0.313426
-accuracy: 0.891602
+mean loss: 0.347395
+accuracy: 0.887868
 ----3-----
-mean loss: 0.339142
+mean loss: 0.389829
+accuracy: 0.869141
+----4-----
+mean loss: 0.364418
+accuracy: 0.874512
+----0-----
+----1-----
+eval mean loss: 0.470479
+eval accuracy: 0.856331
+eval avg class acc: 0.823683
+**** EPOCH 043 ****
+----0-----
+mean loss: 0.352523
+accuracy: 0.887207
+----1-----
+mean loss: 0.322814
+accuracy: 0.891544
+----2-----
+mean loss: 0.352584
+accuracy: 0.880371
+----3-----
+mean loss: 0.358823
 accuracy: 0.881836
 ----4-----
-mean loss: 0.308706
+mean loss: 0.383625
+accuracy: 0.875000
+----0-----
+----1-----
+eval mean loss: 0.436871
+eval accuracy: 0.870942
+eval avg class acc: 0.837663
+**** EPOCH 044 ****
+----0-----
+mean loss: 0.365289
+accuracy: 0.875977
+----1-----
+mean loss: 0.336342
+accuracy: 0.882812
+----2-----
+mean loss: 0.362339
+accuracy: 0.869629
+----3-----
+mean loss: 0.333567
+accuracy: 0.885417
+----4-----
+mean loss: 0.353818
+accuracy: 0.885742
+----0-----
+----1-----
+eval mean loss: 0.440121
+eval accuracy: 0.866883
+eval avg class acc: 0.835692
+**** EPOCH 045 ****
+----0-----
+mean loss: 0.322357
+accuracy: 0.893555
+----1-----
+mean loss: 0.355997
+accuracy: 0.871582
+----2-----
+mean loss: 0.333876
+accuracy: 0.886230
+----3-----
+mean loss: 0.323743
+accuracy: 0.895221
+----4-----
+mean loss: 0.351119
+accuracy: 0.880371
+----0-----
+----1-----
+eval mean loss: 0.468640
+eval accuracy: 0.861201
+eval avg class acc: 0.830554
+**** EPOCH 046 ****
+----0-----
+mean loss: 0.343571
+accuracy: 0.883301
+----1-----
+mean loss: 0.415294
+accuracy: 0.868164
+----2-----
+mean loss: 0.456720
+accuracy: 0.857910
+----3-----
+mean loss: 0.411210
+accuracy: 0.863281
+----4-----
+mean loss: 0.376478
+accuracy: 0.876225
+----0-----
+----1-----
+eval mean loss: 0.467463
+eval accuracy: 0.853896
+eval avg class acc: 0.818048
+**** EPOCH 047 ****
+----0-----
+mean loss: 0.355023
+accuracy: 0.875977
+----1-----
+mean loss: 0.374050
+accuracy: 0.876953
+----2-----
+mean loss: 0.334428
+accuracy: 0.892157
+----3-----
+mean loss: 0.350122
+accuracy: 0.886719
+----4-----
+mean loss: 0.370548
+accuracy: 0.874023
+----0-----
+----1-----
+eval mean loss: 0.472595
+eval accuracy: 0.861607
+eval avg class acc: 0.815165
+**** EPOCH 048 ****
+----0-----
+mean loss: 0.358881
+accuracy: 0.875000
+----1-----
+mean loss: 0.344339
+accuracy: 0.887207
+----2-----
+mean loss: 0.344754
+accuracy: 0.892578
+----3-----
+mean loss: 0.338914
+accuracy: 0.888184
+----4-----
+mean loss: 0.318624
 accuracy: 0.898284
 ----0-----
 ----1-----
-eval mean loss: 0.458060
-eval accuracy: 0.862419
-eval avg class acc: 0.818828
-**** EPOCH 043 ****
-----0-----
-mean loss: 0.302970
-accuracy: 0.904297
-----1-----
-mean loss: 0.307550
-accuracy: 0.902344
-----2-----
-mean loss: 0.290929
-accuracy: 0.909314
-----3-----
-mean loss: 0.323222
-accuracy: 0.891602
-----4-----
-mean loss: 0.313728
-accuracy: 0.893555
-----0-----
-----1-----
-eval mean loss: 0.443347
-eval accuracy: 0.873377
-eval avg class acc: 0.833401
-**** EPOCH 044 ****
-----0-----
-mean loss: 0.295119
-accuracy: 0.898926
-----1-----
-mean loss: 0.298364
-accuracy: 0.902832
-----2-----
-mean loss: 0.310612
-accuracy: 0.895508
-----3-----
-mean loss: 0.315441
-accuracy: 0.890931
-----4-----
-mean loss: 0.325796
-accuracy: 0.889160
-----0-----
-----1-----
-eval mean loss: 0.558677
-eval accuracy: 0.844156
-eval avg class acc: 0.809055
-**** EPOCH 045 ****
-----0-----
-mean loss: 0.328260
-accuracy: 0.888184
-----1-----
-mean loss: 0.345376
-accuracy: 0.880859
-----2-----
-mean loss: 0.339181
-accuracy: 0.893555
-----3-----
-mean loss: 0.309304
-accuracy: 0.895020
-----4-----
-mean loss: 0.296172
-accuracy: 0.903186
-----0-----
-----1-----
-eval mean loss: 0.477523
-eval accuracy: 0.853490
-eval avg class acc: 0.813634
-**** EPOCH 046 ****
-----0-----
-mean loss: 0.319838
-accuracy: 0.891602
-----1-----
-mean loss: 0.273751
-accuracy: 0.905637
-----2-----
-mean loss: 0.291354
-accuracy: 0.904297
-----3-----
-mean loss: 0.337267
-accuracy: 0.898926
-----4-----
-mean loss: 0.314067
-accuracy: 0.899414
-----0-----
-----1-----
-eval mean loss: 0.482332
-eval accuracy: 0.857549
-eval avg class acc: 0.813894
-**** EPOCH 047 ****
-----0-----
-mean loss: 0.281594
-accuracy: 0.902344
-----1-----
-mean loss: 0.291500
-accuracy: 0.900879
-----2-----
-mean loss: 0.288753
-accuracy: 0.902344
-----3-----
-mean loss: 0.296334
-accuracy: 0.894608
-----4-----
-mean loss: 0.306355
-accuracy: 0.893066
-----0-----
-----1-----
-eval mean loss: 0.441608
-eval accuracy: 0.873782
-eval avg class acc: 0.831991
-**** EPOCH 048 ****
-----0-----
-mean loss: 0.288781
-accuracy: 0.903320
-----1-----
-mean loss: 0.268165
-accuracy: 0.905273
-----2-----
-mean loss: 0.265149
-accuracy: 0.911765
-----3-----
-mean loss: 0.310504
-accuracy: 0.894531
-----4-----
-mean loss: 0.317518
-accuracy: 0.895996
-----0-----
-----1-----
-eval mean loss: 0.453678
-eval accuracy: 0.867289
-eval avg class acc: 0.825907
+eval mean loss: 0.471693
+eval accuracy: 0.858360
+eval avg class acc: 0.821866
 **** EPOCH 049 ****
 ----0-----
-mean loss: 0.297292
-accuracy: 0.899902
+mean loss: 0.346526
+accuracy: 0.879883
 ----1-----
-mean loss: 0.289201
-accuracy: 0.893066
+mean loss: 0.317673
+accuracy: 0.896484
 ----2-----
-mean loss: 0.307691
-accuracy: 0.891602
+mean loss: 0.313813
+accuracy: 0.892770
 ----3-----
-mean loss: 0.304227
-accuracy: 0.898897
+mean loss: 0.347247
+accuracy: 0.893066
 ----4-----
-mean loss: 0.270007
-accuracy: 0.909180
+mean loss: 0.352349
+accuracy: 0.885742
 ----0-----
 ----1-----
-eval mean loss: 0.455679
-eval accuracy: 0.868101
-eval avg class acc: 0.825992
+eval mean loss: 0.453202
+eval accuracy: 0.860795
+eval avg class acc: 0.819645
 **** EPOCH 050 ****
 ----0-----
-mean loss: 0.279563
-accuracy: 0.910645
+mean loss: 0.323061
+accuracy: 0.889160
 ----1-----
-mean loss: 0.281593
-accuracy: 0.906250
+mean loss: 0.306124
+accuracy: 0.895221
 ----2-----
-mean loss: 0.296052
-accuracy: 0.902832
+mean loss: 0.316993
+accuracy: 0.895020
 ----3-----
-mean loss: 0.290885
-accuracy: 0.896446
+mean loss: 0.325605
+accuracy: 0.890625
 ----4-----
-mean loss: 0.296426
-accuracy: 0.901855
+mean loss: 0.345832
+accuracy: 0.880859
 ----0-----
 ----1-----
-eval mean loss: 0.450398
-eval accuracy: 0.858766
-eval avg class acc: 0.818152
+eval mean loss: 0.477110
+eval accuracy: 0.855925
+eval avg class acc: 0.826369
 Model saved in file: log/model.ckpt
 **** EPOCH 051 ****
 ----0-----
-mean loss: 0.284636
+mean loss: 0.313133
 accuracy: 0.896973
 ----1-----
-mean loss: 0.264799
-accuracy: 0.910645
+mean loss: 0.296807
+accuracy: 0.909314
 ----2-----
-mean loss: 0.280865
-accuracy: 0.903809
+mean loss: 0.313156
+accuracy: 0.897949
 ----3-----
-mean loss: 0.272224
-accuracy: 0.908701
+mean loss: 0.332455
+accuracy: 0.895996
 ----4-----
-mean loss: 0.289636
-accuracy: 0.902344
+mean loss: 0.336577
+accuracy: 0.887695
 ----0-----
 ----1-----
-eval mean loss: 0.459975
-eval accuracy: 0.867289
-eval avg class acc: 0.831585
+eval mean loss: 0.478108
+eval accuracy: 0.861201
+eval avg class acc: 0.817829
 **** EPOCH 052 ****
 ----0-----
-mean loss: 0.261880
-accuracy: 0.908088
+mean loss: 0.325910
+accuracy: 0.889648
 ----1-----
-mean loss: 0.262352
-accuracy: 0.913574
+mean loss: 0.326270
+accuracy: 0.894531
 ----2-----
-mean loss: 0.278006
-accuracy: 0.907227
+mean loss: 0.310051
+accuracy: 0.895996
 ----3-----
-mean loss: 0.312577
-accuracy: 0.891113
+mean loss: 0.342140
+accuracy: 0.890137
 ----4-----
-mean loss: 0.303693
-accuracy: 0.885254
+mean loss: 0.301426
+accuracy: 0.894608
 ----0-----
 ----1-----
-eval mean loss: 0.468086
-eval accuracy: 0.872159
-eval avg class acc: 0.837345
+eval mean loss: 0.468609
+eval accuracy: 0.862013
+eval avg class acc: 0.831926
 **** EPOCH 053 ****
 ----0-----
-mean loss: 0.245980
-accuracy: 0.916992
-----1-----
-mean loss: 0.261155
-accuracy: 0.909180
-----2-----
-mean loss: 0.266800
-accuracy: 0.910156
-----3-----
-mean loss: 0.246712
-accuracy: 0.918505
-----4-----
-mean loss: 0.320887
-accuracy: 0.892578
-----0-----
-----1-----
-eval mean loss: 0.506319
-eval accuracy: 0.855519
-eval avg class acc: 0.815567
-**** EPOCH 054 ****
-----0-----
-mean loss: 0.268765
-accuracy: 0.913086
-----1-----
-mean loss: 0.305519
-accuracy: 0.902832
-----2-----
-mean loss: 0.273055
-accuracy: 0.906738
-----3-----
-mean loss: 0.271879
-accuracy: 0.912109
-----4-----
-mean loss: 0.259813
-accuracy: 0.909314
-----0-----
-----1-----
-eval mean loss: 0.466050
-eval accuracy: 0.867695
-eval avg class acc: 0.834443
-**** EPOCH 055 ****
-----0-----
-mean loss: 0.293253
-accuracy: 0.896973
-----1-----
-mean loss: 0.296911
-accuracy: 0.893555
-----2-----
-mean loss: 0.278194
-accuracy: 0.901961
-----3-----
-mean loss: 0.297253
-accuracy: 0.893066
-----4-----
-mean loss: 0.289289
-accuracy: 0.905762
-----0-----
-----1-----
-eval mean loss: 0.461543
-eval accuracy: 0.866071
-eval avg class acc: 0.833191
-**** EPOCH 056 ****
-----0-----
-mean loss: 0.292068
+mean loss: 0.297668
 accuracy: 0.903320
 ----1-----
-mean loss: 0.278260
-accuracy: 0.905762
+mean loss: 0.315261
+accuracy: 0.898926
 ----2-----
-mean loss: 0.256338
-accuracy: 0.913086
+mean loss: 0.312219
+accuracy: 0.893066
 ----3-----
-mean loss: 0.294552
-accuracy: 0.901855
+mean loss: 0.315109
+accuracy: 0.897461
 ----4-----
-mean loss: 0.277795
-accuracy: 0.909926
+mean loss: 0.308047
+accuracy: 0.892157
 ----0-----
 ----1-----
-eval mean loss: 0.458528
-eval accuracy: 0.869724
-eval avg class acc: 0.833262
-**** EPOCH 057 ****
+eval mean loss: 0.454646
+eval accuracy: 0.861201
+eval avg class acc: 0.817259
+**** EPOCH 054 ****
 ----0-----
-mean loss: 0.274817
-accuracy: 0.909668
+mean loss: 0.315373
+accuracy: 0.891113
 ----1-----
-mean loss: 0.264184
-accuracy: 0.911621
+mean loss: 0.304162
+accuracy: 0.898926
 ----2-----
-mean loss: 0.262698
-accuracy: 0.908088
-----3-----
-mean loss: 0.283293
-accuracy: 0.907715
-----4-----
-mean loss: 0.318527
-accuracy: 0.887207
-----0-----
-----1-----
-eval mean loss: 0.449437
-eval accuracy: 0.872159
-eval avg class acc: 0.836839
-**** EPOCH 058 ****
-----0-----
-mean loss: 0.277793
-accuracy: 0.900879
-----1-----
-mean loss: 0.246073
-accuracy: 0.912109
-----2-----
-mean loss: 0.293764
-accuracy: 0.899902
-----3-----
-mean loss: 0.280867
-accuracy: 0.906250
-----4-----
-mean loss: 0.257208
-accuracy: 0.913603
-----0-----
-----1-----
-eval mean loss: 0.447559
-eval accuracy: 0.868912
-eval avg class acc: 0.829259
-**** EPOCH 059 ****
-----0-----
-mean loss: 0.265927
-accuracy: 0.907227
-----1-----
-mean loss: 0.289139
-accuracy: 0.901367
-----2-----
-mean loss: 0.287422
+mean loss: 0.280316
 accuracy: 0.905637
 ----3-----
-mean loss: 0.274729
-accuracy: 0.911621
+mean loss: 0.316988
+accuracy: 0.895996
 ----4-----
-mean loss: 0.285784
-accuracy: 0.895020
+mean loss: 0.316858
+accuracy: 0.893066
 ----0-----
 ----1-----
-eval mean loss: 0.457848
-eval accuracy: 0.869724
-eval avg class acc: 0.834622
-**** EPOCH 060 ****
+eval mean loss: 0.466360
+eval accuracy: 0.863231
+eval avg class acc: 0.832340
+**** EPOCH 055 ****
 ----0-----
-mean loss: 0.252718
-accuracy: 0.910156
+mean loss: 0.296777
+accuracy: 0.900879
 ----1-----
-mean loss: 0.247596
-accuracy: 0.913574
+mean loss: 0.313744
+accuracy: 0.892578
 ----2-----
-mean loss: 0.279178
-accuracy: 0.905762
+mean loss: 0.304778
+accuracy: 0.898926
 ----3-----
-mean loss: 0.247935
-accuracy: 0.919434
+mean loss: 0.298167
+accuracy: 0.902832
 ----4-----
-mean loss: 0.274312
-accuracy: 0.910539
+mean loss: 0.292189
+accuracy: 0.900123
 ----0-----
 ----1-----
-eval mean loss: 0.466730
-eval accuracy: 0.866477
-eval avg class acc: 0.826863
-Model saved in file: log/model.ckpt
-**** EPOCH 061 ****
+eval mean loss: 0.439966
+eval accuracy: 0.868506
+eval avg class acc: 0.840755
+**** EPOCH 056 ****
 ----0-----
-mean loss: 0.253777
-accuracy: 0.910156
+mean loss: 0.292459
+accuracy: 0.902344
 ----1-----
-mean loss: 0.254134
-accuracy: 0.909668
+mean loss: 0.309753
+accuracy: 0.895508
 ----2-----
-mean loss: 0.243881
-accuracy: 0.915039
+mean loss: 0.269536
+accuracy: 0.909926
 ----3-----
-mean loss: 0.221923
-accuracy: 0.923407
-----4-----
-mean loss: 0.243177
-accuracy: 0.911133
-----0-----
-----1-----
-eval mean loss: 0.434244
-eval accuracy: 0.874188
-eval avg class acc: 0.835151
-**** EPOCH 062 ****
-----0-----
-mean loss: 0.224864
-accuracy: 0.917480
-----1-----
-mean loss: 0.235343
-accuracy: 0.920898
-----2-----
-mean loss: 0.228715
-accuracy: 0.919434
-----3-----
-mean loss: 0.245699
-accuracy: 0.912598
-----4-----
-mean loss: 0.231927
-accuracy: 0.930147
-----0-----
-----1-----
-eval mean loss: 0.454164
-eval accuracy: 0.870942
-eval avg class acc: 0.831228
-**** EPOCH 063 ****
-----0-----
-mean loss: 0.226198
-accuracy: 0.917480
-----1-----
-mean loss: 0.238622
-accuracy: 0.917892
-----2-----
-mean loss: 0.231845
-accuracy: 0.914551
-----3-----
-mean loss: 0.236537
-accuracy: 0.917480
-----4-----
-mean loss: 0.259973
-accuracy: 0.911133
-----0-----
-----1-----
-eval mean loss: 0.464040
-eval accuracy: 0.870130
-eval avg class acc: 0.831913
-**** EPOCH 064 ****
-----0-----
-mean loss: 0.211562
-accuracy: 0.929199
-----1-----
-mean loss: 0.250946
-accuracy: 0.913086
-----2-----
-mean loss: 0.223197
-accuracy: 0.925293
-----3-----
-mean loss: 0.228814
-accuracy: 0.923407
-----4-----
-mean loss: 0.232139
-accuracy: 0.919434
-----0-----
-----1-----
-eval mean loss: 0.439727
-eval accuracy: 0.872159
-eval avg class acc: 0.830354
-**** EPOCH 065 ****
-----0-----
-mean loss: 0.201601
-accuracy: 0.925245
-----1-----
-mean loss: 0.234229
-accuracy: 0.919434
-----2-----
-mean loss: 0.239879
-accuracy: 0.923828
-----3-----
-mean loss: 0.238684
-accuracy: 0.921875
-----4-----
-mean loss: 0.232119
-accuracy: 0.920410
-----0-----
-----1-----
-eval mean loss: 0.428348
-eval accuracy: 0.874594
-eval avg class acc: 0.824370
-**** EPOCH 066 ****
-----0-----
-mean loss: 0.220309
-accuracy: 0.923340
-----1-----
-mean loss: 0.233844
-accuracy: 0.916504
-----2-----
-mean loss: 0.251952
-accuracy: 0.903809
-----3-----
-mean loss: 0.231478
-accuracy: 0.917480
-----4-----
-mean loss: 0.218502
-accuracy: 0.918505
-----0-----
-----1-----
-eval mean loss: 0.468688
-eval accuracy: 0.867695
-eval avg class acc: 0.827097
-**** EPOCH 067 ****
-----0-----
-mean loss: 0.219671
-accuracy: 0.919434
-----1-----
-mean loss: 0.224027
-accuracy: 0.922852
-----2-----
-mean loss: 0.232269
-accuracy: 0.912109
-----3-----
-mean loss: 0.217683
-accuracy: 0.925293
-----4-----
-mean loss: 0.236869
-accuracy: 0.918505
-----0-----
-----1-----
-eval mean loss: 0.465714
-eval accuracy: 0.872565
-eval avg class acc: 0.842489
-**** EPOCH 068 ****
-----0-----
-mean loss: 0.220274
-accuracy: 0.922363
-----1-----
-mean loss: 0.220489
-accuracy: 0.922363
-----2-----
-mean loss: 0.227751
-accuracy: 0.925293
-----3-----
-mean loss: 0.270182
-accuracy: 0.910156
-----4-----
-mean loss: 0.278663
-accuracy: 0.905025
-----0-----
-----1-----
-eval mean loss: 0.488134
-eval accuracy: 0.860795
-eval avg class acc: 0.829702
-**** EPOCH 069 ****
-----0-----
-mean loss: 0.282453
+mean loss: 0.304091
 accuracy: 0.901855
-----1-----
-mean loss: 0.249352
-accuracy: 0.916992
-----2-----
-mean loss: 0.262042
-accuracy: 0.911133
-----3-----
-mean loss: 0.253334
-accuracy: 0.917969
 ----4-----
-mean loss: 0.212737
-accuracy: 0.923407
+mean loss: 0.300100
+accuracy: 0.890625
 ----0-----
 ----1-----
-eval mean loss: 0.467163
-eval accuracy: 0.871753
-eval avg class acc: 0.835386
-**** EPOCH 070 ****
+eval mean loss: 0.455065
+eval accuracy: 0.868506
+eval avg class acc: 0.833218
+**** EPOCH 057 ****
 ----0-----
-mean loss: 0.200772
-accuracy: 0.930147
+mean loss: 0.259266
+accuracy: 0.906250
 ----1-----
-mean loss: 0.236152
-accuracy: 0.918457
+mean loss: 0.307724
+accuracy: 0.902832
 ----2-----
-mean loss: 0.244106
-accuracy: 0.913574
+mean loss: 0.299930
+accuracy: 0.893066
 ----3-----
-mean loss: 0.245271
-accuracy: 0.912598
+mean loss: 0.302041
+accuracy: 0.891602
 ----4-----
-mean loss: 0.228148
-accuracy: 0.927246
+mean loss: 0.305421
+accuracy: 0.897949
 ----0-----
 ----1-----
-eval mean loss: 0.445021
-eval accuracy: 0.877435
-eval avg class acc: 0.838938
-Model saved in file: log/model.ckpt
-**** EPOCH 071 ****
-----0-----
-mean loss: 0.206492
-accuracy: 0.926270
-----1-----
-mean loss: 0.226383
-accuracy: 0.916992
-----2-----
-mean loss: 0.229760
-accuracy: 0.923340
-----3-----
-mean loss: 0.233544
-accuracy: 0.918945
-----4-----
-mean loss: 0.215437
-accuracy: 0.926471
-----0-----
-----1-----
-eval mean loss: 0.461573
-eval accuracy: 0.873377
-eval avg class acc: 0.840195
-**** EPOCH 072 ****
-----0-----
-mean loss: 0.216004
-accuracy: 0.925293
-----1-----
-mean loss: 0.236661
-accuracy: 0.916992
-----2-----
-mean loss: 0.219109
-accuracy: 0.921875
-----3-----
-mean loss: 0.217898
-accuracy: 0.928223
-----4-----
-mean loss: 0.215256
-accuracy: 0.922181
-----0-----
-----1-----
-eval mean loss: 0.436186
-eval accuracy: 0.880682
-eval avg class acc: 0.842966
-**** EPOCH 073 ****
-----0-----
-mean loss: 0.196707
-accuracy: 0.935059
-----1-----
-mean loss: 0.202171
-accuracy: 0.935547
-----2-----
-mean loss: 0.200813
-accuracy: 0.928309
-----3-----
-mean loss: 0.221764
-accuracy: 0.921875
-----4-----
-mean loss: 0.232913
-accuracy: 0.915039
-----0-----
-----1-----
-eval mean loss: 0.452472
-eval accuracy: 0.875406
-eval avg class acc: 0.836776
-**** EPOCH 074 ****
-----0-----
-mean loss: 0.227952
-accuracy: 0.914551
-----1-----
-mean loss: 0.215205
-accuracy: 0.927734
-----2-----
-mean loss: 0.200161
-accuracy: 0.930664
-----3-----
-mean loss: 0.203981
-accuracy: 0.931641
-----4-----
-mean loss: 0.194588
-accuracy: 0.929534
-----0-----
-----1-----
-eval mean loss: 0.446604
-eval accuracy: 0.876623
-eval avg class acc: 0.844453
-**** EPOCH 075 ****
-----0-----
-mean loss: 0.223464
-accuracy: 0.924805
-----1-----
-mean loss: 0.214618
-accuracy: 0.926270
-----2-----
-mean loss: 0.228411
-accuracy: 0.924805
-----3-----
-mean loss: 0.212024
-accuracy: 0.930760
-----4-----
-mean loss: 0.212868
-accuracy: 0.921387
-----0-----
-----1-----
-eval mean loss: 0.451153
-eval accuracy: 0.874188
-eval avg class acc: 0.837629
-**** EPOCH 076 ****
-----0-----
-mean loss: 0.195347
-accuracy: 0.926758
-----1-----
-mean loss: 0.211635
-accuracy: 0.924805
-----2-----
-mean loss: 0.203721
-accuracy: 0.926471
-----3-----
-mean loss: 0.201712
-accuracy: 0.928223
-----4-----
-mean loss: 0.220309
-accuracy: 0.924805
-----0-----
-----1-----
-eval mean loss: 0.446424
-eval accuracy: 0.876623
-eval avg class acc: 0.838333
-**** EPOCH 077 ****
-----0-----
-mean loss: 0.207385
-accuracy: 0.926758
-----1-----
-mean loss: 0.195730
-accuracy: 0.927083
-----2-----
-mean loss: 0.220725
-accuracy: 0.919922
-----3-----
-mean loss: 0.190226
-accuracy: 0.934570
-----4-----
-mean loss: 0.222228
-accuracy: 0.921875
-----0-----
-----1-----
-eval mean loss: 0.438127
-eval accuracy: 0.872159
-eval avg class acc: 0.839242
-**** EPOCH 078 ****
-----0-----
-mean loss: 0.213889
-accuracy: 0.919434
-----1-----
-mean loss: 0.210519
-accuracy: 0.928711
-----2-----
-mean loss: 0.214923
-accuracy: 0.921387
-----3-----
-mean loss: 0.208131
-accuracy: 0.925858
-----4-----
-mean loss: 0.206926
-accuracy: 0.922852
-----0-----
-----1-----
-eval mean loss: 0.451552
-eval accuracy: 0.877841
-eval avg class acc: 0.840516
-**** EPOCH 079 ****
-----0-----
-mean loss: 0.208448
-accuracy: 0.929199
-----1-----
-mean loss: 0.181677
-accuracy: 0.937500
-----2-----
-mean loss: 0.202867
-accuracy: 0.930176
-----3-----
-mean loss: 0.214553
-accuracy: 0.924805
-----4-----
-mean loss: 0.205035
-accuracy: 0.933105
-----0-----
-----1-----
-eval mean loss: 0.443022
-eval accuracy: 0.875812
-eval avg class acc: 0.840396
-**** EPOCH 080 ****
-----0-----
-mean loss: 0.179738
-accuracy: 0.933824
-----1-----
-mean loss: 0.184144
-accuracy: 0.929688
-----2-----
-mean loss: 0.195293
-accuracy: 0.926758
-----3-----
-mean loss: 0.216654
-accuracy: 0.927734
-----4-----
-mean loss: 0.209411
-accuracy: 0.926758
-----0-----
-----1-----
-eval mean loss: 0.452773
-eval accuracy: 0.876623
-eval avg class acc: 0.842312
-Model saved in file: log/model.ckpt
-**** EPOCH 081 ****
-----0-----
-mean loss: 0.182465
-accuracy: 0.934082
-----1-----
-mean loss: 0.222618
-accuracy: 0.921387
-----2-----
-mean loss: 0.186520
-accuracy: 0.938113
-----3-----
-mean loss: 0.204329
-accuracy: 0.929688
-----4-----
-mean loss: 0.213502
-accuracy: 0.923340
-----0-----
-----1-----
-eval mean loss: 0.462960
-eval accuracy: 0.876218
-eval avg class acc: 0.847490
-**** EPOCH 082 ****
-----0-----
-mean loss: 0.179547
-accuracy: 0.937500
-----1-----
-mean loss: 0.187532
-accuracy: 0.932129
-----2-----
-mean loss: 0.183862
-accuracy: 0.935547
-----3-----
-mean loss: 0.169727
-accuracy: 0.944336
-----4-----
-mean loss: 0.183545
-accuracy: 0.937500
-----0-----
-----1-----
-eval mean loss: 0.462441
-eval accuracy: 0.875000
-eval avg class acc: 0.840351
-**** EPOCH 083 ****
-----0-----
-mean loss: 0.178513
-accuracy: 0.933105
-----1-----
-mean loss: 0.177937
-accuracy: 0.939941
-----2-----
-mean loss: 0.188527
-accuracy: 0.925781
-----3-----
-mean loss: 0.178110
-accuracy: 0.933105
-----4-----
-mean loss: 0.173264
-accuracy: 0.936887
-----0-----
-----1-----
-eval mean loss: 0.459231
-eval accuracy: 0.871753
-eval avg class acc: 0.845879
-**** EPOCH 084 ****
-----0-----
-mean loss: 0.179599
-accuracy: 0.935547
-----1-----
-mean loss: 0.165897
-accuracy: 0.941176
-----2-----
-mean loss: 0.183989
-accuracy: 0.937012
-----3-----
-mean loss: 0.170678
-accuracy: 0.941406
-----4-----
-mean loss: 0.178478
-accuracy: 0.928711
-----0-----
-----1-----
-eval mean loss: 0.466966
-eval accuracy: 0.876623
-eval avg class acc: 0.844490
-**** EPOCH 085 ****
-----0-----
-mean loss: 0.172849
-accuracy: 0.937988
-----1-----
-mean loss: 0.161249
-accuracy: 0.944336
-----2-----
-mean loss: 0.179074
-accuracy: 0.938477
-----3-----
-mean loss: 0.179725
-accuracy: 0.936523
-----4-----
-mean loss: 0.176097
-accuracy: 0.928309
-----0-----
-----1-----
-eval mean loss: 0.487906
-eval accuracy: 0.865666
-eval avg class acc: 0.840607
-**** EPOCH 086 ****
-----0-----
-mean loss: 0.172416
-accuracy: 0.939453
-----1-----
-mean loss: 0.180797
-accuracy: 0.935547
-----2-----
-mean loss: 0.171131
-accuracy: 0.938725
-----3-----
-mean loss: 0.188910
-accuracy: 0.933594
-----4-----
-mean loss: 0.176252
-accuracy: 0.936035
-----0-----
-----1-----
-eval mean loss: 0.467848
-eval accuracy: 0.870942
-eval avg class acc: 0.839355
-**** EPOCH 087 ****
-----0-----
-mean loss: 0.192757
-accuracy: 0.936523
-----1-----
-mean loss: 0.182266
-accuracy: 0.935547
-----2-----
-mean loss: 0.179298
-accuracy: 0.936035
-----3-----
-mean loss: 0.169071
-accuracy: 0.942402
-----4-----
-mean loss: 0.174607
-accuracy: 0.940918
-----0-----
-----1-----
-eval mean loss: 0.446077
-eval accuracy: 0.880682
-eval avg class acc: 0.850872
-**** EPOCH 088 ****
-----0-----
-mean loss: 0.170223
-accuracy: 0.940430
-----1-----
-mean loss: 0.181774
-accuracy: 0.937012
-----2-----
-mean loss: 0.183720
-accuracy: 0.930147
-----3-----
-mean loss: 0.195286
-accuracy: 0.937012
-----4-----
-mean loss: 0.178627
-accuracy: 0.931641
-----0-----
-----1-----
-eval mean loss: 0.473156
-eval accuracy: 0.875812
-eval avg class acc: 0.850563
-**** EPOCH 089 ****
-----0-----
-mean loss: 0.148553
-accuracy: 0.947754
-----1-----
-mean loss: 0.162807
-accuracy: 0.942871
-----2-----
-mean loss: 0.160344
-accuracy: 0.948730
-----3-----
-mean loss: 0.174135
-accuracy: 0.936035
-----4-----
-mean loss: 0.166839
-accuracy: 0.941176
-----0-----
-----1-----
-eval mean loss: 0.448730
-eval accuracy: 0.885146
-eval avg class acc: 0.854350
-**** EPOCH 090 ****
-----0-----
-mean loss: 0.166607
-accuracy: 0.942871
-----1-----
-mean loss: 0.159450
-accuracy: 0.942383
-----2-----
-mean loss: 0.180319
-accuracy: 0.937988
-----3-----
-mean loss: 0.163189
-accuracy: 0.936275
-----4-----
-mean loss: 0.178886
-accuracy: 0.933105
-----0-----
-----1-----
-eval mean loss: 0.470167
-eval accuracy: 0.872565
-eval avg class acc: 0.840423
-Model saved in file: log/model.ckpt
-**** EPOCH 091 ****
-----0-----
-mean loss: 0.163790
-accuracy: 0.945312
-----1-----
-mean loss: 0.165057
-accuracy: 0.946691
-----2-----
-mean loss: 0.178998
-accuracy: 0.934082
-----3-----
-mean loss: 0.178392
-accuracy: 0.931641
-----4-----
-mean loss: 0.191177
-accuracy: 0.933594
-----0-----
-----1-----
-eval mean loss: 0.472250
-eval accuracy: 0.874594
-eval avg class acc: 0.846966
-**** EPOCH 092 ****
-----0-----
-mean loss: 0.163433
-accuracy: 0.936035
-----1-----
-mean loss: 0.178991
-accuracy: 0.938477
-----2-----
-mean loss: 0.184610
-accuracy: 0.929688
-----3-----
-mean loss: 0.173537
-accuracy: 0.940430
-----4-----
-mean loss: 0.181463
-accuracy: 0.935049
-----0-----
-----1-----
-eval mean loss: 0.496519
-eval accuracy: 0.867289
-eval avg class acc: 0.836711
-**** EPOCH 093 ****
-----0-----
-mean loss: 0.166721
-accuracy: 0.938965
-----1-----
-mean loss: 0.151708
-accuracy: 0.948242
-----2-----
-mean loss: 0.170120
-accuracy: 0.938477
-----3-----
-mean loss: 0.168566
-accuracy: 0.949142
-----4-----
-mean loss: 0.184785
-accuracy: 0.939941
-----0-----
-----1-----
-eval mean loss: 0.495291
+eval mean loss: 0.457063
 eval accuracy: 0.864448
-eval avg class acc: 0.844679
-**** EPOCH 094 ****
+eval avg class acc: 0.826150
+**** EPOCH 058 ****
 ----0-----
-mean loss: 0.166073
-accuracy: 0.939338
+mean loss: 0.284485
+accuracy: 0.897461
 ----1-----
-mean loss: 0.165433
-accuracy: 0.941406
-----2-----
-mean loss: 0.160240
-accuracy: 0.940430
-----3-----
-mean loss: 0.164889
-accuracy: 0.934082
-----4-----
-mean loss: 0.167107
-accuracy: 0.940918
-----0-----
-----1-----
-eval mean loss: 0.460236
-eval accuracy: 0.883929
-eval avg class acc: 0.850904
-**** EPOCH 095 ****
-----0-----
-mean loss: 0.158524
-accuracy: 0.938965
-----1-----
-mean loss: 0.167728
-accuracy: 0.937500
-----2-----
-mean loss: 0.158615
-accuracy: 0.936035
-----3-----
-mean loss: 0.170903
-accuracy: 0.940918
-----4-----
-mean loss: 0.169518
-accuracy: 0.940430
-----0-----
-----1-----
-eval mean loss: 0.455807
-eval accuracy: 0.877435
-eval avg class acc: 0.843406
-**** EPOCH 096 ****
-----0-----
-mean loss: 0.146714
-accuracy: 0.946777
-----1-----
-mean loss: 0.154815
-accuracy: 0.946777
-----2-----
-mean loss: 0.147364
-accuracy: 0.953431
-----3-----
-mean loss: 0.175227
-accuracy: 0.937988
-----4-----
-mean loss: 0.173114
-accuracy: 0.939453
-----0-----
-----1-----
-eval mean loss: 0.486137
-eval accuracy: 0.882711
-eval avg class acc: 0.854936
-**** EPOCH 097 ****
-----0-----
-mean loss: 0.159154
-accuracy: 0.942871
-----1-----
-mean loss: 0.167098
-accuracy: 0.944240
-----2-----
-mean loss: 0.155781
-accuracy: 0.944336
-----3-----
-mean loss: 0.169343
-accuracy: 0.942871
-----4-----
-mean loss: 0.168820
-accuracy: 0.937988
-----0-----
-----1-----
-eval mean loss: 0.439689
-eval accuracy: 0.887175
-eval avg class acc: 0.855107
-**** EPOCH 098 ****
-----0-----
-mean loss: 0.160667
-accuracy: 0.944824
-----1-----
-mean loss: 0.149799
-accuracy: 0.946777
-----2-----
-mean loss: 0.186881
-accuracy: 0.933594
-----3-----
-mean loss: 0.172280
-accuracy: 0.936035
-----4-----
-mean loss: 0.142010
-accuracy: 0.949755
-----0-----
-----1-----
-eval mean loss: 0.473033
-eval accuracy: 0.877841
-eval avg class acc: 0.849878
-**** EPOCH 099 ****
-----0-----
-mean loss: 0.150390
-accuracy: 0.945312
-----1-----
-mean loss: 0.181050
-accuracy: 0.938477
-----2-----
-mean loss: 0.154457
-accuracy: 0.941406
-----3-----
-mean loss: 0.160004
-accuracy: 0.943627
-----4-----
-mean loss: 0.166973
-accuracy: 0.939453
-----0-----
-----1-----
-eval mean loss: 0.462779
-eval accuracy: 0.881088
-eval avg class acc: 0.847882
-**** EPOCH 100 ****
-----0-----
-mean loss: 0.140767
-accuracy: 0.949142
-----1-----
-mean loss: 0.160218
-accuracy: 0.940918
-----2-----
-mean loss: 0.153535
-accuracy: 0.947754
-----3-----
-mean loss: 0.175353
-accuracy: 0.935547
-----4-----
-mean loss: 0.165386
-accuracy: 0.941895
-----0-----
-----1-----
-eval mean loss: 0.474445
-eval accuracy: 0.877841
-eval avg class acc: 0.849383
-Model saved in file: log/model.ckpt
-**** EPOCH 101 ****
-----0-----
-mean loss: 0.159942
-accuracy: 0.950368
-----1-----
-mean loss: 0.162771
-accuracy: 0.940918
-----2-----
-mean loss: 0.160743
-accuracy: 0.947754
-----3-----
-mean loss: 0.162627
-accuracy: 0.940918
-----4-----
-mean loss: 0.164528
-accuracy: 0.939941
-----0-----
-----1-----
-eval mean loss: 0.476223
-eval accuracy: 0.883929
-eval avg class acc: 0.855578
-**** EPOCH 102 ****
-----0-----
-mean loss: 0.142574
-accuracy: 0.950980
-----1-----
-mean loss: 0.145605
-accuracy: 0.946777
-----2-----
-mean loss: 0.154627
-accuracy: 0.944336
-----3-----
-mean loss: 0.150780
-accuracy: 0.944824
-----4-----
-mean loss: 0.147158
-accuracy: 0.944824
-----0-----
-----1-----
-eval mean loss: 0.470952
-eval accuracy: 0.881088
-eval avg class acc: 0.850062
-**** EPOCH 103 ****
-----0-----
-mean loss: 0.168581
-accuracy: 0.941406
-----1-----
-mean loss: 0.154860
-accuracy: 0.943015
-----2-----
-mean loss: 0.139543
-accuracy: 0.950684
-----3-----
-mean loss: 0.157257
-accuracy: 0.940918
-----4-----
-mean loss: 0.144682
-accuracy: 0.945801
-----0-----
-----1-----
-eval mean loss: 0.449981
-eval accuracy: 0.882711
-eval avg class acc: 0.850350
-**** EPOCH 104 ****
-----0-----
-mean loss: 0.139867
-accuracy: 0.950684
-----1-----
-mean loss: 0.142913
-accuracy: 0.952148
-----2-----
-mean loss: 0.135334
-accuracy: 0.955566
-----3-----
-mean loss: 0.159860
-accuracy: 0.947917
-----4-----
-mean loss: 0.155316
-accuracy: 0.948242
-----0-----
-----1-----
-eval mean loss: 0.469097
-eval accuracy: 0.878247
-eval avg class acc: 0.845300
-**** EPOCH 105 ****
-----0-----
-mean loss: 0.127483
-accuracy: 0.955566
-----1-----
-mean loss: 0.130187
-accuracy: 0.955566
-----2-----
-mean loss: 0.136420
-accuracy: 0.954590
-----3-----
-mean loss: 0.169747
-accuracy: 0.944240
-----4-----
-mean loss: 0.157331
-accuracy: 0.944336
-----0-----
-----1-----
-eval mean loss: 0.486406
-eval accuracy: 0.881088
-eval avg class acc: 0.850342
-**** EPOCH 106 ****
-----0-----
-mean loss: 0.147982
-accuracy: 0.946289
-----1-----
-mean loss: 0.140381
-accuracy: 0.951172
-----2-----
-mean loss: 0.160941
-accuracy: 0.948242
-----3-----
-mean loss: 0.133576
-accuracy: 0.955882
-----4-----
-mean loss: 0.144799
-accuracy: 0.948242
-----0-----
-----1-----
-eval mean loss: 0.494524
-eval accuracy: 0.875812
-eval avg class acc: 0.844273
-**** EPOCH 107 ****
-----0-----
-mean loss: 0.142499
-accuracy: 0.950195
-----1-----
-mean loss: 0.127499
-accuracy: 0.957721
-----2-----
-mean loss: 0.134664
-accuracy: 0.955566
-----3-----
-mean loss: 0.134348
-accuracy: 0.946289
-----4-----
-mean loss: 0.143022
-accuracy: 0.950684
-----0-----
-----1-----
-eval mean loss: 0.457588
-eval accuracy: 0.880682
-eval avg class acc: 0.851389
-**** EPOCH 108 ****
-----0-----
-mean loss: 0.135836
-accuracy: 0.950980
-----1-----
-mean loss: 0.146837
-accuracy: 0.942871
-----2-----
-mean loss: 0.140194
-accuracy: 0.947754
-----3-----
-mean loss: 0.141083
-accuracy: 0.947754
-----4-----
-mean loss: 0.131078
-accuracy: 0.958496
-----0-----
-----1-----
-eval mean loss: 0.487011
-eval accuracy: 0.883523
-eval avg class acc: 0.862105
-**** EPOCH 109 ****
-----0-----
-mean loss: 0.118253
-accuracy: 0.958496
-----1-----
-mean loss: 0.142934
-accuracy: 0.949707
-----2-----
-mean loss: 0.141698
-accuracy: 0.945801
-----3-----
-mean loss: 0.145350
-accuracy: 0.944824
-----4-----
-mean loss: 0.133553
-accuracy: 0.954657
-----0-----
-----1-----
-eval mean loss: 0.469388
-eval accuracy: 0.883523
-eval avg class acc: 0.852553
-**** EPOCH 110 ****
-----0-----
-mean loss: 0.129016
-accuracy: 0.958946
-----1-----
-mean loss: 0.129458
-accuracy: 0.950195
-----2-----
-mean loss: 0.143727
-accuracy: 0.951172
-----3-----
-mean loss: 0.138874
-accuracy: 0.951660
-----4-----
-mean loss: 0.149318
-accuracy: 0.946289
-----0-----
-----1-----
-eval mean loss: 0.499798
-eval accuracy: 0.879058
-eval avg class acc: 0.852971
-Model saved in file: log/model.ckpt
-**** EPOCH 111 ****
-----0-----
-mean loss: 0.138272
-accuracy: 0.950684
-----1-----
-mean loss: 0.123929
-accuracy: 0.959473
-----2-----
-mean loss: 0.141469
-accuracy: 0.949707
-----3-----
-mean loss: 0.152720
-accuracy: 0.943015
-----4-----
-mean loss: 0.135198
-accuracy: 0.949707
-----0-----
-----1-----
-eval mean loss: 0.465422
-eval accuracy: 0.888393
-eval avg class acc: 0.857582
-**** EPOCH 112 ****
-----0-----
-mean loss: 0.135463
-accuracy: 0.950195
-----1-----
-mean loss: 0.155776
-accuracy: 0.949707
-----2-----
-mean loss: 0.133610
-accuracy: 0.947266
-----3-----
-mean loss: 0.125266
-accuracy: 0.952637
-----4-----
-mean loss: 0.137814
-accuracy: 0.949755
-----0-----
-----1-----
-eval mean loss: 0.467105
-eval accuracy: 0.884740
-eval avg class acc: 0.850095
-**** EPOCH 113 ****
-----0-----
-mean loss: 0.128258
-accuracy: 0.951660
-----1-----
-mean loss: 0.140113
-accuracy: 0.948242
-----2-----
-mean loss: 0.147476
-accuracy: 0.944336
-----3-----
-mean loss: 0.136353
-accuracy: 0.954657
-----4-----
-mean loss: 0.175186
-accuracy: 0.935547
-----0-----
-----1-----
-eval mean loss: 0.534904
-eval accuracy: 0.869724
-eval avg class acc: 0.834847
-**** EPOCH 114 ****
-----0-----
-mean loss: 0.150654
-accuracy: 0.944336
-----1-----
-mean loss: 0.143567
-accuracy: 0.949707
-----2-----
-mean loss: 0.141600
-accuracy: 0.951660
-----3-----
-mean loss: 0.134383
-accuracy: 0.952637
-----4-----
-mean loss: 0.152588
-accuracy: 0.941176
-----0-----
-----1-----
-eval mean loss: 0.470831
-eval accuracy: 0.880682
-eval avg class acc: 0.851975
-**** EPOCH 115 ****
-----0-----
-mean loss: 0.132771
-accuracy: 0.950980
-----1-----
-mean loss: 0.146341
-accuracy: 0.948730
-----2-----
-mean loss: 0.125863
-accuracy: 0.955078
-----3-----
-mean loss: 0.143599
-accuracy: 0.943359
-----4-----
-mean loss: 0.154097
-accuracy: 0.941406
-----0-----
-----1-----
-eval mean loss: 0.464600
-eval accuracy: 0.881088
-eval avg class acc: 0.847557
-**** EPOCH 116 ****
-----0-----
-mean loss: 0.118651
-accuracy: 0.957031
-----1-----
-mean loss: 0.135621
-accuracy: 0.951172
-----2-----
-mean loss: 0.133151
-accuracy: 0.949219
-----3-----
-mean loss: 0.132043
-accuracy: 0.951660
-----4-----
-mean loss: 0.138803
-accuracy: 0.949142
-----0-----
-----1-----
-eval mean loss: 0.471678
-eval accuracy: 0.881899
-eval avg class acc: 0.857518
-**** EPOCH 117 ****
-----0-----
-mean loss: 0.126733
-accuracy: 0.955078
-----1-----
-mean loss: 0.140497
-accuracy: 0.953125
-----2-----
-mean loss: 0.125973
-accuracy: 0.954102
-----3-----
-mean loss: 0.132496
-accuracy: 0.950195
-----4-----
-mean loss: 0.122752
-accuracy: 0.955270
-----0-----
-----1-----
-eval mean loss: 0.470558
-eval accuracy: 0.877029
-eval avg class acc: 0.850442
-**** EPOCH 118 ****
-----0-----
-mean loss: 0.129500
-accuracy: 0.957031
-----1-----
-mean loss: 0.139970
-accuracy: 0.952637
-----2-----
-mean loss: 0.132722
-accuracy: 0.955566
-----3-----
-mean loss: 0.140475
-accuracy: 0.947266
-----4-----
-mean loss: 0.129584
-accuracy: 0.952819
-----0-----
-----1-----
-eval mean loss: 0.510807
-eval accuracy: 0.876623
-eval avg class acc: 0.845187
-**** EPOCH 119 ****
-----0-----
-mean loss: 0.111480
-accuracy: 0.962623
-----1-----
-mean loss: 0.129248
-accuracy: 0.949707
-----2-----
-mean loss: 0.120520
-accuracy: 0.955566
-----3-----
-mean loss: 0.128346
-accuracy: 0.953613
-----4-----
-mean loss: 0.150079
-accuracy: 0.946289
-----0-----
-----1-----
-eval mean loss: 0.497619
-eval accuracy: 0.879464
-eval avg class acc: 0.849362
-**** EPOCH 120 ****
-----0-----
-mean loss: 0.118596
-accuracy: 0.957520
-----1-----
-mean loss: 0.129176
-accuracy: 0.950195
-----2-----
-mean loss: 0.136417
-accuracy: 0.948242
-----3-----
-mean loss: 0.124645
-accuracy: 0.953613
-----4-----
-mean loss: 0.138655
-accuracy: 0.950368
-----0-----
-----1-----
-eval mean loss: 0.522471
-eval accuracy: 0.875812
-eval avg class acc: 0.841493
-Model saved in file: log/model.ckpt
-**** EPOCH 121 ****
-----0-----
-mean loss: 0.147344
-accuracy: 0.946691
-----1-----
-mean loss: 0.127193
-accuracy: 0.953613
-----2-----
-mean loss: 0.132313
-accuracy: 0.953125
-----3-----
-mean loss: 0.123284
-accuracy: 0.952637
-----4-----
-mean loss: 0.119034
-accuracy: 0.956055
-----0-----
-----1-----
-eval mean loss: 0.458184
-eval accuracy: 0.888799
-eval avg class acc: 0.857326
-**** EPOCH 122 ****
-----0-----
-mean loss: 0.129704
-accuracy: 0.955078
-----1-----
-mean loss: 0.114675
-accuracy: 0.958984
-----2-----
-mean loss: 0.122818
-accuracy: 0.952206
-----3-----
-mean loss: 0.117771
-accuracy: 0.957031
-----4-----
-mean loss: 0.119649
-accuracy: 0.954102
-----0-----
-----1-----
-eval mean loss: 0.466035
-eval accuracy: 0.886364
-eval avg class acc: 0.862698
-**** EPOCH 123 ****
-----0-----
-mean loss: 0.104079
-accuracy: 0.968750
-----1-----
-mean loss: 0.123356
-accuracy: 0.958496
-----2-----
-mean loss: 0.112605
-accuracy: 0.960784
-----3-----
-mean loss: 0.138601
-accuracy: 0.948730
-----4-----
-mean loss: 0.119298
-accuracy: 0.956055
-----0-----
-----1-----
-eval mean loss: 0.454938
-eval accuracy: 0.887987
-eval avg class acc: 0.859732
-**** EPOCH 124 ****
-----0-----
-mean loss: 0.112281
-accuracy: 0.958984
-----1-----
-mean loss: 0.125160
-accuracy: 0.954044
-----2-----
-mean loss: 0.115014
-accuracy: 0.958008
-----3-----
-mean loss: 0.117878
-accuracy: 0.961914
-----4-----
-mean loss: 0.128089
-accuracy: 0.955078
-----0-----
-----1-----
-eval mean loss: 0.491268
-eval accuracy: 0.884334
-eval avg class acc: 0.846060
-**** EPOCH 125 ****
-----0-----
-mean loss: 0.111236
-accuracy: 0.954590
-----1-----
-mean loss: 0.130677
-accuracy: 0.952206
-----2-----
-mean loss: 0.113311
-accuracy: 0.959961
-----3-----
-mean loss: 0.123516
-accuracy: 0.952148
-----4-----
-mean loss: 0.126565
-accuracy: 0.955566
-----0-----
-----1-----
-eval mean loss: 0.495300
-eval accuracy: 0.885146
-eval avg class acc: 0.855478
-**** EPOCH 126 ****
-----0-----
-mean loss: 0.117886
-accuracy: 0.963235
-----1-----
-mean loss: 0.110972
-accuracy: 0.963379
-----2-----
-mean loss: 0.117321
-accuracy: 0.957031
-----3-----
-mean loss: 0.119384
-accuracy: 0.952637
-----4-----
-mean loss: 0.116363
-accuracy: 0.961426
-----0-----
-----1-----
-eval mean loss: 0.464019
-eval accuracy: 0.891234
-eval avg class acc: 0.861107
-**** EPOCH 127 ****
-----0-----
-mean loss: 0.118230
-accuracy: 0.957520
-----1-----
-mean loss: 0.123532
-accuracy: 0.957520
-----2-----
-mean loss: 0.122469
-accuracy: 0.955566
-----3-----
-mean loss: 0.127454
-accuracy: 0.956055
-----4-----
-mean loss: 0.109659
-accuracy: 0.962623
-----0-----
-----1-----
-eval mean loss: 0.482653
-eval accuracy: 0.883117
-eval avg class acc: 0.854331
-**** EPOCH 128 ****
-----0-----
-mean loss: 0.138370
-accuracy: 0.955078
-----1-----
-mean loss: 0.123523
-accuracy: 0.955078
-----2-----
-mean loss: 0.119963
-accuracy: 0.955270
-----3-----
-mean loss: 0.126340
-accuracy: 0.953613
-----4-----
-mean loss: 0.121211
-accuracy: 0.955566
-----0-----
-----1-----
-eval mean loss: 0.476219
-eval accuracy: 0.882305
-eval avg class acc: 0.854156
-**** EPOCH 129 ****
-----0-----
-mean loss: 0.123646
-accuracy: 0.951172
-----1-----
-mean loss: 0.129752
-accuracy: 0.952819
-----2-----
-mean loss: 0.118850
-accuracy: 0.955078
-----3-----
-mean loss: 0.119727
-accuracy: 0.957520
-----4-----
-mean loss: 0.130001
-accuracy: 0.952637
-----0-----
-----1-----
-eval mean loss: 0.515804
-eval accuracy: 0.871347
-eval avg class acc: 0.836678
-**** EPOCH 130 ****
-----0-----
-mean loss: 0.122764
-accuracy: 0.956543
-----1-----
-mean loss: 0.125530
-accuracy: 0.955566
-----2-----
-mean loss: 0.126471
-accuracy: 0.956055
-----3-----
-mean loss: 0.122500
-accuracy: 0.957520
-----4-----
-mean loss: 0.128881
-accuracy: 0.955882
-----0-----
-----1-----
-eval mean loss: 0.504790
-eval accuracy: 0.880682
-eval avg class acc: 0.843814
-Model saved in file: log/model.ckpt
-**** EPOCH 131 ****
-----0-----
-mean loss: 0.112679
-accuracy: 0.962891
-----1-----
-mean loss: 0.109417
-accuracy: 0.963379
-----2-----
-mean loss: 0.117862
-accuracy: 0.953613
-----3-----
-mean loss: 0.111419
-accuracy: 0.958984
-----4-----
-mean loss: 0.118157
-accuracy: 0.963235
-----0-----
-----1-----
-eval mean loss: 0.474418
-eval accuracy: 0.889205
-eval avg class acc: 0.850340
-**** EPOCH 132 ****
-----0-----
-mean loss: 0.108352
-accuracy: 0.962891
-----1-----
-mean loss: 0.114115
-accuracy: 0.958946
-----2-----
-mean loss: 0.126970
-accuracy: 0.949219
-----3-----
-mean loss: 0.113209
-accuracy: 0.961914
-----4-----
-mean loss: 0.129208
-accuracy: 0.950195
-----0-----
-----1-----
-eval mean loss: 0.515037
-eval accuracy: 0.884740
-eval avg class acc: 0.849234
-**** EPOCH 133 ****
-----0-----
-mean loss: 0.108817
-accuracy: 0.964844
-----1-----
-mean loss: 0.111076
-accuracy: 0.961914
-----2-----
-mean loss: 0.118303
-accuracy: 0.955566
-----3-----
-mean loss: 0.108167
-accuracy: 0.958984
-----4-----
-mean loss: 0.121351
-accuracy: 0.953431
-----0-----
-----1-----
-eval mean loss: 0.496251
-eval accuracy: 0.881899
-eval avg class acc: 0.855772
-**** EPOCH 134 ****
-----0-----
-mean loss: 0.113157
-accuracy: 0.955882
-----1-----
-mean loss: 0.114041
-accuracy: 0.963379
-----2-----
-mean loss: 0.128064
-accuracy: 0.951172
-----3-----
-mean loss: 0.118499
-accuracy: 0.955078
-----4-----
-mean loss: 0.119592
-accuracy: 0.958496
-----0-----
-----1-----
-eval mean loss: 0.485762
-eval accuracy: 0.883929
-eval avg class acc: 0.847260
-**** EPOCH 135 ****
-----0-----
-mean loss: 0.122181
-accuracy: 0.956495
-----1-----
-mean loss: 0.100183
-accuracy: 0.960449
-----2-----
-mean loss: 0.123682
-accuracy: 0.956543
-----3-----
-mean loss: 0.117627
-accuracy: 0.961426
-----4-----
-mean loss: 0.122332
-accuracy: 0.954590
-----0-----
-----1-----
-eval mean loss: 0.490374
-eval accuracy: 0.882305
-eval avg class acc: 0.848878
-**** EPOCH 136 ****
-----0-----
-mean loss: 0.109656
-accuracy: 0.956543
-----1-----
-mean loss: 0.115048
-accuracy: 0.957031
-----2-----
-mean loss: 0.098737
-accuracy: 0.962623
-----3-----
-mean loss: 0.116735
-accuracy: 0.958008
-----4-----
-mean loss: 0.109628
-accuracy: 0.956055
-----0-----
-----1-----
-eval mean loss: 0.492224
-eval accuracy: 0.879870
-eval avg class acc: 0.846218
-**** EPOCH 137 ****
-----0-----
-mean loss: 0.111889
-accuracy: 0.961914
-----1-----
-mean loss: 0.107744
-accuracy: 0.963867
-----2-----
-mean loss: 0.124208
-accuracy: 0.954044
-----3-----
-mean loss: 0.114811
-accuracy: 0.958496
-----4-----
-mean loss: 0.129957
-accuracy: 0.951660
-----0-----
-----1-----
-eval mean loss: 0.524498
-eval accuracy: 0.881494
-eval avg class acc: 0.847026
-**** EPOCH 138 ****
-----0-----
-mean loss: 0.116060
-accuracy: 0.956055
-----1-----
-mean loss: 0.101784
-accuracy: 0.966309
-----2-----
-mean loss: 0.107745
-accuracy: 0.959473
-----3-----
-mean loss: 0.101608
-accuracy: 0.965686
-----4-----
-mean loss: 0.103852
-accuracy: 0.966797
-----0-----
-----1-----
-eval mean loss: 0.495220
-eval accuracy: 0.881088
-eval avg class acc: 0.854780
-**** EPOCH 139 ****
-----0-----
-mean loss: 0.108456
-accuracy: 0.959473
-----1-----
-mean loss: 0.112279
-accuracy: 0.954657
-----2-----
-mean loss: 0.106373
-accuracy: 0.959961
-----3-----
-mean loss: 0.114177
-accuracy: 0.957520
-----4-----
-mean loss: 0.113317
-accuracy: 0.958984
-----0-----
-----1-----
-eval mean loss: 0.495202
-eval accuracy: 0.883117
-eval avg class acc: 0.849069
-**** EPOCH 140 ****
-----0-----
-mean loss: 0.098612
-accuracy: 0.967285
-----1-----
-mean loss: 0.114876
-accuracy: 0.958984
-----2-----
-mean loss: 0.117514
-accuracy: 0.960172
-----3-----
-mean loss: 0.119497
-accuracy: 0.958008
-----4-----
-mean loss: 0.103930
-accuracy: 0.958984
-----0-----
-----1-----
-eval mean loss: 0.496645
-eval accuracy: 0.882711
-eval avg class acc: 0.845388
-Model saved in file: log/model.ckpt
-**** EPOCH 141 ****
-----0-----
-mean loss: 0.103079
-accuracy: 0.964355
-----1-----
-mean loss: 0.106076
-accuracy: 0.960938
-----2-----
-mean loss: 0.106949
-accuracy: 0.964844
-----3-----
-mean loss: 0.121236
-accuracy: 0.956543
-----4-----
-mean loss: 0.117193
-accuracy: 0.960784
-----0-----
-----1-----
-eval mean loss: 0.534246
-eval accuracy: 0.874188
-eval avg class acc: 0.837770
-**** EPOCH 142 ****
-----0-----
-mean loss: 0.113901
-accuracy: 0.961426
-----1-----
-mean loss: 0.105456
-accuracy: 0.965820
-----2-----
-mean loss: 0.108925
-accuracy: 0.958496
-----3-----
-mean loss: 0.118406
-accuracy: 0.961426
-----4-----
-mean loss: 0.114976
-accuracy: 0.960784
-----0-----
-----1-----
-eval mean loss: 0.494937
-eval accuracy: 0.885146
-eval avg class acc: 0.850951
-**** EPOCH 143 ****
-----0-----
-mean loss: 0.108925
-accuracy: 0.957520
-----1-----
-mean loss: 0.120994
-accuracy: 0.960172
-----2-----
-mean loss: 0.112641
-accuracy: 0.958008
-----3-----
-mean loss: 0.113052
-accuracy: 0.958008
-----4-----
-mean loss: 0.109384
-accuracy: 0.959473
-----0-----
-----1-----
-eval mean loss: 0.488957
-eval accuracy: 0.889205
-eval avg class acc: 0.855151
-**** EPOCH 144 ****
-----0-----
-mean loss: 0.104489
-accuracy: 0.963867
-----1-----
-mean loss: 0.097385
-accuracy: 0.963379
-----2-----
-mean loss: 0.112016
-accuracy: 0.962891
-----3-----
-mean loss: 0.109701
-accuracy: 0.958984
-----4-----
-mean loss: 0.099250
-accuracy: 0.963848
-----0-----
-----1-----
-eval mean loss: 0.501866
-eval accuracy: 0.881899
-eval avg class acc: 0.848654
-**** EPOCH 145 ****
-----0-----
-mean loss: 0.097570
-accuracy: 0.965820
-----1-----
-mean loss: 0.101305
-accuracy: 0.960449
-----2-----
-mean loss: 0.097841
-accuracy: 0.962623
-----3-----
-mean loss: 0.115619
-accuracy: 0.959473
-----4-----
-mean loss: 0.104194
-accuracy: 0.967285
-----0-----
-----1-----
-eval mean loss: 0.490220
-eval accuracy: 0.882305
-eval avg class acc: 0.848957
-**** EPOCH 146 ****
-----0-----
-mean loss: 0.096680
-accuracy: 0.968262
-----1-----
-mean loss: 0.100735
-accuracy: 0.964461
-----2-----
-mean loss: 0.100533
-accuracy: 0.962891
-----3-----
-mean loss: 0.103772
-accuracy: 0.964844
-----4-----
-mean loss: 0.108009
-accuracy: 0.957520
-----0-----
-----1-----
-eval mean loss: 0.471409
-eval accuracy: 0.891640
-eval avg class acc: 0.858998
-**** EPOCH 147 ****
-----0-----
-mean loss: 0.107425
-accuracy: 0.958008
-----1-----
-mean loss: 0.111623
-accuracy: 0.963867
-----2-----
-mean loss: 0.091127
-accuracy: 0.965332
-----3-----
-mean loss: 0.095364
-accuracy: 0.965332
-----4-----
-mean loss: 0.118647
-accuracy: 0.960784
-----0-----
-----1-----
-eval mean loss: 0.475864
-eval accuracy: 0.886769
-eval avg class acc: 0.851079
-**** EPOCH 148 ****
-----0-----
-mean loss: 0.106119
-accuracy: 0.963867
-----1-----
-mean loss: 0.118392
-accuracy: 0.954102
-----2-----
-mean loss: 0.096504
-accuracy: 0.965820
-----3-----
-mean loss: 0.099103
-accuracy: 0.964461
-----4-----
-mean loss: 0.090694
-accuracy: 0.969727
-----0-----
-----1-----
-eval mean loss: 0.486211
-eval accuracy: 0.887581
-eval avg class acc: 0.853819
-**** EPOCH 149 ****
-----0-----
-mean loss: 0.104543
-accuracy: 0.963867
-----1-----
-mean loss: 0.102574
-accuracy: 0.960938
-----2-----
-mean loss: 0.111738
-accuracy: 0.956495
-----3-----
-mean loss: 0.106931
-accuracy: 0.964844
-----4-----
-mean loss: 0.100039
-accuracy: 0.966309
-----0-----
-----1-----
-eval mean loss: 0.489603
-eval accuracy: 0.887175
-eval avg class acc: 0.856901
-**** EPOCH 150 ****
-----0-----
-mean loss: 0.100450
-accuracy: 0.964355
-----1-----
-mean loss: 0.103207
-accuracy: 0.961914
-----2-----
-mean loss: 0.102969
-accuracy: 0.961426
-----3-----
-mean loss: 0.092763
-accuracy: 0.962010
-----4-----
-mean loss: 0.091178
-accuracy: 0.969238
-----0-----
-----1-----
-eval mean loss: 0.497690
-eval accuracy: 0.885552
-eval avg class acc: 0.855735
-Model saved in file: log/model.ckpt
-**** EPOCH 151 ****
-----0-----
-mean loss: 0.105559
-accuracy: 0.959559
-----1-----
-mean loss: 0.103252
-accuracy: 0.964844
-----2-----
-mean loss: 0.102382
-accuracy: 0.960938
-----3-----
-mean loss: 0.101632
-accuracy: 0.965820
-----4-----
-mean loss: 0.096699
-accuracy: 0.965820
-----0-----
-----1-----
-eval mean loss: 0.484334
-eval accuracy: 0.888799
-eval avg class acc: 0.858008
-**** EPOCH 152 ****
-----0-----
-mean loss: 0.086029
-accuracy: 0.968262
-----1-----
-mean loss: 0.112700
-accuracy: 0.962010
-----2-----
-mean loss: 0.094306
-accuracy: 0.966309
-----3-----
-mean loss: 0.104390
-accuracy: 0.961426
-----4-----
-mean loss: 0.093395
-accuracy: 0.966797
-----0-----
-----1-----
-eval mean loss: 0.496577
-eval accuracy: 0.883523
-eval avg class acc: 0.851717
-**** EPOCH 153 ****
-----0-----
-mean loss: 0.103998
-accuracy: 0.958496
-----1-----
-mean loss: 0.088191
-accuracy: 0.969238
-----2-----
-mean loss: 0.103890
-accuracy: 0.960172
-----3-----
-mean loss: 0.105124
-accuracy: 0.958008
-----4-----
-mean loss: 0.103854
-accuracy: 0.964844
-----0-----
-----1-----
-eval mean loss: 0.489261
-eval accuracy: 0.883523
-eval avg class acc: 0.851342
-**** EPOCH 154 ****
-----0-----
-mean loss: 0.090310
-accuracy: 0.968262
-----1-----
-mean loss: 0.089631
-accuracy: 0.969238
-----2-----
-mean loss: 0.102444
-accuracy: 0.959961
-----3-----
-mean loss: 0.112871
-accuracy: 0.961397
-----4-----
-mean loss: 0.107366
-accuracy: 0.960938
-----0-----
-----1-----
-eval mean loss: 0.492985
-eval accuracy: 0.884740
-eval avg class acc: 0.851154
-**** EPOCH 155 ****
-----0-----
-mean loss: 0.105551
-accuracy: 0.957520
-----1-----
-mean loss: 0.103235
-accuracy: 0.961914
-----2-----
-mean loss: 0.095952
-accuracy: 0.963379
-----3-----
-mean loss: 0.083230
-accuracy: 0.969727
-----4-----
-mean loss: 0.111278
-accuracy: 0.962010
-----0-----
-----1-----
-eval mean loss: 0.506671
-eval accuracy: 0.888393
-eval avg class acc: 0.854482
-**** EPOCH 156 ****
-----0-----
-mean loss: 0.093424
-accuracy: 0.968750
-----1-----
-mean loss: 0.090773
-accuracy: 0.969363
-----2-----
-mean loss: 0.103000
-accuracy: 0.966309
-----3-----
-mean loss: 0.097172
-accuracy: 0.964844
-----4-----
-mean loss: 0.103273
-accuracy: 0.962402
-----0-----
-----1-----
-eval mean loss: 0.492604
-eval accuracy: 0.884740
-eval avg class acc: 0.852656
-**** EPOCH 157 ****
-----0-----
-mean loss: 0.109585
-accuracy: 0.960172
-----1-----
-mean loss: 0.097217
-accuracy: 0.964355
-----2-----
-mean loss: 0.108027
-accuracy: 0.950684
-----3-----
-mean loss: 0.114384
-accuracy: 0.961426
-----4-----
-mean loss: 0.099736
-accuracy: 0.961426
-----0-----
-----1-----
-eval mean loss: 0.492178
-eval accuracy: 0.880682
-eval avg class acc: 0.851871
-**** EPOCH 158 ****
-----0-----
-mean loss: 0.094115
-accuracy: 0.967285
-----1-----
-mean loss: 0.094579
-accuracy: 0.965686
-----2-----
-mean loss: 0.092890
-accuracy: 0.972656
-----3-----
-mean loss: 0.113365
-accuracy: 0.961426
-----4-----
-mean loss: 0.101642
-accuracy: 0.965820
-----0-----
-----1-----
-eval mean loss: 0.500440
-eval accuracy: 0.884740
-eval avg class acc: 0.854627
-**** EPOCH 159 ****
-----0-----
-mean loss: 0.099111
-accuracy: 0.964355
-----1-----
-mean loss: 0.091123
-accuracy: 0.963848
-----2-----
-mean loss: 0.110300
-accuracy: 0.959473
-----3-----
-mean loss: 0.096063
-accuracy: 0.964355
-----4-----
-mean loss: 0.112146
-accuracy: 0.956055
-----0-----
-----1-----
-eval mean loss: 0.516136
-eval accuracy: 0.876623
-eval avg class acc: 0.846711
-**** EPOCH 160 ****
-----0-----
-mean loss: 0.095215
-accuracy: 0.963379
-----1-----
-mean loss: 0.104279
-accuracy: 0.962623
-----2-----
-mean loss: 0.096749
-accuracy: 0.964844
-----3-----
-mean loss: 0.094304
-accuracy: 0.968262
-----4-----
-mean loss: 0.100793
-accuracy: 0.965820
-----0-----
-----1-----
-eval mean loss: 0.510944
-eval accuracy: 0.878247
-eval avg class acc: 0.851078
-Model saved in file: log/model.ckpt
-**** EPOCH 161 ****
-----0-----
-mean loss: 0.097326
-accuracy: 0.963848
-----1-----
-mean loss: 0.091966
-accuracy: 0.965332
-----2-----
-mean loss: 0.108108
-accuracy: 0.959473
-----3-----
-mean loss: 0.093447
-accuracy: 0.964844
-----4-----
-mean loss: 0.098238
-accuracy: 0.968750
-----0-----
-----1-----
-eval mean loss: 0.495526
-eval accuracy: 0.885146
-eval avg class acc: 0.853789
-**** EPOCH 162 ****
-----0-----
-mean loss: 0.095444
-accuracy: 0.966309
-----1-----
-mean loss: 0.094525
-accuracy: 0.965332
-----2-----
-mean loss: 0.097575
-accuracy: 0.964461
-----3-----
-mean loss: 0.105960
-accuracy: 0.964355
-----4-----
-mean loss: 0.099871
-accuracy: 0.960449
-----0-----
-----1-----
-eval mean loss: 0.490411
-eval accuracy: 0.887987
-eval avg class acc: 0.860157
-**** EPOCH 163 ****
-----0-----
-mean loss: 0.091560
-accuracy: 0.965332
-----1-----
-mean loss: 0.091859
-accuracy: 0.965686
-----2-----
-mean loss: 0.088540
-accuracy: 0.969727
-----3-----
-mean loss: 0.103371
-accuracy: 0.964355
-----4-----
-mean loss: 0.101892
-accuracy: 0.960938
-----0-----
-----1-----
-eval mean loss: 0.501331
-eval accuracy: 0.881494
-eval avg class acc: 0.855668
-**** EPOCH 164 ****
-----0-----
-mean loss: 0.086959
-accuracy: 0.967285
-----1-----
-mean loss: 0.104863
-accuracy: 0.963379
-----2-----
-mean loss: 0.091510
-accuracy: 0.967285
-----3-----
-mean loss: 0.094465
-accuracy: 0.966797
-----4-----
-mean loss: 0.084598
-accuracy: 0.971201
-----0-----
-----1-----
-eval mean loss: 0.515779
-eval accuracy: 0.883523
-eval avg class acc: 0.855646
-**** EPOCH 165 ****
-----0-----
-mean loss: 0.094097
-accuracy: 0.963867
-----1-----
-mean loss: 0.100715
-accuracy: 0.964844
-----2-----
-mean loss: 0.090271
-accuracy: 0.971201
-----3-----
-mean loss: 0.088970
-accuracy: 0.969238
-----4-----
-mean loss: 0.090410
-accuracy: 0.965820
-----0-----
-----1-----
-eval mean loss: 0.493876
-eval accuracy: 0.889205
-eval avg class acc: 0.858107
-**** EPOCH 166 ****
-----0-----
-mean loss: 0.088465
-accuracy: 0.969727
-----1-----
-mean loss: 0.100962
-accuracy: 0.961914
-----2-----
-mean loss: 0.088042
-accuracy: 0.969238
-----3-----
-mean loss: 0.086762
-accuracy: 0.967525
-----4-----
-mean loss: 0.100901
-accuracy: 0.965332
-----0-----
-----1-----
-eval mean loss: 0.500073
-eval accuracy: 0.887987
-eval avg class acc: 0.858607
-**** EPOCH 167 ****
-----0-----
-mean loss: 0.090226
-accuracy: 0.970588
-----1-----
-mean loss: 0.100535
-accuracy: 0.964355
-----2-----
-mean loss: 0.092769
-accuracy: 0.965820
-----3-----
-mean loss: 0.102589
-accuracy: 0.964355
-----4-----
-mean loss: 0.094472
-accuracy: 0.963867
-----0-----
-----1-----
-eval mean loss: 0.499500
-eval accuracy: 0.879870
-eval avg class acc: 0.847064
-**** EPOCH 168 ****
-----0-----
-mean loss: 0.093646
-accuracy: 0.963848
-----1-----
-mean loss: 0.098719
-accuracy: 0.961426
-----2-----
-mean loss: 0.095449
-accuracy: 0.961914
-----3-----
-mean loss: 0.092556
-accuracy: 0.965332
-----4-----
-mean loss: 0.089312
-accuracy: 0.967285
-----0-----
-----1-----
-eval mean loss: 0.511327
-eval accuracy: 0.878653
-eval avg class acc: 0.848312
-**** EPOCH 169 ****
-----0-----
-mean loss: 0.091559
-accuracy: 0.964355
-----1-----
-mean loss: 0.085643
-accuracy: 0.968750
-----2-----
-mean loss: 0.091098
-accuracy: 0.965332
-----3-----
-mean loss: 0.091098
-accuracy: 0.970215
-----4-----
-mean loss: 0.099673
-accuracy: 0.963235
-----0-----
-----1-----
-eval mean loss: 0.498311
-eval accuracy: 0.883523
-eval avg class acc: 0.852159
-**** EPOCH 170 ****
-----0-----
-mean loss: 0.095490
-accuracy: 0.965686
-----1-----
-mean loss: 0.088860
-accuracy: 0.971191
-----2-----
-mean loss: 0.096640
-accuracy: 0.964844
-----3-----
-mean loss: 0.089744
-accuracy: 0.964355
-----4-----
-mean loss: 0.092166
-accuracy: 0.966309
-----0-----
-----1-----
-eval mean loss: 0.516436
-eval accuracy: 0.884740
-eval avg class acc: 0.853858
-Model saved in file: log/model.ckpt
-**** EPOCH 171 ****
-----0-----
-mean loss: 0.092101
-accuracy: 0.963379
-----1-----
-mean loss: 0.086902
-accuracy: 0.969238
-----2-----
-mean loss: 0.085153
-accuracy: 0.968750
-----3-----
-mean loss: 0.087907
-accuracy: 0.967773
-----4-----
-mean loss: 0.098305
-accuracy: 0.964461
-----0-----
-----1-----
-eval mean loss: 0.509578
-eval accuracy: 0.886364
-eval avg class acc: 0.852322
-**** EPOCH 172 ****
-----0-----
-mean loss: 0.084862
-accuracy: 0.969238
-----1-----
-mean loss: 0.099663
-accuracy: 0.963848
-----2-----
-mean loss: 0.087171
-accuracy: 0.964355
-----3-----
-mean loss: 0.084365
-accuracy: 0.966797
-----4-----
-mean loss: 0.090414
-accuracy: 0.965332
-----0-----
-----1-----
-eval mean loss: 0.500587
-eval accuracy: 0.888799
-eval avg class acc: 0.854737
-**** EPOCH 173 ****
-----0-----
-mean loss: 0.082285
-accuracy: 0.972168
-----1-----
-mean loss: 0.080734
-accuracy: 0.971201
-----2-----
-mean loss: 0.093847
-accuracy: 0.966309
-----3-----
-mean loss: 0.077672
-accuracy: 0.975586
-----4-----
-mean loss: 0.090884
-accuracy: 0.966309
-----0-----
-----1-----
-eval mean loss: 0.516309
-eval accuracy: 0.886364
-eval avg class acc: 0.853312
-**** EPOCH 174 ****
-----0-----
-mean loss: 0.089868
-accuracy: 0.966309
-----1-----
-mean loss: 0.080513
-accuracy: 0.971191
-----2-----
-mean loss: 0.082973
-accuracy: 0.972426
-----3-----
-mean loss: 0.081615
-accuracy: 0.972656
-----4-----
-mean loss: 0.102534
-accuracy: 0.961914
-----0-----
-----1-----
-eval mean loss: 0.498483
-eval accuracy: 0.885552
-eval avg class acc: 0.855034
-**** EPOCH 175 ****
-----0-----
-mean loss: 0.096313
-accuracy: 0.967525
-----1-----
-mean loss: 0.085507
-accuracy: 0.970703
-----2-----
-mean loss: 0.084724
-accuracy: 0.968262
-----3-----
-mean loss: 0.091680
-accuracy: 0.963379
-----4-----
-mean loss: 0.083549
-accuracy: 0.970215
-----0-----
-----1-----
-eval mean loss: 0.499929
-eval accuracy: 0.883117
-eval avg class acc: 0.853190
-**** EPOCH 176 ****
-----0-----
-mean loss: 0.078334
-accuracy: 0.969975
-----1-----
-mean loss: 0.082474
-accuracy: 0.968750
-----2-----
-mean loss: 0.075008
-accuracy: 0.972168
-----3-----
-mean loss: 0.096918
-accuracy: 0.965332
-----4-----
-mean loss: 0.085993
-accuracy: 0.970215
-----0-----
-----1-----
-eval mean loss: 0.495794
-eval accuracy: 0.883523
-eval avg class acc: 0.850654
-**** EPOCH 177 ****
-----0-----
-mean loss: 0.083648
-accuracy: 0.965332
-----1-----
-mean loss: 0.111335
-accuracy: 0.960938
-----2-----
-mean loss: 0.095855
-accuracy: 0.967525
-----3-----
-mean loss: 0.081916
-accuracy: 0.971191
-----4-----
-mean loss: 0.102175
-accuracy: 0.962891
-----0-----
-----1-----
-eval mean loss: 0.515159
-eval accuracy: 0.885958
-eval avg class acc: 0.854981
-**** EPOCH 178 ****
-----0-----
-mean loss: 0.084368
-accuracy: 0.965686
-----1-----
-mean loss: 0.079595
-accuracy: 0.972656
-----2-----
-mean loss: 0.097926
-accuracy: 0.961914
-----3-----
-mean loss: 0.087461
-accuracy: 0.969238
-----4-----
-mean loss: 0.095696
-accuracy: 0.967773
-----0-----
-----1-----
-eval mean loss: 0.499630
-eval accuracy: 0.884334
-eval avg class acc: 0.851469
-**** EPOCH 179 ****
-----0-----
-mean loss: 0.090438
-accuracy: 0.966797
-----1-----
-mean loss: 0.093020
-accuracy: 0.969727
-----2-----
-mean loss: 0.083504
-accuracy: 0.971201
-----3-----
-mean loss: 0.087724
-accuracy: 0.970703
-----4-----
-mean loss: 0.085091
-accuracy: 0.971680
-----0-----
-----1-----
-eval mean loss: 0.499615
-eval accuracy: 0.886769
-eval avg class acc: 0.857583
-**** EPOCH 180 ****
-----0-----
-mean loss: 0.085226
-accuracy: 0.965686
-----1-----
-mean loss: 0.078013
-accuracy: 0.972656
-----2-----
-mean loss: 0.090342
-accuracy: 0.968750
-----3-----
-mean loss: 0.077219
-accuracy: 0.974121
-----4-----
-mean loss: 0.086995
-accuracy: 0.966309
-----0-----
-----1-----
-eval mean loss: 0.491367
-eval accuracy: 0.890016
-eval avg class acc: 0.862847
-Model saved in file: log/model.ckpt
-**** EPOCH 181 ****
-----0-----
-mean loss: 0.089564
-accuracy: 0.972168
-----1-----
-mean loss: 0.099822
-accuracy: 0.960784
-----2-----
-mean loss: 0.097874
-accuracy: 0.965332
-----3-----
-mean loss: 0.097411
-accuracy: 0.963867
-----4-----
-mean loss: 0.096105
-accuracy: 0.963379
-----0-----
-----1-----
-eval mean loss: 0.510636
-eval accuracy: 0.887987
-eval avg class acc: 0.857526
-**** EPOCH 182 ****
-----0-----
-mean loss: 0.075458
-accuracy: 0.975098
-----1-----
-mean loss: 0.084012
-accuracy: 0.969238
-----2-----
-mean loss: 0.089366
-accuracy: 0.966797
-----3-----
-mean loss: 0.091842
-accuracy: 0.970703
-----4-----
-mean loss: 0.095101
-accuracy: 0.962623
-----0-----
-----1-----
-eval mean loss: 0.517626
-eval accuracy: 0.885552
-eval avg class acc: 0.854100
-**** EPOCH 183 ****
-----0-----
-mean loss: 0.088988
-accuracy: 0.965686
-----1-----
-mean loss: 0.093039
-accuracy: 0.965820
-----2-----
-mean loss: 0.082292
-accuracy: 0.969727
-----3-----
-mean loss: 0.080888
-accuracy: 0.970703
-----4-----
-mean loss: 0.091510
-accuracy: 0.970215
-----0-----
-----1-----
-eval mean loss: 0.502879
-eval accuracy: 0.885552
-eval avg class acc: 0.858227
-**** EPOCH 184 ****
-----0-----
-mean loss: 0.080287
-accuracy: 0.971680
-----1-----
-mean loss: 0.075981
-accuracy: 0.973633
-----2-----
-mean loss: 0.091561
-accuracy: 0.968750
-----3-----
-mean loss: 0.090806
-accuracy: 0.970703
-----4-----
-mean loss: 0.083097
-accuracy: 0.969727
-----0-----
-----1-----
-eval mean loss: 0.505652
-eval accuracy: 0.885552
-eval avg class acc: 0.858995
-**** EPOCH 185 ****
-----0-----
-mean loss: 0.088315
-accuracy: 0.969238
-----1-----
-mean loss: 0.091529
-accuracy: 0.966912
-----2-----
-mean loss: 0.093518
-accuracy: 0.964844
-----3-----
-mean loss: 0.083922
-accuracy: 0.969727
-----4-----
-mean loss: 0.085616
-accuracy: 0.970215
-----0-----
-----1-----
-eval mean loss: 0.502355
-eval accuracy: 0.886364
-eval avg class acc: 0.859521
-**** EPOCH 186 ****
-----0-----
-mean loss: 0.095479
-accuracy: 0.967285
-----1-----
-mean loss: 0.089398
-accuracy: 0.965820
-----2-----
-mean loss: 0.086012
-accuracy: 0.966912
-----3-----
-mean loss: 0.086830
-accuracy: 0.968750
-----4-----
-mean loss: 0.080568
-accuracy: 0.972656
-----0-----
-----1-----
-eval mean loss: 0.511361
-eval accuracy: 0.885146
-eval avg class acc: 0.853934
-**** EPOCH 187 ****
-----0-----
-mean loss: 0.071980
-accuracy: 0.975586
-----1-----
-mean loss: 0.083897
-accuracy: 0.968137
-----2-----
-mean loss: 0.080832
-accuracy: 0.970215
-----3-----
-mean loss: 0.082913
-accuracy: 0.971680
-----4-----
-mean loss: 0.077356
-accuracy: 0.969238
-----0-----
-----1-----
-eval mean loss: 0.519870
-eval accuracy: 0.884334
-eval avg class acc: 0.857146
-**** EPOCH 188 ****
-----0-----
-mean loss: 0.079688
-accuracy: 0.973145
-----1-----
-mean loss: 0.081055
-accuracy: 0.969975
-----2-----
-mean loss: 0.090444
-accuracy: 0.972168
-----3-----
-mean loss: 0.103460
-accuracy: 0.959473
-----4-----
-mean loss: 0.093101
-accuracy: 0.963867
-----0-----
-----1-----
-eval mean loss: 0.500586
-eval accuracy: 0.887581
-eval avg class acc: 0.860399
-**** EPOCH 189 ****
-----0-----
-mean loss: 0.093887
-accuracy: 0.964355
-----1-----
-mean loss: 0.085570
-accuracy: 0.967525
-----2-----
-mean loss: 0.085039
-accuracy: 0.969238
-----3-----
-mean loss: 0.081864
-accuracy: 0.971191
-----4-----
-mean loss: 0.086382
-accuracy: 0.970703
-----0-----
-----1-----
-eval mean loss: 0.508668
-eval accuracy: 0.890016
-eval avg class acc: 0.860141
-**** EPOCH 190 ****
-----0-----
-mean loss: 0.093569
-accuracy: 0.966299
-----1-----
-mean loss: 0.089659
-accuracy: 0.965820
-----2-----
-mean loss: 0.085263
-accuracy: 0.969727
-----3-----
-mean loss: 0.076929
-accuracy: 0.975098
-----4-----
-mean loss: 0.079002
-accuracy: 0.972656
-----0-----
-----1-----
-eval mean loss: 0.509095
-eval accuracy: 0.885552
-eval avg class acc: 0.853896
-Model saved in file: log/model.ckpt
-**** EPOCH 191 ****
-----0-----
-mean loss: 0.074565
-accuracy: 0.976562
-----1-----
-mean loss: 0.081781
-accuracy: 0.972168
-----2-----
-mean loss: 0.089563
-accuracy: 0.966299
-----3-----
-mean loss: 0.087178
-accuracy: 0.970215
-----4-----
-mean loss: 0.091431
-accuracy: 0.964355
-----0-----
-----1-----
-eval mean loss: 0.510302
-eval accuracy: 0.885552
-eval avg class acc: 0.854072
-**** EPOCH 192 ****
-----0-----
-mean loss: 0.088609
-accuracy: 0.963867
-----1-----
-mean loss: 0.089003
-accuracy: 0.969238
-----2-----
-mean loss: 0.089892
-accuracy: 0.963848
-----3-----
-mean loss: 0.084209
-accuracy: 0.971191
-----4-----
-mean loss: 0.075612
-accuracy: 0.968262
-----0-----
-----1-----
-eval mean loss: 0.502388
-eval accuracy: 0.887175
-eval avg class acc: 0.855107
-**** EPOCH 193 ****
-----0-----
-mean loss: 0.075932
-accuracy: 0.974609
-----1-----
-mean loss: 0.078901
-accuracy: 0.971814
-----2-----
-mean loss: 0.079449
-accuracy: 0.970703
-----3-----
-mean loss: 0.085189
-accuracy: 0.969727
-----4-----
-mean loss: 0.085803
-accuracy: 0.966797
-----0-----
-----1-----
-eval mean loss: 0.505642
-eval accuracy: 0.884740
-eval avg class acc: 0.853521
-**** EPOCH 194 ****
-----0-----
-mean loss: 0.084990
-accuracy: 0.968262
-----1-----
-mean loss: 0.091565
-accuracy: 0.963867
-----2-----
-mean loss: 0.076083
-accuracy: 0.972168
-----3-----
-mean loss: 0.076758
-accuracy: 0.969975
-----4-----
-mean loss: 0.087197
-accuracy: 0.970703
-----0-----
-----1-----
-eval mean loss: 0.503307
-eval accuracy: 0.884334
-eval avg class acc: 0.854228
-**** EPOCH 195 ****
-----0-----
-mean loss: 0.078249
-accuracy: 0.971680
-----1-----
-mean loss: 0.075201
-accuracy: 0.973633
-----2-----
-mean loss: 0.086423
-accuracy: 0.969238
-----3-----
-mean loss: 0.086741
-accuracy: 0.968137
-----4-----
-mean loss: 0.073988
-accuracy: 0.977051
-----0-----
-----1-----
-eval mean loss: 0.509788
-eval accuracy: 0.885552
-eval avg class acc: 0.855176
-**** EPOCH 196 ****
-----0-----
-mean loss: 0.078572
-accuracy: 0.971191
-----1-----
-mean loss: 0.076557
-accuracy: 0.972656
-----2-----
-mean loss: 0.090425
-accuracy: 0.966299
-----3-----
-mean loss: 0.085078
-accuracy: 0.968262
-----4-----
-mean loss: 0.083457
-accuracy: 0.971680
-----0-----
-----1-----
-eval mean loss: 0.502828
-eval accuracy: 0.889610
-eval avg class acc: 0.861254
-**** EPOCH 197 ****
-----0-----
-mean loss: 0.080022
-accuracy: 0.968750
-----1-----
-mean loss: 0.088410
-accuracy: 0.969727
-----2-----
-mean loss: 0.076295
-accuracy: 0.972168
-----3-----
-mean loss: 0.085533
-accuracy: 0.966912
-----4-----
-mean loss: 0.090606
-accuracy: 0.965820
-----0-----
-----1-----
-eval mean loss: 0.521071
-eval accuracy: 0.887987
-eval avg class acc: 0.857152
-**** EPOCH 198 ****
-----0-----
-mean loss: 0.076374
-accuracy: 0.971191
-----1-----
-mean loss: 0.078590
-accuracy: 0.968137
-----2-----
-mean loss: 0.087720
-accuracy: 0.971191
-----3-----
-mean loss: 0.090071
-accuracy: 0.967773
-----4-----
-mean loss: 0.073110
-accuracy: 0.978027
-----0-----
-----1-----
-eval mean loss: 0.507576
-eval accuracy: 0.882711
-eval avg class acc: 0.850342
-**** EPOCH 199 ****
-----0-----
-mean loss: 0.080904
-accuracy: 0.970588
-----1-----
-mean loss: 0.073430
-accuracy: 0.979004
-----2-----
-mean loss: 0.078271
-accuracy: 0.968262
-----3-----
-mean loss: 0.080165
-accuracy: 0.970703
-----4-----
-mean loss: 0.084020
-accuracy: 0.969238
-----0-----
-----1-----
-eval mean loss: 0.511273
-eval accuracy: 0.887175
-eval avg class acc: 0.855011
-**** EPOCH 200 ****
-----0-----
-mean loss: 0.090201
-accuracy: 0.965820
-----1-----
-mean loss: 0.074489
-accuracy: 0.973652
-----2-----
-mean loss: 0.079363
-accuracy: 0.968262
-----3-----
-mean loss: 0.072835
-accuracy: 0.974609
-----4-----
-mean loss: 0.082572
-accuracy: 0.970703
-----0-----
-----1-----
-eval mean loss: 0.510748
-eval accuracy: 0.887987
-eval avg class acc: 0.855483
-Model saved in file: log/model.ckpt
-**** EPOCH 201 ****
-----0-----
-mean loss: 0.085361
-accuracy: 0.971191
-----1-----
-mean loss: 0.080499
-accuracy: 0.969975
-----2-----
-mean loss: 0.083297
-accuracy: 0.970703
-----3-----
-mean loss: 0.081045
-accuracy: 0.969238
-----4-----
-mean loss: 0.084851
-accuracy: 0.969238
-----0-----
-----1-----
-eval mean loss: 0.495835
-eval accuracy: 0.887175
-eval avg class acc: 0.859317
-**** EPOCH 202 ****
-----0-----
-mean loss: 0.084306
-accuracy: 0.967525
-----1-----
-mean loss: 0.081979
-accuracy: 0.970215
-----2-----
-mean loss: 0.095547
-accuracy: 0.965820
-----3-----
-mean loss: 0.082763
-accuracy: 0.969727
-----4-----
-mean loss: 0.081119
-accuracy: 0.974609
-----0-----
-----1-----
-eval mean loss: 0.502741
-eval accuracy: 0.889610
-eval avg class acc: 0.860564
-**** EPOCH 203 ****
-----0-----
-mean loss: 0.085877
-accuracy: 0.965686
-----1-----
-mean loss: 0.076173
-accuracy: 0.971191
-----2-----
-mean loss: 0.075359
-accuracy: 0.975586
-----3-----
-mean loss: 0.069767
-accuracy: 0.969727
-----4-----
-mean loss: 0.086755
-accuracy: 0.969727
-----0-----
-----1-----
-eval mean loss: 0.511289
-eval accuracy: 0.888393
-eval avg class acc: 0.857189
-**** EPOCH 204 ****
-----0-----
-mean loss: 0.083857
-accuracy: 0.965820
-----1-----
-mean loss: 0.073958
-accuracy: 0.973039
-----2-----
-mean loss: 0.087894
-accuracy: 0.966309
-----3-----
-mean loss: 0.071033
-accuracy: 0.975586
-----4-----
-mean loss: 0.082460
-accuracy: 0.968750
-----0-----
-----1-----
-eval mean loss: 0.513900
-eval accuracy: 0.887175
-eval avg class acc: 0.857107
-**** EPOCH 205 ****
-----0-----
-mean loss: 0.075149
-accuracy: 0.974121
-----1-----
-mean loss: 0.086772
-accuracy: 0.970703
-----2-----
-mean loss: 0.082931
-accuracy: 0.973039
-----3-----
-mean loss: 0.089796
-accuracy: 0.965332
-----4-----
-mean loss: 0.080252
-accuracy: 0.973633
-----0-----
-----1-----
-eval mean loss: 0.510780
-eval accuracy: 0.887581
-eval avg class acc: 0.857157
-**** EPOCH 206 ****
-----0-----
-mean loss: 0.092128
-accuracy: 0.965820
-----1-----
-mean loss: 0.075059
-accuracy: 0.971680
-----2-----
-mean loss: 0.087234
-accuracy: 0.967773
-----3-----
-mean loss: 0.072710
-accuracy: 0.973652
-----4-----
-mean loss: 0.081905
-accuracy: 0.972656
-----0-----
-----1-----
-eval mean loss: 0.514172
-eval accuracy: 0.887987
-eval avg class acc: 0.857569
-**** EPOCH 207 ****
-----0-----
-mean loss: 0.068000
-accuracy: 0.973145
-----1-----
-mean loss: 0.072804
-accuracy: 0.972656
-----2-----
-mean loss: 0.069422
-accuracy: 0.976716
-----3-----
-mean loss: 0.079017
-accuracy: 0.972168
-----4-----
-mean loss: 0.082690
-accuracy: 0.972656
-----0-----
-----1-----
-eval mean loss: 0.510691
-eval accuracy: 0.888799
-eval avg class acc: 0.860024
-**** EPOCH 208 ****
-----0-----
-mean loss: 0.073112
-accuracy: 0.974121
-----1-----
-mean loss: 0.073698
-accuracy: 0.973145
-----2-----
-mean loss: 0.080227
-accuracy: 0.971680
-----3-----
-mean loss: 0.078829
-accuracy: 0.969975
-----4-----
-mean loss: 0.079529
-accuracy: 0.970215
-----0-----
-----1-----
-eval mean loss: 0.524407
-eval accuracy: 0.882305
-eval avg class acc: 0.853823
-**** EPOCH 209 ****
-----0-----
-mean loss: 0.083312
-accuracy: 0.969363
-----1-----
-mean loss: 0.085048
-accuracy: 0.968262
-----2-----
-mean loss: 0.082310
-accuracy: 0.973145
-----3-----
-mean loss: 0.072596
-accuracy: 0.974121
-----4-----
-mean loss: 0.073707
-accuracy: 0.975586
-----0-----
-----1-----
-eval mean loss: 0.513471
-eval accuracy: 0.885958
-eval avg class acc: 0.854317
-**** EPOCH 210 ****
-----0-----
-mean loss: 0.078551
-accuracy: 0.970215
-----1-----
-mean loss: 0.078583
-accuracy: 0.969238
-----2-----
-mean loss: 0.081421
-accuracy: 0.969727
-----3-----
-mean loss: 0.077559
-accuracy: 0.972656
-----4-----
-mean loss: 0.073696
-accuracy: 0.971814
-----0-----
-----1-----
-eval mean loss: 0.515939
-eval accuracy: 0.887175
-eval avg class acc: 0.855947
-Model saved in file: log/model.ckpt
-**** EPOCH 211 ****
-----0-----
-mean loss: 0.070193
-accuracy: 0.973145
-----1-----
-mean loss: 0.076194
-accuracy: 0.973633
-----2-----
-mean loss: 0.081187
-accuracy: 0.969975
-----3-----
-mean loss: 0.072669
-accuracy: 0.971680
-----4-----
-mean loss: 0.074960
-accuracy: 0.971680
-----0-----
-----1-----
-eval mean loss: 0.524602
-eval accuracy: 0.883929
-eval avg class acc: 0.854751
-**** EPOCH 212 ****
-----0-----
-mean loss: 0.079613
-accuracy: 0.971191
-----1-----
-mean loss: 0.071449
-accuracy: 0.974609
-----2-----
-mean loss: 0.078691
-accuracy: 0.968262
-----3-----
-mean loss: 0.078355
-accuracy: 0.973039
-----4-----
-mean loss: 0.080653
-accuracy: 0.968262
-----0-----
-----1-----
-eval mean loss: 0.511950
-eval accuracy: 0.885958
-eval avg class acc: 0.857534
-**** EPOCH 213 ****
-----0-----
-mean loss: 0.076129
-accuracy: 0.975586
-----1-----
-mean loss: 0.073177
-accuracy: 0.968750
-----2-----
-mean loss: 0.075161
-accuracy: 0.972656
-----3-----
-mean loss: 0.079642
-accuracy: 0.971680
-----4-----
-mean loss: 0.087433
-accuracy: 0.968262
-----0-----
-----1-----
-eval mean loss: 0.515743
-eval accuracy: 0.885958
-eval avg class acc: 0.856450
-**** EPOCH 214 ****
-----0-----
-mean loss: 0.076892
-accuracy: 0.973145
-----1-----
-mean loss: 0.080253
-accuracy: 0.970703
-----2-----
-mean loss: 0.074502
-accuracy: 0.972426
-----3-----
-mean loss: 0.079225
-accuracy: 0.970215
-----4-----
-mean loss: 0.078710
-accuracy: 0.970215
-----0-----
-----1-----
-eval mean loss: 0.518716
-eval accuracy: 0.885958
-eval avg class acc: 0.857521
-**** EPOCH 215 ****
-----0-----
-mean loss: 0.063519
-accuracy: 0.979492
-----1-----
-mean loss: 0.069835
-accuracy: 0.977328
-----2-----
-mean loss: 0.083009
-accuracy: 0.969238
-----3-----
-mean loss: 0.072528
-accuracy: 0.974121
-----4-----
-mean loss: 0.072220
-accuracy: 0.975098
-----0-----
-----1-----
-eval mean loss: 0.524074
-eval accuracy: 0.886769
-eval avg class acc: 0.856184
-**** EPOCH 216 ****
-----0-----
-mean loss: 0.078989
-accuracy: 0.971680
-----1-----
-mean loss: 0.074086
-accuracy: 0.974609
-----2-----
-mean loss: 0.077112
-accuracy: 0.972656
-----3-----
-mean loss: 0.069279
-accuracy: 0.975586
-----4-----
-mean loss: 0.074985
-accuracy: 0.974877
-----0-----
-----1-----
-eval mean loss: 0.524333
-eval accuracy: 0.887581
-eval avg class acc: 0.856684
-**** EPOCH 217 ****
-----0-----
-mean loss: 0.076358
-accuracy: 0.973633
-----1-----
-mean loss: 0.073668
-accuracy: 0.972168
-----2-----
-mean loss: 0.079242
-accuracy: 0.971191
-----3-----
-mean loss: 0.077180
-accuracy: 0.971680
-----4-----
-mean loss: 0.081314
-accuracy: 0.969975
-----0-----
-----1-----
-eval mean loss: 0.528028
-eval accuracy: 0.881088
-eval avg class acc: 0.852910
-**** EPOCH 218 ****
-----0-----
-mean loss: 0.081715
-accuracy: 0.972656
-----1-----
-mean loss: 0.079198
-accuracy: 0.967525
-----2-----
-mean loss: 0.077510
-accuracy: 0.970703
-----3-----
-mean loss: 0.081165
-accuracy: 0.975098
-----4-----
-mean loss: 0.076947
-accuracy: 0.973633
-----0-----
-----1-----
-eval mean loss: 0.523950
-eval accuracy: 0.887175
-eval avg class acc: 0.856227
-**** EPOCH 219 ****
-----0-----
-mean loss: 0.074404
-accuracy: 0.971680
-----1-----
-mean loss: 0.073650
-accuracy: 0.976074
-----2-----
-mean loss: 0.072341
-accuracy: 0.971201
-----3-----
-mean loss: 0.076283
-accuracy: 0.972656
-----4-----
-mean loss: 0.076961
-accuracy: 0.977051
-----0-----
-----1-----
-eval mean loss: 0.523061
-eval accuracy: 0.886364
-eval avg class acc: 0.857315
-**** EPOCH 220 ****
-----0-----
-mean loss: 0.080462
-accuracy: 0.971680
-----1-----
-mean loss: 0.078799
-accuracy: 0.974121
-----2-----
-mean loss: 0.076378
-accuracy: 0.973039
-----3-----
-mean loss: 0.072250
-accuracy: 0.972168
-----4-----
-mean loss: 0.074184
-accuracy: 0.972168
-----0-----
-----1-----
-eval mean loss: 0.530650
-eval accuracy: 0.886364
-eval avg class acc: 0.854774
-Model saved in file: log/model.ckpt
-**** EPOCH 221 ****
-----0-----
-mean loss: 0.077753
-accuracy: 0.972656
-----1-----
-mean loss: 0.077513
-accuracy: 0.974609
-----2-----
-mean loss: 0.073948
-accuracy: 0.971814
-----3-----
-mean loss: 0.080651
-accuracy: 0.973633
-----4-----
-mean loss: 0.066130
-accuracy: 0.977051
-----0-----
-----1-----
-eval mean loss: 0.518208
-eval accuracy: 0.888393
-eval avg class acc: 0.858074
-**** EPOCH 222 ****
-----0-----
-mean loss: 0.074926
-accuracy: 0.974121
-----1-----
-mean loss: 0.071007
-accuracy: 0.975490
-----2-----
-mean loss: 0.069002
-accuracy: 0.977539
-----3-----
-mean loss: 0.073740
-accuracy: 0.974609
-----4-----
-mean loss: 0.076388
-accuracy: 0.973633
-----0-----
-----1-----
-eval mean loss: 0.512081
-eval accuracy: 0.889610
-eval avg class acc: 0.857574
-**** EPOCH 223 ****
-----0-----
-mean loss: 0.075563
-accuracy: 0.970215
-----1-----
-mean loss: 0.077298
-accuracy: 0.972168
-----2-----
-mean loss: 0.074181
-accuracy: 0.977328
-----3-----
-mean loss: 0.073878
-accuracy: 0.973633
-----4-----
-mean loss: 0.092047
-accuracy: 0.966797
-----0-----
-----1-----
-eval mean loss: 0.517142
-eval accuracy: 0.885552
-eval avg class acc: 0.855274
-**** EPOCH 224 ****
-----0-----
-mean loss: 0.066161
-accuracy: 0.978027
-----1-----
-mean loss: 0.074374
-accuracy: 0.973145
-----2-----
-mean loss: 0.082909
-accuracy: 0.973039
-----3-----
-mean loss: 0.072031
-accuracy: 0.970703
-----4-----
-mean loss: 0.077603
-accuracy: 0.969727
-----0-----
-----1-----
-eval mean loss: 0.523716
-eval accuracy: 0.887987
-eval avg class acc: 0.856865
-**** EPOCH 225 ****
-----0-----
-mean loss: 0.070108
-accuracy: 0.976074
-----1-----
-mean loss: 0.066366
-accuracy: 0.978027
-----2-----
-mean loss: 0.079842
-accuracy: 0.968262
-----3-----
-mean loss: 0.076635
-accuracy: 0.974121
-----4-----
-mean loss: 0.073051
-accuracy: 0.971201
-----0-----
-----1-----
-eval mean loss: 0.524264
-eval accuracy: 0.889205
-eval avg class acc: 0.858434
-**** EPOCH 226 ****
-----0-----
-mean loss: 0.072807
-accuracy: 0.979004
-----1-----
-mean loss: 0.081425
-accuracy: 0.969727
-----2-----
-mean loss: 0.088621
-accuracy: 0.966299
-----3-----
-mean loss: 0.074040
-accuracy: 0.968262
-----4-----
-mean loss: 0.073040
-accuracy: 0.972656
-----0-----
-----1-----
-eval mean loss: 0.526962
-eval accuracy: 0.885552
-eval avg class acc: 0.857019
-**** EPOCH 227 ****
-----0-----
-mean loss: 0.068172
-accuracy: 0.975098
-----1-----
-mean loss: 0.073320
-accuracy: 0.974121
-----2-----
-mean loss: 0.069182
-accuracy: 0.975098
-----3-----
-mean loss: 0.081103
-accuracy: 0.968137
-----4-----
-mean loss: 0.074631
-accuracy: 0.976562
-----0-----
-----1-----
-eval mean loss: 0.522348
-eval accuracy: 0.887175
-eval avg class acc: 0.855914
-**** EPOCH 228 ****
-----0-----
-mean loss: 0.077677
-accuracy: 0.974121
-----1-----
-mean loss: 0.070948
-accuracy: 0.975586
-----2-----
-mean loss: 0.078878
-accuracy: 0.968137
-----3-----
-mean loss: 0.076384
-accuracy: 0.974121
-----4-----
-mean loss: 0.063797
-accuracy: 0.981934
-----0-----
-----1-----
-eval mean loss: 0.517825
-eval accuracy: 0.885958
-eval avg class acc: 0.856238
-**** EPOCH 229 ****
-----0-----
-mean loss: 0.074735
-accuracy: 0.974121
-----1-----
-mean loss: 0.076708
-accuracy: 0.973633
-----2-----
-mean loss: 0.077141
-accuracy: 0.970588
-----3-----
-mean loss: 0.069919
-accuracy: 0.971191
-----4-----
-mean loss: 0.071565
-accuracy: 0.975586
-----0-----
-----1-----
-eval mean loss: 0.516634
-eval accuracy: 0.890016
-eval avg class acc: 0.857870
-**** EPOCH 230 ****
-----0-----
-mean loss: 0.071111
-accuracy: 0.976716
-----1-----
-mean loss: 0.083773
-accuracy: 0.968750
-----2-----
-mean loss: 0.080245
-accuracy: 0.973145
-----3-----
-mean loss: 0.064527
-accuracy: 0.976074
-----4-----
-mean loss: 0.070050
-accuracy: 0.974121
-----0-----
-----1-----
-eval mean loss: 0.516245
-eval accuracy: 0.888799
-eval avg class acc: 0.858148
-Model saved in file: log/model.ckpt
-**** EPOCH 231 ****
-----0-----
-mean loss: 0.069691
-accuracy: 0.973145
-----1-----
-mean loss: 0.065955
-accuracy: 0.976562
-----2-----
-mean loss: 0.070507
-accuracy: 0.974265
-----3-----
-mean loss: 0.071213
-accuracy: 0.976074
-----4-----
-mean loss: 0.072385
-accuracy: 0.975586
-----0-----
-----1-----
-eval mean loss: 0.517491
-eval accuracy: 0.887581
-eval avg class acc: 0.855393
-**** EPOCH 232 ****
-----0-----
-mean loss: 0.074256
-accuracy: 0.972656
-----1-----
-mean loss: 0.069010
-accuracy: 0.971191
-----2-----
-mean loss: 0.074682
-accuracy: 0.971680
-----3-----
-mean loss: 0.082449
-accuracy: 0.968137
-----4-----
-mean loss: 0.080216
-accuracy: 0.968750
-----0-----
-----1-----
-eval mean loss: 0.519393
-eval accuracy: 0.893669
-eval avg class acc: 0.863561
-**** EPOCH 233 ****
-----0-----
-mean loss: 0.073286
-accuracy: 0.972656
-----1-----
-mean loss: 0.076573
-accuracy: 0.970703
-----2-----
-mean loss: 0.067028
-accuracy: 0.974877
-----3-----
-mean loss: 0.064606
-accuracy: 0.977539
-----4-----
-mean loss: 0.088412
-accuracy: 0.968750
-----0-----
-----1-----
-eval mean loss: 0.523477
-eval accuracy: 0.887175
-eval avg class acc: 0.856868
-**** EPOCH 234 ****
-----0-----
-mean loss: 0.074332
-accuracy: 0.976103
-----1-----
-mean loss: 0.064638
-accuracy: 0.978027
-----2-----
-mean loss: 0.068927
-accuracy: 0.976074
-----3-----
-mean loss: 0.075829
-accuracy: 0.971191
-----4-----
-mean loss: 0.080173
-accuracy: 0.970215
-----0-----
-----1-----
-eval mean loss: 0.526083
-eval accuracy: 0.887175
-eval avg class acc: 0.854866
-**** EPOCH 235 ****
-----0-----
-mean loss: 0.074976
-accuracy: 0.971191
-----1-----
-mean loss: 0.081999
-accuracy: 0.968750
-----2-----
-mean loss: 0.083413
-accuracy: 0.971680
-----3-----
-mean loss: 0.071836
-accuracy: 0.975098
-----4-----
-mean loss: 0.080377
-accuracy: 0.968137
-----0-----
-----1-----
-eval mean loss: 0.527128
-eval accuracy: 0.888799
-eval avg class acc: 0.858143
-**** EPOCH 236 ****
-----0-----
-mean loss: 0.063117
-accuracy: 0.975586
-----1-----
-mean loss: 0.075821
-accuracy: 0.979004
-----2-----
-mean loss: 0.082550
-accuracy: 0.968750
-----3-----
-mean loss: 0.072083
-accuracy: 0.975586
-----4-----
-mean loss: 0.070852
-accuracy: 0.974265
-----0-----
-----1-----
-eval mean loss: 0.523744
-eval accuracy: 0.887987
-eval avg class acc: 0.856643
-**** EPOCH 237 ****
-----0-----
-mean loss: 0.074681
-accuracy: 0.971680
-----1-----
-mean loss: 0.073274
-accuracy: 0.973145
-----2-----
-mean loss: 0.067930
-accuracy: 0.974877
-----3-----
-mean loss: 0.076464
-accuracy: 0.972656
-----4-----
-mean loss: 0.063044
-accuracy: 0.974121
-----0-----
-----1-----
-eval mean loss: 0.518090
-eval accuracy: 0.888799
-eval avg class acc: 0.857064
-**** EPOCH 238 ****
-----0-----
-mean loss: 0.082865
-accuracy: 0.970215
-----1-----
-mean loss: 0.079467
-accuracy: 0.971680
-----2-----
-mean loss: 0.074772
-accuracy: 0.974609
-----3-----
-mean loss: 0.074982
-accuracy: 0.972656
-----4-----
-mean loss: 0.080904
-accuracy: 0.970588
-----0-----
-----1-----
-eval mean loss: 0.522401
-eval accuracy: 0.887175
-eval avg class acc: 0.855942
-**** EPOCH 239 ****
-----0-----
-mean loss: 0.072098
-accuracy: 0.975490
-----1-----
-mean loss: 0.073369
-accuracy: 0.976074
-----2-----
-mean loss: 0.071657
-accuracy: 0.969727
-----3-----
-mean loss: 0.075560
-accuracy: 0.974609
-----4-----
-mean loss: 0.068861
-accuracy: 0.975098
-----0-----
-----1-----
-eval mean loss: 0.521531
-eval accuracy: 0.886769
-eval avg class acc: 0.853728
-**** EPOCH 240 ****
-----0-----
-mean loss: 0.079429
-accuracy: 0.971680
-----1-----
-mean loss: 0.057813
-accuracy: 0.983398
-----2-----
-mean loss: 0.063954
-accuracy: 0.977051
-----3-----
-mean loss: 0.088343
-accuracy: 0.966797
-----4-----
-mean loss: 0.075908
-accuracy: 0.974265
-----0-----
-----1-----
-eval mean loss: 0.520911
-eval accuracy: 0.887987
-eval avg class acc: 0.856730
-Model saved in file: log/model.ckpt
-**** EPOCH 241 ****
-----0-----
-mean loss: 0.081581
-accuracy: 0.972168
-----1-----
-mean loss: 0.078577
-accuracy: 0.970703
-----2-----
-mean loss: 0.075782
-accuracy: 0.974121
-----3-----
-mean loss: 0.066611
-accuracy: 0.974609
-----4-----
-mean loss: 0.067649
-accuracy: 0.974265
-----0-----
-----1-----
-eval mean loss: 0.520188
-eval accuracy: 0.887175
-eval avg class acc: 0.854072
-**** EPOCH 242 ****
-----0-----
-mean loss: 0.069040
-accuracy: 0.974121
-----1-----
-mean loss: 0.071284
-accuracy: 0.976562
-----2-----
-mean loss: 0.079801
-accuracy: 0.973633
-----3-----
-mean loss: 0.068769
-accuracy: 0.977539
-----4-----
-mean loss: 0.067944
-accuracy: 0.977941
-----0-----
-----1-----
-eval mean loss: 0.526789
-eval accuracy: 0.888799
-eval avg class acc: 0.854069
-**** EPOCH 243 ****
-----0-----
-mean loss: 0.074922
-accuracy: 0.969238
-----1-----
-mean loss: 0.065978
-accuracy: 0.979004
-----2-----
-mean loss: 0.071658
-accuracy: 0.974877
-----3-----
-mean loss: 0.072807
-accuracy: 0.976074
-----4-----
-mean loss: 0.074208
-accuracy: 0.974609
-----0-----
-----1-----
-eval mean loss: 0.525366
-eval accuracy: 0.887987
-eval avg class acc: 0.856572
-**** EPOCH 244 ****
-----0-----
-mean loss: 0.057740
-accuracy: 0.982910
-----1-----
-mean loss: 0.064530
-accuracy: 0.975586
-----2-----
-mean loss: 0.067960
-accuracy: 0.979492
-----3-----
-mean loss: 0.077932
-accuracy: 0.971191
-----4-----
-mean loss: 0.066164
-accuracy: 0.977941
-----0-----
-----1-----
-eval mean loss: 0.524910
-eval accuracy: 0.886364
-eval avg class acc: 0.855686
-**** EPOCH 245 ****
-----0-----
-mean loss: 0.077686
-accuracy: 0.973633
-----1-----
-mean loss: 0.065632
-accuracy: 0.977941
-----2-----
-mean loss: 0.072611
-accuracy: 0.972656
-----3-----
-mean loss: 0.073686
-accuracy: 0.972656
-----4-----
-mean loss: 0.109065
-accuracy: 0.973633
-----0-----
-----1-----
-eval mean loss: 0.520661
-eval accuracy: 0.886769
-eval avg class acc: 0.855814
-**** EPOCH 246 ****
-----0-----
-mean loss: 0.068546
-accuracy: 0.975586
-----1-----
-mean loss: 0.065349
-accuracy: 0.977051
-----2-----
-mean loss: 0.081547
-accuracy: 0.968262
-----3-----
-mean loss: 0.073243
-accuracy: 0.976562
-----4-----
-mean loss: 0.064802
-accuracy: 0.979167
-----0-----
-----1-----
-eval mean loss: 0.522283
-eval accuracy: 0.887175
-eval avg class acc: 0.857069
-**** EPOCH 247 ****
-----0-----
-mean loss: 0.066136
-accuracy: 0.979492
-----1-----
-mean loss: 0.072743
-accuracy: 0.978554
-----2-----
-mean loss: 0.068410
-accuracy: 0.979980
-----3-----
-mean loss: 0.078781
-accuracy: 0.973633
-----4-----
-mean loss: 0.062683
-accuracy: 0.979980
-----0-----
-----1-----
-eval mean loss: 0.524691
-eval accuracy: 0.883117
-eval avg class acc: 0.852396
-**** EPOCH 248 ****
-----0-----
-mean loss: 0.069127
-accuracy: 0.977051
-----1-----
-mean loss: 0.067221
-accuracy: 0.973652
-----2-----
-mean loss: 0.067440
-accuracy: 0.973633
-----3-----
-mean loss: 0.073707
-accuracy: 0.975586
-----4-----
-mean loss: 0.075215
-accuracy: 0.977051
-----0-----
-----1-----
-eval mean loss: 0.521948
-eval accuracy: 0.884740
-eval avg class acc: 0.854450
-**** EPOCH 249 ****
-----0-----
-mean loss: 0.062491
-accuracy: 0.981934
-----1-----
-mean loss: 0.076686
-accuracy: 0.972168
-----2-----
-mean loss: 0.067214
-accuracy: 0.973145
-----3-----
-mean loss: 0.076398
-accuracy: 0.974121
-----4-----
-mean loss: 0.076713
-accuracy: 0.974877
-----0-----
-----1-----
-eval mean loss: 0.526443
-eval accuracy: 0.886364
-eval avg class acc: 0.856447
