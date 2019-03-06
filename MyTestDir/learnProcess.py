@@ -74,4 +74,46 @@ TRAIN_FILES = provider.getDataFiles( \
     os.path.join(BASE_DIR, 'data/modelnet40_ply_hdf5_2048/train_files.txt'))
 TEST_FILES = provider.getDataFiles(\
     os.path.join(BASE_DIR, 'data/modelnet40_ply_hdf5_2048/test_files.txt'))
-print (TRAIN_FILES)
+
+#记录并同时输出log信息的功能
+def log_string(out_str):
+    LOG_FOUT.write(out_str+'\n')
+    LOG_FOUT.flush()
+    print(out_str)
+
+
+def get_learning_rate(batch):
+    learning_rate = tf.train.exponential_decay(
+                        BASE_LEARNING_RATE,  # Base learning rate.
+                        batch * BATCH_SIZE,  # Current index into the dataset.
+                        DECAY_STEP,          # Decay step.
+                        DECAY_RATE,          # Decay rate.
+                        staircase=True)
+    learning_rate = tf.maximum(learning_rate, 0.00001) # CLIP THE LEARNING RATE!
+    return learning_rate
+
+def get_bn_decay(batch):
+    bn_momentum = tf.train.exponential_decay(
+                      BN_INIT_DECAY,
+                      batch*BATCH_SIZE,
+                      BN_DECAY_DECAY_STEP,
+                      BN_DECAY_DECAY_RATE,
+                      staircase=True)
+    bn_decay = tf.minimum(BN_DECAY_CLIP, 1 - bn_momentum)
+    return bn_decay
+
+
+#开始干活
+#主程序
+with tf.Graph().as_default():
+    with tf.device('/gpu:' + str(GPU_INDEX)):
+        pointclouds_pl, labels_pl = MODEL.placeholder_inputs(BATCH_SIZE, NUM_POINT)
+        is_training_pl = tf.placeholder(tf.bool, shape=())
+        print(pointclouds_pl)
+        print(labels_pl)
+
+print ('***************************************')
+print ('/gpu:'+str(GPU_INDEX))
+
+print ('***************************************')
+

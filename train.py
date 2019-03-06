@@ -71,7 +71,7 @@ BN_DECAY_CLIP = 0.99
 #获取主机名
 HOSTNAME = socket.gethostname()
 
-# 将储存训练文件名的文件转化成字符串数组['file1','file2','file3','file4',……]
+# provider.getDataFiles将储存训练文件名的文件转化成字符串数组['file1','file2','file3','file4',……]
 TRAIN_FILES = provider.getDataFiles( \
     os.path.join(BASE_DIR, 'data/modelnet40_ply_hdf5_2048/train_files.txt'))
 TEST_FILES = provider.getDataFiles(\
@@ -104,9 +104,20 @@ def get_bn_decay(batch):
     bn_decay = tf.minimum(BN_DECAY_CLIP, 1 - bn_momentum)
     return bn_decay
 
+#开始干活
+#主程序
 def train():
+    # tf.Graph()表示实例化了一个类，一个用于tensorflow计算和表示用的数据流图
+    # 通俗来讲就是：在代码中添加的操作（画中的结点）和数据（画中的线条）都是画在纸上的“画”，而图就是呈现这些画的纸，你可以利用很多线程生成很多张图，但是默认图就只有一张。
+    # tf.Graph().as_default()表示将这个类实例，也就是新生成的图作为整个tensorflow运行环境的默认图，如果只有一个主线程不写也没有关系.
     with tf.Graph().as_default():
+        # 在0号CPU上执行下边的操作
         with tf.device('/gpu:'+str(GPU_INDEX)):
+            # placeholder为占位符，只规定数据的格式要求
+            # pointclouds_pl, labels_pl也是placeholder类型
+            # BATCH_SIZE=32, NUM_POINT=1024
+            # pointclouds_pl：Tensor("Placeholder:0", shape=(32, 1024, 3), dtype=float32, device=/device:GPU:0)
+            # labels_pl：Tensor("Placeholder_1:0", shape=(32,), dtype=int32, device=/device:GPU:0)
             pointclouds_pl, labels_pl = MODEL.placeholder_inputs(BATCH_SIZE, NUM_POINT)
             is_training_pl = tf.placeholder(tf.bool, shape=())
             print(is_training_pl)
