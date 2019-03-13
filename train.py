@@ -130,7 +130,7 @@ def train():
             #用来显示标量信息,用于tensorboard图谱
             tf.summary.scalar('bn_decay', bn_decay)
 
-            # Get model and loss 
+            # 使用自定义的类方法来定义神经网络，经过这一部，神经网络结才能获得。
             pred, end_points = MODEL.get_model(pointclouds_pl, is_training_pl, bn_decay=bn_decay)
             loss = MODEL.get_loss(pred, labels_pl, end_points)
             tf.summary.scalar('loss', loss)

@@ -138,9 +138,8 @@ def train():
             accuracy = tf.reduce_sum(tf.cast(correct, tf.float32)) / float(BATCH_SIZE)
             tf.summary.scalar('accuracy', accuracy)
 
-            print (pred)
-            print (end_points)
-            print 'accuracy:', accuracy
+
+            print 'batch:', batch
 
 
 train()
