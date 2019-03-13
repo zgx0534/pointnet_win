@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 import tensorflow as tf
 import numpy as np
 import math
@@ -9,12 +10,13 @@ sys.path.append(os.path.join(BASE_DIR, '../utils'))
 import tf_util
 from transform_nets import input_transform_net, feature_transform_net
 
+#输出两个placeholder分别是pointclouds_pl, labels_pl
 def placeholder_inputs(batch_size, num_point):
     pointclouds_pl = tf.placeholder(tf.float32, shape=(batch_size, num_point, 3))
     labels_pl = tf.placeholder(tf.int32, shape=(batch_size))
     return pointclouds_pl, labels_pl
 
-
+#定义分类网络 input 32x1024x3, output 32x40
 def get_model(point_cloud, is_training, bn_decay=None):
     """ Classification PointNet, input is BxNx3, output Bx40 """
     batch_size = point_cloud.get_shape()[0].value

@@ -119,7 +119,7 @@ def train():
             # labels_pl：Tensor("Placeholder_1:0", shape=(32,), dtype=int32, device=/device:GPU:0)
             pointclouds_pl, labels_pl = MODEL.placeholder_inputs(BATCH_SIZE, NUM_POINT)
             is_training_pl = tf.placeholder(tf.bool, shape=())
-            print(is_training_pl)
+
 
 
             # 请注意将参数 global_step = batch 最小化。
@@ -139,7 +139,7 @@ def train():
             tf.summary.scalar('accuracy', accuracy)
 
 
-            print 'batch:', batch
+            print 'pointclouds_pl:', pointclouds_pl
 
 
 train()

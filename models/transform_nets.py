@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 import tensorflow as tf
 import numpy as np
 import sys
@@ -13,7 +14,7 @@ def input_transform_net(point_cloud, is_training, bn_decay=None, K=3):
             Transformation matrix of size 3xK """
     batch_size = point_cloud.get_shape()[0].value
     num_point = point_cloud.get_shape()[1].value
-
+    #expand_dims表示给数据扩展一个维度，-1表示在最后扩展一维
     input_image = tf.expand_dims(point_cloud, -1)
     net = tf_util.conv2d(input_image, 64, [1,3],
                          padding='VALID', stride=[1,1],
