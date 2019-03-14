@@ -15,6 +15,7 @@ def input_transform_net(point_cloud, is_training, bn_decay=None, K=3):
     batch_size = point_cloud.get_shape()[0].value
     num_point = point_cloud.get_shape()[1].value
     #expand_dims表示给数据扩展一个维度，-1表示在最后扩展一维
+    #point_cloud本来是（32,1024,3）现在是（32,1024,3,1）
     input_image = tf.expand_dims(point_cloud, -1)
     net = tf_util.conv2d(input_image, 64, [1,3],
                          padding='VALID', stride=[1,1],

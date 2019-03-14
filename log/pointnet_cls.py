@@ -24,24 +24,38 @@ def get_model(point_cloud, is_training, bn_decay=None):
     end_points = {}
 
     with tf.variable_scope('transform_net1') as sc:
+        #将point_cloud (32*1024*3) 卷积池化全连接转成32*3*3
         transform = input_transform_net(point_cloud, is_training, bn_decay, K=3)
+        #pointcloud: (32, 1024, 3)
+        #transform: (32, 3, 3)
+
+    #tf.matmul表示两个矩阵点乘
     point_cloud_transformed = tf.matmul(point_cloud, transform)
+    #point_cloud_transformed:(32, 1024, 3)
+
     input_image = tf.expand_dims(point_cloud_transformed, -1)
+    #input_image:(32, 1024, 3, 1)
 
     net = tf_util.conv2d(input_image, 64, [1,3],
                          padding='VALID', stride=[1,1],
                          bn=True, is_training=is_training,
                          scope='conv1', bn_decay=bn_decay)
+    #net:(32, 1024, 1, 64)
+
     net = tf_util.conv2d(net, 64, [1,1],
                          padding='VALID', stride=[1,1],
                          bn=True, is_training=is_training,
                          scope='conv2', bn_decay=bn_decay)
+    #net:(32, 1024, 1, 64)
 
     with tf.variable_scope('transform_net2') as sc:
         transform = feature_transform_net(net, is_training, bn_decay, K=64)
     end_points['transform'] = transform
     net_transformed = tf.matmul(tf.squeeze(net, axis=[2]), transform)
+    #net_transformed:(32, 1024, 64)
+
     net_transformed = tf.expand_dims(net_transformed, [2])
+    #net_transformed:(32, 1024, 1, 64)
 
     net = tf_util.conv2d(net_transformed, 64, [1,1],
                          padding='VALID', stride=[1,1],
@@ -55,7 +69,9 @@ def get_model(point_cloud, is_training, bn_decay=None):
                          padding='VALID', stride=[1,1],
                          bn=True, is_training=is_training,
                          scope='conv5', bn_decay=bn_decay)
-
+    print '*************'
+    print net.shape
+    print '*************'
     # Symmetric function: max pooling
     net = tf_util.max_pool2d(net, [num_point,1],
                              padding='VALID', scope='maxpool')
