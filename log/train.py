@@ -119,11 +119,7 @@ def train():
             # pointclouds_pl：Tensor("Placeholder:0", shape=(32, 1024, 3), dtype=float32, device=/device:GPU:0)
             # labels_pl：Tensor("Placeholder_1:0", shape=(32,), dtype=int32, device=/device:GPU:0)
             pointclouds_pl, labels_pl = MODEL.placeholder_inputs(BATCH_SIZE, NUM_POINT)
-            print pointclouds_pl, labels_pl
-            print '***********'
             is_training_pl = tf.placeholder(tf.bool, shape=())
-            print(is_training_pl)
-
 
             # 请注意将参数 global_step = batch 最小化。
             # 这告诉优化器每次训练时都会为你帮助增加'batch'参数。
@@ -132,7 +128,7 @@ def train():
             #用来显示标量信息,用于tensorboard图谱
             tf.summary.scalar('bn_decay', bn_decay)
 
-            # 使用自定义的类方法来定义神经网络，经过这一部，神经网络结才能获得。
+            # 使用自定义的类方法来定义神经网络，这一步直接输出预测结果
             pred, end_points = MODEL.get_model(pointclouds_pl, is_training_pl, bn_decay=bn_decay)
             loss = MODEL.get_loss(pred, labels_pl, end_points)
             tf.summary.scalar('loss', loss)

@@ -21,6 +21,7 @@ def input_transform_net(point_cloud, is_training, bn_decay=None, K=3):
                          padding='VALID', stride=[1,1],
                          bn=True, is_training=is_training,
                          scope='tconv1', bn_decay=bn_decay)
+
     net = tf_util.conv2d(net, 128, [1,1],
                          padding='VALID', stride=[1,1],
                          bn=True, is_training=is_training,
@@ -31,7 +32,6 @@ def input_transform_net(point_cloud, is_training, bn_decay=None, K=3):
                          scope='tconv3', bn_decay=bn_decay)
     net = tf_util.max_pool2d(net, [num_point,1],
                              padding='VALID', scope='tmaxpool')
-
     net = tf.reshape(net, [batch_size, -1])
     net = tf_util.fully_connected(net, 512, bn=True, is_training=is_training,
                                   scope='tfc1', bn_decay=bn_decay)
@@ -47,6 +47,7 @@ def input_transform_net(point_cloud, is_training, bn_decay=None, K=3):
                                  initializer=tf.constant_initializer(0.0),
                                  dtype=tf.float32)
         biases += tf.constant([1,0,0,0,1,0,0,0,1], dtype=tf.float32)
+        print '%%%',weights
         transform = tf.matmul(net, weights)
         transform = tf.nn.bias_add(transform, biases)
 
