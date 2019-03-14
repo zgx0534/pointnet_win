@@ -119,6 +119,8 @@ def train():
             # pointclouds_pl：Tensor("Placeholder:0", shape=(32, 1024, 3), dtype=float32, device=/device:GPU:0)
             # labels_pl：Tensor("Placeholder_1:0", shape=(32,), dtype=int32, device=/device:GPU:0)
             pointclouds_pl, labels_pl = MODEL.placeholder_inputs(BATCH_SIZE, NUM_POINT)
+            print pointclouds_pl, labels_pl
+            print '***********'
             is_training_pl = tf.placeholder(tf.bool, shape=())
             print(is_training_pl)
 
