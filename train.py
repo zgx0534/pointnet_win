@@ -59,7 +59,6 @@ os.system('cp train.py %s' % (LOG_DIR)) # bkp of train procedure
 #打开log日志文件写入基本信息，LOG_FOUT为操作log文件句柄
 LOG_FOUT = open(os.path.join(LOG_DIR, 'log_train.txt'), 'w')
 LOG_FOUT.write(str(FLAGS)+'\n')
-
 MAX_NUM_POINT = 2048
 NUM_CLASSES = 40
 
@@ -130,6 +129,8 @@ def train():
 
             # 使用自定义的类方法来定义神经网络，这一步直接输出预测结果
             pred, end_points = MODEL.get_model(pointclouds_pl, is_training_pl, bn_decay=bn_decay)
+            #pred: Tensor("fc3/BiasAdd:0", shape=(32, 40), dtype=float32, device=/device:GPU:0)
+            #end_point: {'transform': <tf.Tensor 'transform_net2/Reshape_1:0' shape=(32, 64, 64) dtype=float32>}
             loss = MODEL.get_loss(pred, labels_pl, end_points)
             tf.summary.scalar('loss', loss)
             correct = tf.equal(tf.argmax(pred, 1), tf.to_int64(labels_pl))
