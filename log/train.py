@@ -47,7 +47,7 @@ OPTIMIZER = FLAGS.optimizer
 DECAY_STEP = FLAGS.decay_step
 DECAY_RATE = FLAGS.decay_rate
 
-#导入网络模板，默认使用pointnet_cls
+#动态导入网络模板，这样可以灵活的根据需求导入模块，不需要写在文件首部，默认导入pointnet_cls
 MODEL = importlib.import_module(FLAGS.model) # import network module
 MODEL_FILE = os.path.join(BASE_DIR, 'models', FLAGS.model+'.py')
 #建立log文件夹
@@ -83,24 +83,30 @@ def log_string(out_str):
     print(out_str)
 
 
+
+# decayed_learning_rate = learning_rate * decay_rate ^ (global_step / decay_steps)
+# decayed_learning_rate = 0.001         * 0.7        ^ (batch*32    / 20000)
+# learning_rate开始是 0.001 随着batch不断增加而减小，batch*32==20000时，learning_rate为0.001*0.7
 def get_learning_rate(batch):
     learning_rate = tf.train.exponential_decay(
-                        BASE_LEARNING_RATE,  # Base learning rate.
+                        BASE_LEARNING_RATE,  # Base learning rate.  0.001
                         batch * BATCH_SIZE,  # Current index into the dataset.
-                        DECAY_STEP,          # Decay step.
-                        DECAY_RATE,          # Decay rate.
+                        DECAY_STEP,          # Decay step.  20000
+                        DECAY_RATE,          # Decay rate.  0.7
                         staircase=True)
-    learning_rate = tf.maximum(learning_rate, 0.00001) # CLIP THE LEARNING RATE!
+
+    learning_rate = tf.maximum(learning_rate, 0.00001) # 设置learning_rate最低值
     return learning_rate        
 
+#动量函数
 def get_bn_decay(batch):
     bn_momentum = tf.train.exponential_decay(
-                      BN_INIT_DECAY,
+                      BN_INIT_DECAY,   #0.5
                       batch*BATCH_SIZE,
-                      BN_DECAY_DECAY_STEP,
-                      BN_DECAY_DECAY_RATE,
+                      BN_DECAY_DECAY_STEP,   #20000
+                      BN_DECAY_DECAY_RATE,   #0.5
                       staircase=True)
-    bn_decay = tf.minimum(BN_DECAY_CLIP, 1 - bn_momentum)
+    bn_decay = tf.minimum(BN_DECAY_CLIP, 1 - bn_momentum)   # bn_decay不能大于0.99
     return bn_decay
 
 #开始干活
@@ -129,6 +135,7 @@ def train():
 
             # 使用自定义的类方法来定义神经网络，这一步直接输出预测结果
             pred, end_points = MODEL.get_model(pointclouds_pl, is_training_pl, bn_decay=bn_decay)
+            print 'RRRR',pointclouds_pl
             #pred: Tensor("fc3/BiasAdd:0", shape=(32, 40), dtype=float32, device=/device:GPU:0)
             #end_point: {'transform': <tf.Tensor 'transform_net2/Reshape_1:0' shape=(32, 64, 64) dtype=float32>}
             loss = MODEL.get_loss(pred, labels_pl, end_points)

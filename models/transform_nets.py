@@ -18,6 +18,8 @@ def input_transform_net(point_cloud, is_training, bn_decay=None, K=3):
     #point_cloud本来是（32,1024,3）现在是（32,1024,3,1）
     input_image = tf.expand_dims(point_cloud, -1)
     # input_image （32,1024,3,1）
+    # padding = 'VALID'表示不使用0补边，SAME表示用0补边
+    # is_training 指明了是否为训练，训练时需要优化参数，测试时不需要
     net = tf_util.conv2d(input_image, 64, [1,3],
                          padding='VALID', stride=[1,1],
                          bn=True, is_training=is_training,
@@ -33,6 +35,8 @@ def input_transform_net(point_cloud, is_training, bn_decay=None, K=3):
                          bn=True, is_training=is_training,
                          scope='tconv3', bn_decay=bn_decay)
     # net （32,1024,1,1024）
+
+    #池化
     net = tf_util.max_pool2d(net, [num_point,1],
                              padding='VALID', scope='tmaxpool')
     # net （32,1,1,1024）

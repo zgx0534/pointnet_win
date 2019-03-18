@@ -8,6 +8,10 @@ import socket
 import importlib
 import os
 import sys
+batch = tf.Variable(0)
 tensor1=[[1,5,5],[3,2,2]]
 tensor2=tf.convert_to_tensor(tensor1)
-print tf.Session().run(tensor2)
+end_points = {1,}
+end_points.add(5)
+
+print end_points
