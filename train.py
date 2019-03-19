@@ -208,15 +208,20 @@ def train_one_epoch(sess, ops, train_writer):
     """ ops: dict mapping from string to tf ops """
     is_training = True
     
-    # Shuffle train files
+    # train_file_idxs存储TRAIN_FILES文件的索引 从0到个数的一个排列
     train_file_idxs = np.arange(0, len(TRAIN_FILES))
+    # 打乱train_file_idxs的顺序
     np.random.shuffle(train_file_idxs)
     
     for fn in range(len(TRAIN_FILES)):
         log_string('----' + str(fn) + '-----')
+        # TRAIN_FILES[0-4]每一个都是保存数据集，前四个文件都是2048个点云，每个点云的尺寸是(2048*3),但是只使用了1024个点
+        # 数据集是字典类型, 有四个key, 分别是[u'data', u'faceId', u'label', u'normal']
+        # current_data, current_label是一个数据字典的全部数据和标签
         current_data, current_label = provider.loadDataFile(TRAIN_FILES[train_file_idxs[fn]])
         current_data = current_data[:,0:NUM_POINT,:]
-        current_data, current_label, _ = provider.shuffle_data(current_data, np.squeeze(current_label))            
+        # 打乱current_data, current_label的顺序被打乱 _为索引
+        current_data, current_label, _ = provider.shuffle_data(current_data, np.squeeze(current_label))
         current_label = np.squeeze(current_label)
         
         file_size = current_data.shape[0]
@@ -229,8 +234,9 @@ def train_one_epoch(sess, ops, train_writer):
         for batch_idx in range(num_batches):
             start_idx = batch_idx * BATCH_SIZE
             end_idx = (batch_idx+1) * BATCH_SIZE
-            
-            # Augment batched point clouds by rotation and jittering
+            dianyu
+            # 通过旋转和抖动来增加批量点云
+            # 先取得32个点云形成一个小训练集，然后进行旋转和抖动。
             rotated_data = provider.rotate_point_cloud(current_data[start_idx:end_idx, :, :])
             jittered_data = provider.jitter_point_cloud(rotated_data)
             feed_dict = {ops['pointclouds_pl']: jittered_data,
