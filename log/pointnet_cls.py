@@ -24,14 +24,15 @@ def get_model(point_cloud, is_training, bn_decay=None):
     end_points = {}
 
     with tf.variable_scope('transform_net1') as sc:
-        #将point_cloud (32*1024*3) 卷积池化全连接转成32*3*3
+        # 将point_cloud (32*1024*3) 卷积池化全连接转成32*3*3
         transform = input_transform_net(point_cloud, is_training, bn_decay, K=3)
-        #pointcloud: (32, 1024, 3)
-        #transform: (32, 3, 3)
+        # pointcloud: (32, 1024, 3)
+        # transform 变成32个[3，3]的单位矩阵
 
-    #tf.matmul表示两个矩阵点乘
+    #tf.matmul表示两个矩阵相乘
     point_cloud_transformed = tf.matmul(point_cloud, transform)
     #point_cloud_transformed:(32, 1024, 3)
+
 
     input_image = tf.expand_dims(point_cloud_transformed, -1)
     #input_image:(32, 1024, 3, 1)
@@ -50,12 +51,14 @@ def get_model(point_cloud, is_training, bn_decay=None):
 
     with tf.variable_scope('transform_net2') as sc:
         transform = feature_transform_net(net, is_training, bn_decay, K=64)
+    #transform 32个64*64的单位阵
     end_points['transform'] = transform
+    # end_points为32*64*64的单位阵拉成的向量
     net_transformed = tf.matmul(tf.squeeze(net, axis=[2]), transform)
-    #net_transformed:(32, 1024, 64)
+    # net_transformed:(32, 1024, 64)
 
     net_transformed = tf.expand_dims(net_transformed, [2])
-    #net_transformed:(32, 1024, 1, 64)
+    # net_transformed:(32, 1024, 1, 64)
 
     net = tf_util.conv2d(net_transformed, 64, [1,1],
                          padding='VALID', stride=[1,1],
@@ -69,12 +72,13 @@ def get_model(point_cloud, is_training, bn_decay=None):
                          padding='VALID', stride=[1,1],
                          bn=True, is_training=is_training,
                          scope='conv5', bn_decay=bn_decay)
-    #net:(32, 1024, 1, 1024)
+    # net:(32, 1024, 1, 1024)
     # Symmetric function: max pooling
     net = tf_util.max_pool2d(net, [num_point,1],
                              padding='VALID', scope='maxpool')
-
+    # net:(32, 1, 1, 1024)
     net = tf.reshape(net, [batch_size, -1])
+    # net:(32, 1024)
     net = tf_util.fully_connected(net, 512, bn=True, is_training=is_training,
                                   scope='fc1', bn_decay=bn_decay)
     net = tf_util.dropout(net, keep_prob=0.7, is_training=is_training,
@@ -84,7 +88,7 @@ def get_model(point_cloud, is_training, bn_decay=None):
     net = tf_util.dropout(net, keep_prob=0.7, is_training=is_training,
                           scope='dp2')
     net = tf_util.fully_connected(net, 40, activation_fn=None, scope='fc3')
-
+    # net:(32, 40)
     return net, end_points
 
 
@@ -92,6 +96,7 @@ def get_loss(pred, label, end_points, reg_weight=0.001):
     """ pred: B*NUM_CLASSES,
         label: B, """
     loss = tf.nn.sparse_softmax_cross_entropy_with_logits(logits=pred, labels=label)
+    print '&&&', loss
     classify_loss = tf.reduce_mean(loss)
     tf.summary.scalar('classify loss', classify_loss)
 

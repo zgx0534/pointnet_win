@@ -135,8 +135,10 @@ def train():
 
             # 使用自定义的类方法来定义神经网络，这一步直接输出预测结果
             pred, end_points = MODEL.get_model(pointclouds_pl, is_training_pl, bn_decay=bn_decay)
-            #pred: Tensor("fc3/BiasAdd:0", shape=(32, 40), dtype=float32, device=/device:GPU:0)
-            #end_point: {'transform': <tf.Tensor 'transform_net2/Reshape_1:0' shape=(32, 64, 64) dtype=float32>}
+            # pred:(32, 40)
+            # end_points为64*64的单位阵拉成的向量
+            # pred: Tensor("fc3/BiasAdd:0", shape=(32, 40), dtype=float32, device=/device:GPU:0)
+            # end_point: {'transform': <tf.Tensor 'transform_net2/Reshape_1:0' shape=(32, 64, 64) dtype=float32>}
             loss = MODEL.get_loss(pred, labels_pl, end_points)
             tf.summary.scalar('loss', loss)
             correct = tf.equal(tf.argmax(pred, 1), tf.to_int64(labels_pl))

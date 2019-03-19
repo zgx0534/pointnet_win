@@ -8,10 +8,13 @@ import socket
 import importlib
 import os
 import sys
-batch = tf.Variable(0)
-tensor1=[[1,5,5],[3,2,2]]
-tensor2=tf.convert_to_tensor(tensor1)
-end_points = {1,}
-end_points.add(5)
+# k=3
+# weights = tf.get_variable('weights', [32,256],initializer=tf.constant_initializer(2.0),dtype=tf.float32)
+# #bias = tf.reshape(tf.constant([1,0,0,0,1,0,0,0,1,1,0,0,0,1,0,0,0,1], dtype=tf.float32),[2,3,3])
+# aaa={}
+# b=tf.constant(np.eye(64).flatten(), dtype=tf.float32)
 
-print end_points
+transform = aaa['transform']
+with tf.Session() as sess:
+    sess.run(tf.global_variables_initializer())
+    print sess.run(transform)
