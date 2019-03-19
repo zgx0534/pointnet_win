@@ -109,8 +109,7 @@ def get_bn_decay(batch):
     bn_decay = tf.minimum(BN_DECAY_CLIP, 1 - bn_momentum)   # bn_decay不能大于0.99
     return bn_decay
 
-#开始干活
-#主程序
+#训练方法，每次调用它
 def train():
     # tf.Graph()表示实例化了一个类，一个用于tensorflow计算和表示用的数据流图
     # 通俗来讲就是：在代码中添加的操作（画中的结点）和数据（画中的线条）都是画在纸上的“画”，而图就是呈现这些画的纸，你可以利用很多线程生成很多张图，但是默认图就只有一张。
@@ -141,6 +140,7 @@ def train():
             # end_point: {'transform': <tf.Tensor 'transform_net2/Reshape_1:0' shape=(32, 64, 64) dtype=float32>}
             loss = MODEL.get_loss(pred, labels_pl, end_points)
             tf.summary.scalar('loss', loss)
+
             correct = tf.equal(tf.argmax(pred, 1), tf.to_int64(labels_pl))
             accuracy = tf.reduce_sum(tf.cast(correct, tf.float32)) / float(BATCH_SIZE)
             tf.summary.scalar('accuracy', accuracy)
@@ -148,16 +148,18 @@ def train():
             # Get training operator
             learning_rate = get_learning_rate(batch)
             tf.summary.scalar('learning_rate', learning_rate)
+            # 根据用户设置来选择优化器
             if OPTIMIZER == 'momentum':
                 optimizer = tf.train.MomentumOptimizer(learning_rate, momentum=MOMENTUM)
             elif OPTIMIZER == 'adam':
                 optimizer = tf.train.AdamOptimizer(learning_rate)
             train_op = optimizer.minimize(loss, global_step=batch)
             
-            # Add ops to save and restore all the variables.
+            # 创建一个Saver对象，用于保存所有参数和变量 用于迭代训练和测试，需要执行save方法
             saver = tf.train.Saver()
             
         # Create a session
+        # tf.ConfigProto()用于在创建session之前，对session配置
         config = tf.ConfigProto()
         config.gpu_options.allow_growth = True
         config.allow_soft_placement = True
@@ -165,7 +167,8 @@ def train():
         sess = tf.Session(config=config)
 
         # Add summary writers
-        #merged = tf.merge_all_summaries()
+        # merged = tf.merge_all_summaries()
+        # merge_all 可以将所有summary全部保存到磁盘，以便tensorboard显示。
         merged = tf.summary.merge_all()
         train_writer = tf.summary.FileWriter(os.path.join(LOG_DIR, 'train'),
                                   sess.graph)
@@ -186,7 +189,7 @@ def train():
                'train_op': train_op,
                'merged': merged,
                'step': batch}
-
+        # 训练250组,每10组输出一次
         for epoch in range(MAX_EPOCH):
             log_string('**** EPOCH %03d ****' % (epoch))
             sys.stdout.flush()

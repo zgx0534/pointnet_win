@@ -96,12 +96,16 @@ def get_loss(pred, label, end_points, reg_weight=0.001):
     """ pred: B*NUM_CLASSES,
         label: B, """
     loss = tf.nn.sparse_softmax_cross_entropy_with_logits(logits=pred, labels=label)
-    print '&&&', loss
+    # loss.shape=(32,)
+
+    # 求32个loss的均值
     classify_loss = tf.reduce_mean(loss)
+
     tf.summary.scalar('classify loss', classify_loss)
 
-    # Enforce the transformation as orthogonal matrix
+    # 强制转换为正交矩阵
     transform = end_points['transform'] # BxKxK
+    print 'TR',transform
     K = transform.get_shape()[1].value
     mat_diff = tf.matmul(transform, tf.transpose(transform, perm=[0,2,1]))
     mat_diff -= tf.constant(np.eye(K), dtype=tf.float32)
