@@ -9,7 +9,7 @@ import importlib
 import os
 import sys
 
-#加入依赖的默认查找路径,类似于添加环境变量
+#添加环境变量
 #os.path.dirname()功能为去掉文件名，返回目录
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 #sys.path.append(BASE_DIR)帮助程序在本项目文件夹下找依赖
