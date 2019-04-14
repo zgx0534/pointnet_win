@@ -52,6 +52,7 @@ def get_model(point_cloud, is_training, bn_decay=None):
     with tf.variable_scope('transform_net2') as sc:
         transform = feature_transform_net(net, is_training, bn_decay, K=64)
     #transform 32个64*64的单位阵
+
     end_points['transform'] = transform
     # end_points为32*64*64的单位阵拉成的向量
     net_transformed = tf.matmul(tf.squeeze(net, axis=[2]), transform)

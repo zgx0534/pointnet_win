@@ -9,7 +9,7 @@ import importlib
 import os
 import sys
 
-#加入依赖的默认查找路径,类似于添加环境变量
+#添加环境变量
 #os.path.dirname()功能为去掉文件名，返回目录
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 #sys.path.append(BASE_DIR)帮助程序在本项目文件夹下找依赖
@@ -109,8 +109,7 @@ def get_bn_decay(batch):
     bn_decay = tf.minimum(BN_DECAY_CLIP, 1 - bn_momentum)   # bn_decay不能大于0.99
     return bn_decay
 
-#开始干活
-#主程序
+# 训练方法，每次调用它
 def train():
     # tf.Graph()表示实例化了一个类，一个用于tensorflow计算和表示用的数据流图
     # 通俗来讲就是：在代码中添加的操作（画中的结点）和数据（画中的线条）都是画在纸上的“画”，而图就是呈现这些画的纸，你可以利用很多线程生成很多张图，但是默认图就只有一张。
@@ -141,6 +140,7 @@ def train():
             # end_point: {'transform': <tf.Tensor 'transform_net2/Reshape_1:0' shape=(32, 64, 64) dtype=float32>}
             loss = MODEL.get_loss(pred, labels_pl, end_points)
             tf.summary.scalar('loss', loss)
+
             correct = tf.equal(tf.argmax(pred, 1), tf.to_int64(labels_pl))
             accuracy = tf.reduce_sum(tf.cast(correct, tf.float32)) / float(BATCH_SIZE)
             tf.summary.scalar('accuracy', accuracy)
@@ -148,16 +148,18 @@ def train():
             # Get training operator
             learning_rate = get_learning_rate(batch)
             tf.summary.scalar('learning_rate', learning_rate)
+            # 根据用户设置来选择优化器
             if OPTIMIZER == 'momentum':
                 optimizer = tf.train.MomentumOptimizer(learning_rate, momentum=MOMENTUM)
             elif OPTIMIZER == 'adam':
                 optimizer = tf.train.AdamOptimizer(learning_rate)
             train_op = optimizer.minimize(loss, global_step=batch)
             
-            # Add ops to save and restore all the variables.
+            # 创建一个Saver对象，用于保存所有参数和变量 用于迭代训练和测试，需要执行save方法
             saver = tf.train.Saver()
             
         # Create a session
+        # tf.ConfigProto()用于在创建session之前，对session配置
         config = tf.ConfigProto()
         config.gpu_options.allow_growth = True
         config.allow_soft_placement = True
@@ -165,7 +167,8 @@ def train():
         sess = tf.Session(config=config)
 
         # Add summary writers
-        #merged = tf.merge_all_summaries()
+        # merged = tf.merge_all_summaries()
+        # merge_all 可以将所有summary全部保存到磁盘，以便tensorboard显示。
         merged = tf.summary.merge_all()
         train_writer = tf.summary.FileWriter(os.path.join(LOG_DIR, 'train'),
                                   sess.graph)
@@ -174,7 +177,7 @@ def train():
         # Init variables
         init = tf.global_variables_initializer()
         # To fix the bug introduced in TF 0.12.1 as in
-        # http://stackoverflow.com/questions/41543774/invalidargumenterror-for-tensor-bool-tensorflow-0-12-1
+        # http://`stackoverflow.com/questions/41543774/invalidargumenterror-for-tensor-bool-tensorflow-0-12-1
         #sess.run(init)
         sess.run(init, {is_training_pl: True})
 
@@ -186,7 +189,7 @@ def train():
                'train_op': train_op,
                'merged': merged,
                'step': batch}
-
+        # 训练250组,每10组输出一次
         for epoch in range(MAX_EPOCH):
             log_string('**** EPOCH %03d ****' % (epoch))
             sys.stdout.flush()
@@ -205,15 +208,21 @@ def train_one_epoch(sess, ops, train_writer):
     """ ops: dict mapping from string to tf ops """
     is_training = True
     
-    # Shuffle train files
+    # train_file_idxs存储TRAIN_FILES文件的索引 从0到个数的一个排列
     train_file_idxs = np.arange(0, len(TRAIN_FILES))
+    # 打乱train_file_idxs的顺序
     np.random.shuffle(train_file_idxs)
-    
+
+    # 一个文件
     for fn in range(len(TRAIN_FILES)):
         log_string('----' + str(fn) + '-----')
+        # TRAIN_FILES[0-4]每一个都是保存数据集，前四个文件都是2048个点云，每个点云的尺寸是(2048*3),但是只使用了1024个点
+        # 数据集是字典类型, 有四个key, 分别是[u'data', u'faceId', u'label', u'normal']
+        # current_data, current_label是一个数据字典的全部数据和标签
         current_data, current_label = provider.loadDataFile(TRAIN_FILES[train_file_idxs[fn]])
         current_data = current_data[:,0:NUM_POINT,:]
-        current_data, current_label, _ = provider.shuffle_data(current_data, np.squeeze(current_label))            
+        # 打乱current_data, current_label的顺序被打乱 _为索引
+        current_data, current_label, _ = provider.shuffle_data(current_data, np.squeeze(current_label))
         current_label = np.squeeze(current_label)
         
         file_size = current_data.shape[0]
@@ -226,8 +235,8 @@ def train_one_epoch(sess, ops, train_writer):
         for batch_idx in range(num_batches):
             start_idx = batch_idx * BATCH_SIZE
             end_idx = (batch_idx+1) * BATCH_SIZE
-            
-            # Augment batched point clouds by rotation and jittering
+            # 通过旋转和抖动来增加批量点云
+            # 先取得32个点云形成一个小训练集，然后进行旋转和抖动。
             rotated_data = provider.rotate_point_cloud(current_data[start_idx:end_idx, :, :])
             jittered_data = provider.jitter_point_cloud(rotated_data)
             feed_dict = {ops['pointclouds_pl']: jittered_data,

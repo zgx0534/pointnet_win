@@ -52,6 +52,7 @@ def get_model(point_cloud, is_training, bn_decay=None):
     with tf.variable_scope('transform_net2') as sc:
         transform = feature_transform_net(net, is_training, bn_decay, K=64)
     #transform 32个64*64的单位阵
+
     end_points['transform'] = transform
     # end_points为32*64*64的单位阵拉成的向量
     net_transformed = tf.matmul(tf.squeeze(net, axis=[2]), transform)
@@ -105,8 +106,9 @@ def get_loss(pred, label, end_points, reg_weight=0.001):
 
     # 强制转换为正交矩阵
     transform = end_points['transform'] # BxKxK
-    print 'TR',transform
+    # transform (32, 64, 64)
     K = transform.get_shape()[1].value
+    # K=32
     mat_diff = tf.matmul(transform, tf.transpose(transform, perm=[0,2,1]))
     mat_diff -= tf.constant(np.eye(K), dtype=tf.float32)
     mat_diff_loss = tf.nn.l2_loss(mat_diff) 

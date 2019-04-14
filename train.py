@@ -109,7 +109,7 @@ def get_bn_decay(batch):
     bn_decay = tf.minimum(BN_DECAY_CLIP, 1 - bn_momentum)   # bn_decay不能大于0.99
     return bn_decay
 
-#训练方法，每次调用它
+# 训练方法，每次调用它
 def train():
     # tf.Graph()表示实例化了一个类，一个用于tensorflow计算和表示用的数据流图
     # 通俗来讲就是：在代码中添加的操作（画中的结点）和数据（画中的线条）都是画在纸上的“画”，而图就是呈现这些画的纸，你可以利用很多线程生成很多张图，但是默认图就只有一张。
@@ -177,7 +177,7 @@ def train():
         # Init variables
         init = tf.global_variables_initializer()
         # To fix the bug introduced in TF 0.12.1 as in
-        # http://stackoverflow.com/questions/41543774/invalidargumenterror-for-tensor-bool-tensorflow-0-12-1
+        # http://`stackoverflow.com/questions/41543774/invalidargumenterror-for-tensor-bool-tensorflow-0-12-1
         #sess.run(init)
         sess.run(init, {is_training_pl: True})
 
@@ -212,7 +212,8 @@ def train_one_epoch(sess, ops, train_writer):
     train_file_idxs = np.arange(0, len(TRAIN_FILES))
     # 打乱train_file_idxs的顺序
     np.random.shuffle(train_file_idxs)
-    
+
+    # 一个文件
     for fn in range(len(TRAIN_FILES)):
         log_string('----' + str(fn) + '-----')
         # TRAIN_FILES[0-4]每一个都是保存数据集，前四个文件都是2048个点云，每个点云的尺寸是(2048*3),但是只使用了1024个点
@@ -234,7 +235,6 @@ def train_one_epoch(sess, ops, train_writer):
         for batch_idx in range(num_batches):
             start_idx = batch_idx * BATCH_SIZE
             end_idx = (batch_idx+1) * BATCH_SIZE
-            dianyu
             # 通过旋转和抖动来增加批量点云
             # 先取得32个点云形成一个小训练集，然后进行旋转和抖动。
             rotated_data = provider.rotate_point_cloud(current_data[start_idx:end_idx, :, :])
