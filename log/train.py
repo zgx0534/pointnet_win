@@ -250,6 +250,13 @@ def train_one_epoch(sess, ops, train_writer):
             total_correct += correct
             total_seen += BATCH_SIZE
             loss_sum += loss_val
+            # =============   测试代码  =================
+
+            with tf.variable_scope('transform_net1/transform_feat') as sc:
+                weights = tf.get_variable('weights', [256, 9],
+                                  dtype=tf.float32)
+                print weights
+            # =============   测试代码  =================
         
         log_string('mean loss: %f' % (loss_sum / float(num_batches)))
         log_string('accuracy: %f' % (total_correct / float(total_seen)))
