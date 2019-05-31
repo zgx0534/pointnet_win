@@ -24,7 +24,7 @@ import tf_util
 #用于命令参数获取，使程序更加友好，个性化运行
 parser = argparse.ArgumentParser()
 parser.add_argument('--gpu', type=int, default=0, help='GPU to use [default: GPU 0]')
-parser.add_argument('--model', default='pointnet_cls', help='Model name: pointnet_cls or pointnet_cls_basic [default: pointnet_cls]')
+parser.add_argument('--model', default='net_improved', help='Model name: pointnet_cls or pointnet_cls_basic [default: pointnet_cls]')
 parser.add_argument('--log_dir', default='log', help='Log dir [default: log]')
 parser.add_argument('--num_point', type=int, default=1024, help='Point Number [256/512/1024/2048] [default: 1024]')
 parser.add_argument('--max_epoch', type=int, default=250, help='Epoch to run [default: 250]')
@@ -133,7 +133,7 @@ def train():
             tf.summary.scalar('bn_decay', bn_decay)
 
             # 使用自定义的类方法来定义神经网络，这一步直接输出预测结果
-            pred, end_points = MODEL.get_model(pointclouds_pl, is_training_pl, bn_decay=bn_decay)
+            pred, end_points,biases_val = MODEL.get_model(pointclouds_pl, is_training_pl, bn_decay=bn_decay)
             # pred:(32, 40)
             # end_points为64*64的单位阵拉成的向量
             # pred: Tensor("fc3/BiasAdd:0", shape=(32, 40), dtype=float32, device=/device:GPU:0)
@@ -188,7 +188,8 @@ def train():
                'loss': loss,
                'train_op': train_op,
                'merged': merged,
-               'step': batch}
+               'step': batch,
+               'biases_val':biases_val}
         # 训练250组,每10组输出一次
         for epoch in range(MAX_EPOCH):
             log_string('**** EPOCH %03d ****' % (epoch))
@@ -250,14 +251,6 @@ def train_one_epoch(sess, ops, train_writer):
             total_correct += correct
             total_seen += BATCH_SIZE
             loss_sum += loss_val
-            # =============   测试代码  =================
-
-            with tf.variable_scope('transform_net1/transform_feat') as sc:
-                weights = tf.get_variable('weights', [256, 9],
-                                  dtype=tf.float32)
-                print weights
-            # =============   测试代码  =================
-        
         log_string('mean loss: %f' % (loss_sum / float(num_batches)))
         log_string('accuracy: %f' % (total_correct / float(total_seen)))
 
@@ -302,8 +295,6 @@ def eval_one_epoch(sess, ops, test_writer):
     log_string('eval mean loss: %f' % (loss_sum / float(total_seen)))
     log_string('eval accuracy: %f'% (total_correct / float(total_seen)))
     log_string('eval avg class acc: %f' % (np.mean(np.array(total_correct_class)/np.array(total_seen_class,dtype=np.float))))
-         
-
 
 if __name__ == "__main__":
     train()

@@ -25,7 +25,7 @@ def get_model(point_cloud, is_training, bn_decay=None):
 
     with tf.variable_scope('transform_net1') as sc:
         # 将point_cloud (32*1024*3) 卷积池化全连接转成32*3*3
-        transform = input_transform_net(point_cloud, is_training, bn_decay, K=3)
+        transform,biases_val = input_transform_net(point_cloud, is_training, bn_decay, K=3)
         # pointcloud: (32, 1024, 3)
         # transform 变成32个[3，3]的单位矩阵
 
@@ -90,7 +90,7 @@ def get_model(point_cloud, is_training, bn_decay=None):
                           scope='dp2')
     net = tf_util.fully_connected(net, 40, activation_fn=None, scope='fc3')
     # net:(32, 40)
-    return net, end_points
+    return net, end_points,biases_val
 
 
 def get_loss(pred, label, end_points, reg_weight=0.001):

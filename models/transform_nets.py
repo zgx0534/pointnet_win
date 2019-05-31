@@ -68,7 +68,7 @@ def input_transform_net(point_cloud, is_training, bn_decay=None, K=3):
     transform = tf.reshape(transform,[batch_size, 3, K])
     # transform.shape (32, 3, 3)
     # transform 变成32个[3，3]的单位矩阵
-    return transform
+    return transform,biases
 
 
 def feature_transform_net(inputs, is_training, bn_decay=None, K=64):
@@ -103,7 +103,7 @@ def feature_transform_net(inputs, is_training, bn_decay=None, K=64):
     net = tf_util.fully_connected(net, 256, bn=True, is_training=is_training,
                                   scope='tfc2', bn_decay=bn_decay)
     # (32, 256)
-    with tf.variable_scope('transform_feat',reuse=True) as sc:
+    with tf.variable_scope('transform_feat') as sc:
         weights = tf.get_variable('weights', [256, K*K],
                                   initializer=tf.constant_initializer(0.0),
                                   dtype=tf.float32)
