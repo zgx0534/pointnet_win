@@ -16,21 +16,19 @@ def placeholder_inputs(batch_size, num_point):
     labels_pl = tf.placeholder(tf.int32, shape=(batch_size))
     return pointclouds_pl, labels_pl
 
-# 定义分类网络 input 32x1024x3, output 32x40
-# 先空间点变换 ---> 64-64感知 ---> 特征域变换 ---> 64-64感知 ---> 特征扩展 ---> 池化去顺序性 ---> 全连接
+#定义分类网络 input 32x1024x3, output 32x40
 def get_model(point_cloud, is_training, bn_decay=None):
     """ Classification PointNet, input is BxNx3, output Bx40 """
     batch_size = point_cloud.get_shape()[0].value
     num_point = point_cloud.get_shape()[1].value
     end_points = {}
 
+    # 空间坐标变换
     with tf.variable_scope('transform_net1') as sc:
         # 将point_cloud (32*1024*3) 卷积池化全连接转成32*3*3
         transform,biases_val = input_transform_net(point_cloud, is_training, bn_decay, K=3)
         # pointcloud: (32, 1024, 3)
         # transform 变成32个[3，3]的单位矩阵
-
-    #tf.matmul表示两个矩阵相乘
     point_cloud_transformed = tf.matmul(point_cloud, transform)
     #point_cloud_transformed:(32, 1024, 3)
 
