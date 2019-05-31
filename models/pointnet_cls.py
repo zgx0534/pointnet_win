@@ -16,7 +16,8 @@ def placeholder_inputs(batch_size, num_point):
     labels_pl = tf.placeholder(tf.int32, shape=(batch_size))
     return pointclouds_pl, labels_pl
 
-#定义分类网络 input 32x1024x3, output 32x40
+# 定义分类网络 input 32x1024x3, output 32x40
+# 先空间点变换 ---> 64-64感知 ---> 特征域变换 ---> 特征扩展 ---> 池化去顺序性 ---> 全连接
 def get_model(point_cloud, is_training, bn_decay=None):
     """ Classification PointNet, input is BxNx3, output Bx40 """
     batch_size = point_cloud.get_shape()[0].value
