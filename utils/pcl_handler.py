@@ -42,12 +42,11 @@ def preHandle(cloud_batch):
 
     # 将对象返回到tensor
     data=[]
-    for i in range(batchSize):
-        for pointcloud in pclObj_arr[i]:
-            for index in range(POINTNUM_OUT):
-                data.append(pointcloud.at(index).x)
-                data.append(pointcloud.at(index).y)
-                data.append(pointcloud.at(index).z)
+    for pointcloud in pclObj_arr:
+        for index in range(POINTNUM_OUT):
+            data.append(pointcloud.at(index).x)
+            data.append(pointcloud.at(index).y)
+            data.append(pointcloud.at(index).z)
     tsr=tf.convert_to_tensor(data)
     tsr_res=tf.reshape(tsr,[batchSize,POINTNUM_OUT,3])
     return tsr_res
