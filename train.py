@@ -20,13 +20,14 @@ sys.path.append(os.path.join(BASE_DIR, 'utils'))
 
 import provider
 import tf_util
+import pcl_handler
 
 #用于命令参数获取，使程序更加友好，个性化运行
 parser = argparse.ArgumentParser()
 parser.add_argument('--gpu', type=int, default=0, help='GPU to use [default: GPU 0]')
 parser.add_argument('--model', default='net_improved', help='Model name: pointnet_cls or pointnet_cls_basic [default: pointnet_cls]')
 parser.add_argument('--log_dir', default='log', help='Log dir [default: log]')
-parser.add_argument('--num_point', type=int, default=1024, help='Point Number [256/512/1024/2048] [default: 1024]')
+parser.add_argument('--num_point', type=int, default=2048, help='Point Number [256/512/1024/2048] [default: 2048]')
 parser.add_argument('--max_epoch', type=int, default=250, help='Epoch to run [default: 250]')
 parser.add_argument('--batch_size', type=int, default=32, help='Batch Size during training [default: 32]')
 parser.add_argument('--learning_rate', type=float, default=0.001, help='Initial learning rate [default: 0.001]')
@@ -53,9 +54,7 @@ MODEL_FILE = os.path.join(BASE_DIR, 'models', FLAGS.model+'.py')
 #建立log文件夹
 LOG_DIR = FLAGS.log_dir
 if not os.path.exists(LOG_DIR): os.mkdir(LOG_DIR)
-#把模板文件和训练文件拷进log文件夹
-os.system('cp %s %s' % (MODEL_FILE, LOG_DIR)) # bkp of model def
-os.system('cp train.py %s' % (LOG_DIR)) # bkp of train procedure
+
 #打开log日志文件写入基本信息，LOG_FOUT为操作log文件句柄
 LOG_FOUT = open(os.path.join(LOG_DIR, 'log_train.txt'), 'w')
 LOG_FOUT.write(str(FLAGS)+'\n')
@@ -240,7 +239,11 @@ def train_one_epoch(sess, ops, train_writer):
             # 先取得32个点云形成一个小训练集，然后进行旋转和抖动。
             rotated_data = provider.rotate_point_cloud(current_data[start_idx:end_idx, :, :])
             jittered_data = provider.jitter_point_cloud(rotated_data)
-            feed_dict = {ops['pointclouds_pl']: jittered_data,
+
+            # pcl预处理
+            data_handled=pcl_handler.preHandle(jittered_data)
+
+            feed_dict = {ops['pointclouds_pl']: data_handled,
                          ops['labels_pl']: current_label[start_idx:end_idx],
                          ops['is_training_pl']: is_training,}
             summary, step, _, loss_val, pred_val = sess.run([ops['merged'], ops['step'],
@@ -248,9 +251,9 @@ def train_one_epoch(sess, ops, train_writer):
             train_writer.add_summary(summary, step)
             pred_val = np.argmax(pred_val, 1)
             correct = np.sum(pred_val == current_label[start_idx:end_idx])
-            total_correct += correct
-            total_seen += BATCH_SIZE
-            loss_sum += loss_val
+            total_correct = total_correct + correct
+            total_seen = total_seen + BATCH_SIZE
+            loss_sum = loss_sum + loss_val
         log_string('mean loss: %f' % (loss_sum / float(num_batches)))
         log_string('accuracy: %f' % (total_correct / float(total_seen)))
 
@@ -277,20 +280,27 @@ def eval_one_epoch(sess, ops, test_writer):
             start_idx = batch_idx * BATCH_SIZE
             end_idx = (batch_idx+1) * BATCH_SIZE
 
-            feed_dict = {ops['pointclouds_pl']: current_data[start_idx:end_idx, :, :],
+
+            rotated_data = provider.rotate_point_cloud(current_data[start_idx:end_idx, :, :])
+            jittered_data = provider.jitter_point_cloud(rotated_data)
+
+            # pcl预处理
+            data_handled=pcl_handler.preHandle(jittered_data)
+
+            feed_dict = {ops['pointclouds_pl']: data_handled,
                          ops['labels_pl']: current_label[start_idx:end_idx],
                          ops['is_training_pl']: is_training}
             summary, step, loss_val, pred_val = sess.run([ops['merged'], ops['step'],
                 ops['loss'], ops['pred']], feed_dict=feed_dict)
             pred_val = np.argmax(pred_val, 1)
             correct = np.sum(pred_val == current_label[start_idx:end_idx])
-            total_correct += correct
-            total_seen += BATCH_SIZE
-            loss_sum += (loss_val*BATCH_SIZE)
+            total_correct = total_correct+correct
+            total_seen = total_seen+BATCH_SIZE
+            loss_sum = loss_sum + (loss_val*BATCH_SIZE)
             for i in range(start_idx, end_idx):
                 l = current_label[i]
-                total_seen_class[l] += 1
-                total_correct_class[l] += (pred_val[i-start_idx] == l)
+                total_seen_class[l] = total_seen_class[l]+ 1
+                total_correct_class[l] = total_correct_class[l]+(pred_val[i-start_idx] == l)
             
     log_string('eval mean loss: %f' % (loss_sum / float(total_seen)))
     log_string('eval accuracy: %f'% (total_correct / float(total_seen)))
